@@ -1,0 +1,37 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Oct  9 17:28:15 2014
+| Host         : nb-atraber.localdomain running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_vdma_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_vdma_0_0 (xilinx.com:ip:axi_vdma:6.2) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
+| Date         : Thu Oct  9 14:25:26 2014
+| Host         : nb-atraber.localdomain running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_vdma_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_vdma_0_0 from xilinx.com:ip:axi_vdma:6.1 (Rev. 1) to xilinx.com:ip:axi_vdma:6.2 (Rev. 1)
+

@@ -1,0 +1,6 @@
+17:03:35 **** Incremental Build of configuration Debug for project BaseSystem ****
+make all 
+make: No se hace nada para `all'.
+
+17:03:35 Build Finished (took 131ms)
+

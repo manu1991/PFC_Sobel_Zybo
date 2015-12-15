@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Webtalk v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 17:18:21 MST 2014
+# 
+# Start of session at: Tue Nov 10 18:36:36 2015
+# Process ID: 5988
+# Log file: D:/Users/Manu/Desktop/VersionesProyecto/Proyecto_v2_0_WORKING/Proyecto_v2_0_WORKING.sdk/webtalk/webtalk.log
+# Journal file: D:/Users/Manu/Desktop/VersionesProyecto/Proyecto_v2_0_WORKING/Proyecto_v2_0_WORKING.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+WARNING: [Common 17-204] Your XILINX environment variable is undefined. You will not be able to run Synthesis and Implementation using ISE based strategies, or import ngc netlists. Please set up your XILINX environment to get full functionality.
+source sdk_webtalk.tcl
+# webtalk_init -webtalk_dir D:\\Users\\Manu\\Desktop\\VersionesProyecto\\Proyecto_v2_0_WORKING\\Proyecto_v2_0_WORKING.sdk\\webtalk
+# webtalk_register_client -client project
+# webtalk_add_data -client project -key date_generated -value "mar nov 10 18:36:30 2015" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key product_version -value "SDK v2014.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key build_version -value "2014.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_platform -value "amd64" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key registration_id -value "210940137_1777503264_0_764" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key tool_flow -value "SDK" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key beta -value "false" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key route_design -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_family -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_device -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_package -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_speed -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key random_id -value "b56j2uj0u82jf6ad4je8e68skc" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_id -value "2014.4_138" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_iteration -value "138" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_name -value "Microsoft Windows 7 , 64-bit" -context "user_environment"
+# webtalk_add_data -client project -key os_release -value "major release  (build 7600)" -context "user_environment"
+# webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-3610QM CPU @ 2.30GHz" -context "user_environment"
+# webtalk_add_data -client project -key cpu_speed -value "2294 MHz" -context "user_environment"
+# webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
+# webtalk_add_data -client project -key system_ram -value "6.000 GB" -context "user_environment"
+# webtalk_register_client -client sdk
+# webtalk_add_data -client sdk -key uid -value "1447176972396" -context "sdk\\\\hardware/1447176972396"
+# webtalk_add_data -client sdk -key isZynq -value "true" -context "sdk\\\\hardware/1447176972396"
+# webtalk_add_data -client sdk -key Processors -value "2" -context "sdk\\\\hardware/1447176972396"
+# webtalk_add_data -client sdk -key VivadoVersion -value "2014.4" -context "sdk\\\\hardware/1447176972396"
+# webtalk_add_data -client sdk -key Arch -value "zynq" -context "sdk\\\\hardware/1447176972396"
+# webtalk_add_data -client sdk -key Device -value "7z010" -context "sdk\\\\hardware/1447176972396"
+# webtalk_add_data -client sdk -key IsHandoff -value "true" -context "sdk\\\\hardware/1447176972396"
+# webtalk_transmit -clientid 3532138812 -regid "210940137_1777503264_0_764" -xml D:\\Users\\Manu\\Desktop\\VersionesProyecto\\Proyecto_v2_0_WORKING\\Proyecto_v2_0_WORKING.sdk\\webtalk\\usage_statistics_ext_sdk.xml -html D:\\Users\\Manu\\Desktop\\VersionesProyecto\\Proyecto_v2_0_WORKING\\Proyecto_v2_0_WORKING.sdk\\webtalk\\usage_statistics_ext_sdk.html -wdm D:\\Users\\Manu\\Desktop\\VersionesProyecto\\Proyecto_v2_0_WORKING\\Proyecto_v2_0_WORKING.sdk\\webtalk\\sdk_webtalk.wdm -intro "<H3>SDK Usage Report</H3><BR>"
+INFO: [Common 17-186] 'D:\Users\Manu\Desktop\VersionesProyecto\Proyecto_v2_0_WORKING\Proyecto_v2_0_WORKING.sdk\webtalk\usage_statistics_ext_sdk.xml' has been successfully sent to Xilinx on Tue Nov 10 18:36:49 2015. For additional details about this file, please refer to the WebTalk help file at /doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 66.004 ; gain = 0.023
+# webtalk_terminate
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 10 18:36:49 2015...

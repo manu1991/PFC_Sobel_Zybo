@@ -1,0 +1,42 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Oct  9 17:28:32 2014
+| Host         : nb-atraber.localdomain running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_xlconstant_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_xlconstant_0_2 (xilinx.com:ip:xlconstant:1.1) to (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
+| Date         : Thu Oct  9 14:25:16 2014
+| Host         : nb-atraber.localdomain running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_xlconstant_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_xlconstant_0_2 from xilinx.com:ip:xlconstant:1.0 to xilinx.com:ip:xlconstant:1.1
+
+2. Upgrade messages
+-------------------
+
+Renamed port const to dout
+

@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Mar 05 18:53:56 2015
+# Process ID: 4876
+# Log file: D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.runs/synth_1/system_wrapper.vds
+# Journal file: D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7z010clg400-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property webtalk.parent_dir D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.cache/wt [current_project]
+# set_property parent.project_path D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language VHDL [current_project]
+# set_property ip_repo_paths {
+#   D:/Users/Manu/Documents/Proyecto/pruebasVivado/zybo_video_demo/source/pcores/hdmi_rx_v1_00_a
+#   D:/Users/Manu/Documents/Proyecto/zybo_base/zybo_bsd/lib/ADI
+#   D:/Users/Manu/Documents/Proyecto/zybo_base/zybo_bsd/lib/Digilent
+#   D:/Users/Manu/Documents/Proyecto/zybo_base/zybo_bsd/lib/xml
+# } [current_project]
+# add_files D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/system.bd
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Users/Manu/Documents/Proyecto/pruebasVivado/zybo_video_demo/source/pcores/hdmi_rx_v1_00_a'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Users/Manu/Documents/Proyecto/zybo_base/zybo_bsd/lib/ADI'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Users/Manu/Documents/Proyecto/zybo_base/zybo_bsd/lib/Digilent'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Users/Manu/Documents/Proyecto/zybo_base/zybo_bsd/lib/xml'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.4/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 271.648 ; gain = 83.078
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_board.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1_clocks.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_xbar_1/system_xbar_1_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_clocks.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_m00_data_fifo_0/system_m00_data_fifo_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_m00_regslice_0/system_m00_regslice_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_m01_regslice_0/system_m01_regslice_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_m02_regslice_0/system_m02_regslice_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_m03_regslice_0/system_m03_regslice_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_clocks.xdc]
+# set_property used_in_implementation false [get_files -all D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/system_ooc.xdc]
+# set_property is_locked true [get_files D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/system.bd]
+# read_vhdl -library xil_defaultlib D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+# read_xdc D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/constrs_1/imports/Proyecto/ZYBO_Master.xdc
+# set_property used_in_implementation false [get_files D:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/constrs_1/imports/Proyecto/ZYBO_Master.xdc]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# catch { write_hwdef -file system_wrapper.hwdef }
+# synth_design -top system_wrapper -part xc7z010clg400-1
+Command: synth_design -top system_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 327.207 ; gain = 164.352
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:343]
+WARNING: [Synth 8-1565] actual for formal port s1_clkout0 is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:345]
+WARNING: [Synth 8-1565] actual for formal port s1_clkfbout is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:346]
+WARNING: [Synth 8-1565] actual for formal port s1_lock is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:348]
+WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:375]
+WARNING: [Synth 8-1565] actual for formal port s1_clkout0 is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:377]
+WARNING: [Synth 8-1565] actual for formal port s1_clkfbout is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:378]
+WARNING: [Synth 8-1565] actual for formal port s1_lock is neither a static name nor a globally static expression [d:/Users/Manu/Documents/Proyecto/Proyecto_v1_1/Proyecto_v1_1.srcs/sources_1/bd/system/ip/system_axi_dispctrl_0_0/work/hdl/axi_dispctrl_v1_0.vhd:380]

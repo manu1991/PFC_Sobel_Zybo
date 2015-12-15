@@ -1,0 +1,58 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Wed Dec 10 19:05:13 2014
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_mem_intercon_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_mem_intercon_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Oct  9 17:28:11 2014
+| Host         : nb-atraber.localdomain running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_mem_intercon_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_mem_intercon_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
+| Date         : Thu Oct  9 14:25:16 2014
+| Host         : nb-atraber.localdomain running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_mem_intercon_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_mem_intercon_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 1) to (Rev. 3)
+

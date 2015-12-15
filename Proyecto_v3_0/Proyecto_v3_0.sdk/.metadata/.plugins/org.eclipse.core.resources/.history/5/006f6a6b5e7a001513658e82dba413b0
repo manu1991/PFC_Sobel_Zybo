@@ -1,0 +1,298 @@
+/* ------------------------------------------------------------ */
+/*        				Ficheros incluidos						*/
+/* ------------------------------------------------------------ */
+
+#include "display_demo.h"
+#include "xaxivdma.h"
+#include "timer_ps.h"
+#include "xparameters.h"
+#include "xuartps.h"
+#include "funcionesVdma.h"
+#include "xscutimer.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+#include "xsdps.h"
+#include "xsobel.h"
+
+
+/* ------------------------------------------------------------ */
+/*				        Variables Globales						*/
+/* ------------------------------------------------------------ */
+
+/*
+ * Estructuras del driver para el display
+ */
+DisplayCtrl vgaCtrl;
+XAxiVdma VdmaHDMI;
+
+
+//Array de 3 x (1280x720 = 2764800) 1 frame para cada color.
+u32 vgaBuf[DISPLAY_NUM_FRAMES][DISPLAYDEMO_MAX_FRAME];
+u32 hdmiBuf[DISPLAY_NUM_FRAMES][DISPLAYDEMO_MAX_FRAME];
+
+/*
+ * Definiciones
+ */
+#define VGA_BASEADDR XPAR_AXI_DISPCTRL_VGA_S_AXI_BASEADDR //Direccion de inicio del DisplayController para el VGA OUT
+#define VGA_VDMA_ID XPAR_AXI_VDMA_VGA_DEVICE_ID //Identificador del core VDMA VGA
+#define HDMI_VDMA_ID XPAR_AXI_VDMA_HDMI_DEVICE_ID //Identificador del core VDMA HDMI
+#define HLS_VDMA_ID XPAR_AXI_VDMA_HLS_DEVICE_ID //Identificador del core VDMA HLS
+#define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID //Reloj interno
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR //Control de puertos serie
+//#define SW_BASEADDR XPAR_SWS_4BITS_BASEADDR
+#define BTN_BASEADDR XPAR_BTNS_4BITS_BASEADDR //Botones GPIO de 4 bits.
+#define TIMER_LOAD_VALUE	0x64C4B8
+#define PROCESADO_BASEADDR XPAR_XPROCESADO_0_S_AXI_VIDEO_BASEADDR
+#define PROCESADO_ID XPAR_PROCESADO_0_DEVICE_ID
+#define SOBEL_ID XPAR_SOBEL_0_DEVICE_ID
+
+void MainDemoPrintMenu();
+
+/*Variables necesarias para la inicializacion del VDMA HDMI*/
+XAxiVdma_Config *CfgVdmaHdmi;
+XAxiVdma VdmaHdmi;
+XAxiVdma_DmaSetup StpVdmaHdmi;
+
+/*Variables necesarias para la inicializacion del VDMA VGA*/
+XAxiVdma_Config *CfgVdmaVga;
+XAxiVdma VdmaVga;
+XAxiVdma_DmaSetup StpVdmaVga;
+
+/*Variables necesarias para la inicializacion del VDMA HLS*/
+XAxiVdma_Config *CfgVdmaHls;
+XAxiVdma VdmaHls;
+XAxiVdma_DmaSetup StpRead;
+XAxiVdma_DmaSetup StpWrite;
+
+/*SCU Timer*/
+XScuTimer TimerPS7;
+
+/* ------------------------------------------------------------ */
+/*				Definición de procesos							*/
+/* ------------------------------------------------------------ */
+
+
+void MainDemoPrintMenu()
+{
+	xil_printf("\x1B[H"); //Set cursor to top left of terminal
+	xil_printf("\x1B[2J"); //Clear terminal
+	xil_printf("**************************************************\n\r");
+	xil_printf("**************************************************\n\r");
+	xil_printf("*         ZYBO Base System User Demo             *\n\r");
+	xil_printf("**************************************************\n\r");
+	xil_printf("**************************************************\n\r");
+	xil_printf("\n\r");
+	xil_printf("1 - Audio Demo\n\r");
+	xil_printf("2 - VGA output demo\n\r");
+	xil_printf("3 - HDMI output demo\n\r");
+	xil_printf("q - Quit\n\r");
+	xil_printf("\n\r");
+	xil_printf("Select a demo to run:");
+}
+
+int IniciarTimerPS7(XScuTimer *TimerInstancePtr, u16 TimerDeviceId){
+	int Status;
+	int LastTimerExpired = 0;
+	XScuTimer_Config *ConfigPtr;
+	//XScuTimer *TimerInstancePtr = &TimerPS7;
+
+	volatile u32 CntValue1 = 0;
+	volatile u32 CntValue2 = 0;
+	/*
+	 * Initialize the Scu Private Timer so that it is ready to use.
+	 */
+	ConfigPtr = XScuTimer_LookupConfig(TimerDeviceId);
+
+	/*
+	 * This is where the virtual address would be used, this example
+	 * uses physical address.
+	 */
+	Status = XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr,
+				 ConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Se carga el timer con el valor: 0x64C4B8 (TIMER_LOAD_VALUE) ya que
+	 * el timer es decreciente, y lo que hago es que configuro un prescaler de 100
+	 * para que cada evento del timer, ocurra en 1s segun la formula:
+	 *
+	 * tEvento = (Prescaler+1)*(TIMER_LOAD_VALUE+1)/(RelojPS)
+	 * Donde el RelojPS lo tomo como 667MHz (Reloj del procesador de la Zybo)
+	 *
+	 * Despejando:
+	 * Prescaler = (667MHz/TIMER_LOAD_VALUE) - 1.
+	 */
+	XScuTimer_LoadTimer(TimerInstancePtr, TIMER_LOAD_VALUE);
+
+	//Configuro el preescaler:
+	XScuTimer_SetPrescaler(&TimerPS7, 100);
+
+	return XST_SUCCESS;
+}
+
+
+int main(void)
+{
+	//Vacio la cache para que no se muestre lo que hubiera anteriormente.
+	Xil_DCacheDisable();
+
+
+	xil_printf("\x1B[H"); //Coloco el cursor para escritura en la primera posicion arriba izquierda
+	xil_printf("\x1B[2J"); //Limpio el terminal.
+
+	u32 *vgaPtr[DISPLAY_NUM_FRAMES]; //Se crea un puntero array para vga de "DISPLAY_NUM_FRAMES" (3) Posiciones
+	u32 *hdmiPtr[DISPLAY_NUM_FRAMES]; //Se crea un puntero array para hdmi de "DISPLAY_NUM_FRAMES" (3) Posiciones
+
+	int i,j,Status;
+	//char userInput = 0;
+
+	for (i = 0; i < DISPLAY_NUM_FRAMES; i++)
+	{
+		//Se copian las direcciones reservadas para el vgaBuf en vgaPtr y para hdmiBuf en hdmiPtr:
+		vgaPtr[i] = vgaBuf[i];
+		hdmiPtr[i] = hdmiBuf[i];
+	}
+
+	TimerInitialize(SCU_TIMER_ID); //Necesario para que funcione el reloj del Zynq7
+
+	//Ahora, toca configurar el VDMA HLS para que LEA del hdmiPtr (entrada) y ESCRIBA en el vgaPtr (salida)
+	Status = iniciaVdmaHls(HLS_VDMA_ID, CfgVdmaHls, VdmaHls, StpRead, StpWrite, hdmiPtr, vgaPtr, vgaCtrl);
+	if (Status != XST_SUCCESS){
+			xil_printf("No se ha iniciado correctamente el VDMA HLS Error: %d\n\r", Status);
+	}
+
+	//Configuro el VDMA VGA (SALIDA) con el puntero: vgaPtr, por tanto, la lectura, la hace DE ESE puntero.
+	Status = DisplayDemoInitialize(&vgaCtrl, VGA_VDMA_ID, SCU_TIMER_ID, VGA_BASEADDR, DISPLAY_NOT_HDMI, vgaPtr);
+
+	if (Status != XST_SUCCESS){
+		xil_printf("<------Algo no se ha hecho bien------> %d\n\r", Status);
+	}
+
+
+//	Status = iniciaVdmaHdmi(HDMI_VDMA_ID, CfgVdmaHdmi, VdmaHdmi, StpVdmaHdmi, vgaCtrl);
+	//Configuro el VDMA HDMI (ENTRADA) con el puntero: hdmiPtr, por tanto, la escritura, la hace EN ESE puntero.
+	Status = iniciaVdmaHdmi2(HDMI_VDMA_ID, CfgVdmaHdmi, VdmaHdmi, StpVdmaHdmi, hdmiPtr, vgaCtrl);
+	if (Status != XST_SUCCESS){
+		xil_printf("No se ha iniciado correctamente el VDMA HDMI Error: %d\n\r", Status);
+	}
+
+	XSobel *coreSobel;
+	XSobel_Config *coreSobelCfg;
+
+	//Comienzo a configurar el Core HLS "SOBEL":
+//	Status = XSobel_Initialize(&coreSobel, SOBEL_ID);
+//	xil_printf("Iniciado el core SOBEL. Status vale: %x\n\r", Status);
+
+	coreSobelCfg = XSobel_LookupConfig(SOBEL_ID);
+	Status = XSobel_CfgInitialize(&coreSobel, coreSobelCfg);
+	xil_printf("Iniciado el core SOBEL. Status vale: %x\n\r", Status);
+
+	XSobel_SetRows(&coreSobel, 720);
+	xil_printf("Puestas las filas: %d\n\r", XSobel_GetRows(&coreSobel));
+	XSobel_SetCols(&coreSobel, 1280);
+	xil_printf("Puestas las columnas: %d\n\r", XSobel_GetCols(&coreSobel));
+	XSobel_Start(&coreSobel);
+	XSobel_EnableAutoRestart(&coreSobel);
+
+	//Ahora, toca configurar el VDMA HLS para que LEA del hdmiPtr (entrada) y ESCRIBA en el vgaPtr (salida)
+//	Status = iniciaVdmaHls(HLS_VDMA_ID, CfgVdmaHls, VdmaHls, StpRead, StpWrite, hdmiPtr, vgaPtr, vgaCtrl);
+//	if (Status != XST_SUCCESS){
+//			xil_printf("No se ha iniciado correctamente el VDMA HLS Error: %d\n\r", Status);
+//	}
+}
+
+//	int h = 1;
+//	while(1){
+//		if (XSobel_IsReady(&coreSobel) == 1){
+//			xil_printf("Está ready, %d\n\r", h);
+//			h++;
+//		}
+//		else
+//		{
+//			xil_printf("El ready vale: %d\n\r",XSobel_IsReady(&coreSobel));
+//		}
+//	}
+//	for (i=0; i < DISPLAY_NUM_FRAMES; i++){
+//		for (j=0; j < DISPLAYDEMO_MAX_FRAME ; j++){
+//			xil_printf("Valor %d: %x\n\r",j, hdmiPtr[i][j]);
+//		}
+//	}
+
+	/*Comienzo a configurar el core HLS "procesado" creado para el procesadmiento del video. Para ello, se utilizan
+	 * las funciones del driver que genera el propio Vivado HLS a través del código C que se ha escrito*/
+//	XProcesado *coreProcesado;
+//	XProcesado_Config* coreProcesadoConfig;
+//
+//	xil_printf("ANTES de initialize\n\r");
+//	Status = XProcesado_Initialize(&coreProcesado, PROCESADO_ID);
+//	xil_printf("Status: %d\n\r", Status);
+//	xil_printf("ANTES de LookupConfig\n\r");
+//	coreProcesadoConfig = XProcesado_LookupConfig(PROCESADO_ID);
+//	xil_printf("ANTES de CfgInitialize\n\r");
+//	Status =  XProcesado_CfgInitialize(&coreProcesado, coreProcesadoConfig);
+//	xil_printf("Status: %d\n\r", Status);
+
+	/*Una vez configurado, hago un bucle for para obtener los datos 1 a 1 de la dirección de memoria*/
+//	while(1){
+//		for (i=0; i < DISPLAY_NUM_FRAMES; i++){
+//			for (j=0; j < DISPLAYDEMO_MAX_FRAME ; j++){
+//				//El valor actual es *(hdmiPtr[i]+j). Se escribe como entrada de la función
+//				xil_printf("Voy a hacer SET_ENTRADA\n\r");
+//				XProcesado_Set_entrada(&coreProcesado,*(hdmiPtr[i]+j));
+//				xil_printf("Valor del vgaPtr: %x", *(vgaPtr[i]+j));
+//				XProcesado_Set_salida(&coreProcesado,*(vgaPtr[i]+j));
+//				*(vgaPtr[i]+j) = XProcesado_Get_salida(&coreProcesado);
+//				xil_printf("Valor leido del hdmi: %x\n\r", *(hdmiPtr[i]+j));
+//				xil_printf("Valor devuelto del core: %x\n\r", XProcesado_Get_salida(&coreProcesado));
+//				//Ahora, se obtiene el dato de salida de la función, y se escribe en la VGA
+//				//*(vgaPtr[i]+j) =
+//			}
+//		}
+//
+//
+//
+//
+//	xil_printf("<------Acabado------>, status: %d \n\r", Status);
+//	}
+//	while(1){
+//		for (i=0; i < DISPLAY_NUM_FRAMES; i++){
+//			for (j=0; j < DISPLAYDEMO_MAX_FRAME ; j++){
+////				xil_printf("vgaPtr %d ANTES: %x\n\r", i, *vgaPtr[i]);
+////				xil_printf("hdmiPtr %d ANTES: %x\n\r", i, *hdmiPtr[i]);
+////				*(vgaPtr[i]+j) = (*(hdmiPtr[i]+j) <<= 1) &((1>>4) -1);
+////				*(vgaPtr[i]+j) = (*(hdmiPtr[i]+j) >>= 16)&((1>>8) -1);
+////				*(vgaPtr[i]+j) = (*(hdmiPtr[i]+j) <<= 16)&((1>>8) -1);
+////				*(vgaPtr[i]+j) = (*(hdmiPtr[i]+j) >>= 16);
+//				*(vgaPtr[i]+j) = *(hdmiPtr[i]+j);
+////				xil_printf("Valor actual HDMI: %x\n\r", *(hdmiPtr[i]+j));
+////				xil_printf("Valor actual HDMI movido: %x\n\r", (*(hdmiPtr[i]+j) >>= 16)&((1>>8) -1));
+////				xil_printf("vgaPtr %d DESPUES: %x\n\r", i, *vgaPtr[i]);
+////				xil_printf("hdmiPtr %d DESPUES: %x\n\r", i, *hdmiPtr[i]);
+//			}
+//		}
+//	}
+
+//	while(1){
+//		//for (i=0; i<DISPLAY_NUM_FRAMES*DISPLAYDEMO_MAX_FRAME; i++)
+//		//{
+//		//
+//		//}
+//
+//		for(i = 0; i < DISPLAY_NUM_FRAMES; ++ i)
+//		{
+//		  memcpy(&(vgaPtr[i][0]), &(hdmiPtr[i][0]), DISPLAYDEMO_MAX_FRAME * sizeof(u32));
+//		}
+//
+//	}
+
+//	while(1){
+////		memcpy(&(vgaPtr[0][0]), &(hdmiPtr[0][0]), DISPLAYDEMO_MAX_FRAME * sizeof(u32));
+////		memcpy(&(vgaPtr[0][1]), &(hdmiPtr[0][1]), DISPLAYDEMO_MAX_FRAME * sizeof(u32));
+//		memcpy(&(vgaPtr[0][2]), &(hdmiPtr[0][2]), DISPLAYDEMO_MAX_FRAME * sizeof(u32));
+//	}
+
+//	xil_printf("<------Acabado------>, status: %d \n\r", Status);
+//}

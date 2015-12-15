@@ -1,0 +1,121 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sun Nov 22 13:22:27 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_sobel_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_sobel_0_2 (xilinx.com:hls:sobel:1.0) from (Rev. 1511221138) to (Rev. 1511221314)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sun Nov 22 11:45:58 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_sobel_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_sobel_0_2 (xilinx.com:hls:sobel:1.0) from (Rev. 1511141058) to (Rev. 1511221138)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sat Nov 14 11:40:51 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_sobel_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_sobel_0_2 (xilinx.com:hls:sobel:1.0) from (Rev. 1510272059) to (Rev. 1511141058)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Oct 27 21:14:38 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_sobel_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_sobel_0_2 (xilinx.com:hls:sobel:1.0) from (Rev. 1510241259) to (Rev. 1510272059)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Oct 27 19:46:16 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_sobel_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_sobel_0_2 (xilinx.com:hls:sobel:1.0) from (Rev. 1510202016) to (Rev. 1510241259)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Oct 20 20:23:34 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_sobel_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_sobel_0_2 (xilinx.com:hls:sobel:1.0) from (Rev. 1510151943) to (Rev. 1510202016)
+

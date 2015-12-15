@@ -1,0 +1,153 @@
+18:36:05 **** Auto Build of configuration Debug for project Proyecto_1 ****
+make all 
+'Building file: ../src/display_ctrl.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl.d" -MT"src/display_ctrl.d" -o "src/display_ctrl.o" "../src/display_ctrl.c"
+../src/display_ctrl.c: In function 'DisplayStart':
+../src/display_ctrl.c:169:46: warning: assignment makes integer from pointer without a cast [enabled by default]
+   dispPtr->vdmaConfig.FrameStoreStartAddr[i] = dispPtr->framePtr[i];
+                                              ^
+../src/display_ctrl.c: In function 'DisplayStart2':
+../src/display_ctrl.c:265:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^
+../src/display_ctrl.c: In function 'DisplayReadInitialize2':
+../src/display_ctrl.c:441:19: warning: unused variable 'Config' [-Wunused-variable]
+  XAxiVdma_Config *Config;
+                   ^
+../src/display_ctrl.c:439:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^
+'Finished building: ../src/display_ctrl.c'
+' '
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+../src/display_demo.c: In function 'DisplayDemoInitialize':
+../src/display_demo.c:50:2: warning: implicit declaration of function 'DisplayReadInitialize' [-Wimplicit-function-declaration]
+  Status = DisplayReadInitialize(dispPtr, vdmaId, dispCtrlAddr, fHdmi, framePtr, DISPLAYDEMO_STRIDE);
+  ^
+../src/display_demo.c: In function 'DisplayDemoInitialize2':
+../src/display_demo.c:107:2: warning: implicit declaration of function 'DisplayReadInitialize2' [-Wimplicit-function-declaration]
+  Status = DisplayReadInitialize2(dispPtr, vdmaId, dispCtrlAddr, fHdmi, framePtr, DISPLAYDEMO_STRIDE);
+  ^
+../src/display_demo.c:114:2: warning: implicit declaration of function 'DisplayStart2' [-Wimplicit-function-declaration]
+  Status = DisplayStart2(dispPtr);
+  ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'IniciarTimerPS7':
+../src/main.c:101:15: warning: unused variable 'CntValue2' [-Wunused-variable]
+  volatile u32 CntValue2 = 0;
+               ^
+../src/main.c:100:15: warning: unused variable 'CntValue1' [-Wunused-variable]
+  volatile u32 CntValue1 = 0;
+               ^
+../src/main.c:96:6: warning: unused variable 'LastTimerExpired' [-Wunused-variable]
+  int LastTimerExpired = 0;
+      ^
+../src/main.c: In function 'main':
+../src/main.c:140:2: warning: implicit declaration of function 'Xil_DCacheDisable' [-Wimplicit-function-declaration]
+  Xil_DCacheDisable();
+  ^
+../src/main.c:165:2: warning: passing argument 1 of 'XSobel_Initialize' from incompatible pointer type [enabled by default]
+  Status = XSobel_Initialize(&coreSobel, SOBEL_ID);
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:75:5: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ int XSobel_Initialize(XSobel *InstancePtr, u16 DeviceId);
+     ^
+../src/main.c:169:2: warning: passing argument 1 of 'XSobel_CfgInitialize' from incompatible pointer type [enabled by default]
+  Status = XSobel_CfgInitialize(&coreSobel, coreSobelCfg);
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:77:5: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ int XSobel_CfgInitialize(XSobel *InstancePtr, XSobel_Config *ConfigPtr);
+     ^
+../src/main.c:172:2: warning: passing argument 1 of 'XSobel_SetRows' from incompatible pointer type [enabled by default]
+  XSobel_SetRows(&coreSobel, 720);
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:90:6: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ void XSobel_SetRows(XSobel *InstancePtr, u32 Data);
+      ^
+../src/main.c:173:2: warning: passing argument 1 of 'XSobel_GetRows' from incompatible pointer type [enabled by default]
+  xil_printf("Puestas las filas: %d\n\r", XSobel_GetRows(&coreSobel));
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:91:5: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ u32 XSobel_GetRows(XSobel *InstancePtr);
+     ^
+../src/main.c:174:2: warning: passing argument 1 of 'XSobel_SetCols' from incompatible pointer type [enabled by default]
+  XSobel_SetCols(&coreSobel, 1280);
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:92:6: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ void XSobel_SetCols(XSobel *InstancePtr, u32 Data);
+      ^
+../src/main.c:175:2: warning: passing argument 1 of 'XSobel_GetCols' from incompatible pointer type [enabled by default]
+  xil_printf("Puestas las columnas: %d\n\r", XSobel_GetCols(&coreSobel));
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:93:5: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ u32 XSobel_GetCols(XSobel *InstancePtr);
+     ^
+../src/main.c:176:2: warning: passing argument 1 of 'XSobel_Start' from incompatible pointer type [enabled by default]
+  XSobel_Start(&coreSobel);
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:83:6: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ void XSobel_Start(XSobel *InstancePtr);
+      ^
+../src/main.c:177:2: warning: passing argument 1 of 'XSobel_EnableAutoRestart' from incompatible pointer type [enabled by default]
+  XSobel_EnableAutoRestart(&coreSobel);
+  ^
+In file included from ../src/main.c:16:0:
+../../standalone_bsp_1/ps7_cortexa9_0/include/xsobel.h:87:6: note: expected 'struct XSobel *' but argument is of type 'struct XSobel **'
+ void XSobel_EnableAutoRestart(XSobel *InstancePtr);
+      ^
+../src/main.c:149:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j,Status;
+        ^
+In file included from ../src/main.c:10:0:
+../src/funcionesVdma.h: In function 'iniciaVdmaHdmi':
+../src/funcionesVdma.h:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/funcionesVdma.h: In function 'iniciaVdmaHdmi2':
+../src/funcionesVdma.h:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'main':
+../src/main.c:206:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/timer_ps.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps.d" -MT"src/timer_ps.d" -o "src/timer_ps.o" "../src/timer_ps.c"
+'Finished building: ../src/timer_ps.c'
+' '
+'Building target: Proyecto_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/ps7_cortexa9_0/lib -o "Proyecto_1.elf"  ./src/display_ctrl.o ./src/display_demo.o ./src/main.o ./src/platform.o ./src/timer_ps.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Proyecto_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Proyecto_1.elf  |tee "Proyecto_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94776	   2704	22154144	22251624	1538868	Proyecto_1.elf
+'Finished building: Proyecto_1.elf.size'
+' '
+
+18:36:12 Build Finished (took 6s.891ms)
+

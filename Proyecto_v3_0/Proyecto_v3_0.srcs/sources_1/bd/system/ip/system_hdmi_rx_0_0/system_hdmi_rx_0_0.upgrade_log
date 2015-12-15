@@ -1,0 +1,816 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sun Oct 18 17:12:41 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 28) to (Rev. 31)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sat Oct 17 13:48:44 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 27) to (Rev. 28)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sat Apr 18 12:19:10 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 25) to (Rev. 27)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 26 21:46:58 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 24) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 10 17:09:46 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'LED_2'
+-upgrade has added port 'LED'
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 10 17:01:09 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 22) to (Rev. 23)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'LED'
+-upgrade has added port 'LED_2'
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Fri Mar 06 16:43:53 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Fri Mar 06 16:23:25 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Fri Mar 06 16:03:29 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 18:57:53 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 18:52:33 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 18:47:30 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 18:35:36 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 18) to (Rev. 16)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'HDMI_SDA_I'
+-upgrade has removed port 'HDMI_SDA_O'
+-upgrade has removed port 'HDMI_SDA_T'
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 17:26:35 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 17) to (Rev. 18)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_T' inout differs from original direction out
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 17:07:55 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 17:02:00 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 15) to (Rev. 16)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_I' in differs from original direction inout
+-upgraded port 'HDMI_SDA_O' out differs from original direction inout
+-upgraded port 'HDMI_SDA_T' out differs from original direction inout
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Wed Mar 04 18:32:58 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Wed Mar 04 18:26:35 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Wed Mar 04 18:21:37 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Wed Mar 04 18:15:47 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Wed Mar 04 17:53:30 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 20:17:00 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 9) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_I' inout differs from original direction in
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 19:53:51 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_O' inout differs from original direction out
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 19:25:15 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 7) to (Rev. 8)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_I' in differs from original direction inout
+-upgraded port 'HDMI_SDA_O' out differs from original direction inout
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 19:03:44 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 6) to (Rev. 7)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_I' inout differs from original direction in
+-upgraded port 'HDMI_SDA_O' inout differs from original direction out
+-upgraded port 'HDMI_SDA_T' inout differs from original direction out
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 18:58:51 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_I' in differs from original direction inout
+-upgrade has added port 'HDMI_SDA'
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 18:26:42 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'HDMI_SDA'
+-upgrade has added port 'HDMI_SDA_I'
+-upgrade has added port 'HDMI_SDA_O'
+-upgrade has added port 'HDMI_SDA_T'
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 18:20:19 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'HDMI_SDA_I'
+-upgrade has removed port 'HDMI_SDA_O'
+-upgrade has removed port 'HDMI_SDA_T'
+-upgrade has added port 'HDMI_SDA'
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 17:20:38 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_I' in differs from original direction inout
+-upgraded port 'HDMI_SDA_O' out differs from original direction inout
+-upgraded port 'HDMI_SDA_T' out differs from original direction inout
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Mar 03 17:00:33 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SDA_I' inout differs from original direction in
+-upgraded port 'HDMI_SDA_O' inout differs from original direction out
+-upgraded port 'HDMI_SDA_T' inout differs from original direction out
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Tue Jan 27 18:41:26 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hdmi_rx_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hdmi_rx_0_0 (xilinx.com:ip:hdmi_rx:1.0) from (Rev. 3) to (Rev. 1)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hdmi_rx_0_0'. These changes may impact your design.
+
+
+-upgraded port 'HDMI_SCL' in differs from original direction inout
+
