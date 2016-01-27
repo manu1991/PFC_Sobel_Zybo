@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [SYN-103] Legalizing function name 'sobel_Block__proc' to 'sobel_Block_proc'." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:11.598+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_0_val_1' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:11.488+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_0_val_2' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:10.330+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_0_val_0' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:10.289+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_1_val_1' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:10.183+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_1_val_2' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:10.139+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_1_val_0' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:09.997+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_2_val_1' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:09.953+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_2_val_2' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:09.923+0100" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf_2_val_0' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:379)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:09.858+0100" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::borderInterpolate' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgbase.h:113) into borderInterpolate." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:09.838+0100" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::Mat2AXIvideo&lt;32, 720, 1280, 32>' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_io.h:72:47) into Mat2AXIvideo." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:07.983+0100" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::Sobel&lt;1, 0, 3, 32, 32, 720, 1280, 720, 1280>' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:1632:1) into Sobel." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:07.956+0100" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::AXIvideo2Mat&lt;32, 720, 1280, 32>' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_io.h:49:46) into AXIvideo2Mat." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:07.921+0100" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::Filter2D&lt;hls::BORDER_DEFAULT, 32, 32, ap_int&lt;8>, int, 720, 1280, 3, 3>' (C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_video_imgproc.h:225:54) into Filter2D." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:07.889+0100" type="Warning"/>
+        <logs message="@W [XFORM-561] Updating loop lower bound from 5 to 13 for loop 'loop_height' in function 'hls::Filter2D&lt;hls::BORDER_DEFAULT, 32, 32, ap_int&lt;8>, int, 720, 1280, 3, 3>'." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:04.193+0100" type="Warning"/>
+        <logs message="@W [XFORM-561] Updating loop upper bound from 4100 to 725 for loop 'loop_height' in function 'hls::Filter2D&lt;hls::BORDER_DEFAULT, 32, 32, ap_int&lt;8>, int, 720, 1280, 3, 3>'." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:03.709+0100" type="Warning"/>
+        <logs message="@W [XFORM-561] Updating loop upper bound from 4097 to 1282 for loop 'loop_width' in function 'hls::Filter2D&lt;hls::BORDER_DEFAULT, 32, 32, ap_int&lt;8>, int, 720, 1280, 3, 3>'." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:02.834+0100" type="Warning"/>
+        <logs message="@W [XFORM-1103] Ignored data pack directive on non-struct variable 'img_0.data_stream.V' (sobel.cpp:20)." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:52:00.218+0100" type="Warning"/>
+        <logs message="@W [SYNCHK-23] C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls/hls_axi_io.h:49: variable-indexed range selection may cause suboptimal QoR." projectName="sobel.prj" solutionName="solution1" date="2015-11-14T10:51:58.700+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

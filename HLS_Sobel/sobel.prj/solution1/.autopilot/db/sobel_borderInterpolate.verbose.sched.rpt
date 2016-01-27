@@ -1,0 +1,244 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_borderInterpolate'
+================================================================
+* Date:           Sat Nov 14 10:52:13 2015
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        sobel.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   8.00|      6.86|        1.00|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|Expression       |        -|      -|      -|      -|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|      -|
+|Register         |        -|      -|      -|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|      0|      0|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|      0|      0|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 6.86ns
+ST_1: len_read [1/1] 1.48ns
+_ifconv:0  %len_read = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %len)
+
+ST_1: p_read [1/1] 1.48ns
+_ifconv:1  %p_read = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %p)
+
+ST_1: p_cast1 [1/1] 0.00ns
+_ifconv:2  %p_cast1 = sext i12 %p_read to i13
+
+ST_1: tmp [1/1] 0.00ns
+_ifconv:3  %tmp = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %p_read, i32 11)
+
+ST_1: rev [1/1] 1.37ns
+_ifconv:4  %rev = xor i1 %tmp, true
+
+ST_1: len_cast4_cast [1/1] 0.00ns
+_ifconv:5  %len_cast4_cast = zext i12 %len_read to i13
+
+ST_1: tmp_s [1/1] 2.14ns
+_ifconv:6  %tmp_s = icmp slt i13 %p_cast1, %len_cast4_cast
+
+ST_1: or_cond_58 [1/1] 1.37ns
+_ifconv:7  %or_cond_58 = and i1 %tmp_s, %rev
+
+ST_1: tmp_1 [1/1] 2.14ns
+_ifconv:9  %tmp_1 = icmp eq i12 %len_read, 1
+
+ST_1: tmp_63 [1/1] 0.00ns
+_ifconv:10  %tmp_63 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %p_read, i32 11)
+
+ST_1: p_assign [1/1] 1.84ns
+_ifconv:11  %p_assign = sub i13 0, %p_cast1
+
+ST_1: p_p2 [1/1] 1.37ns
+_ifconv:12  %p_p2 = select i1 %tmp_63, i13 %p_assign, i13 %p_cast1
+
+ST_1: tmp_3 [1/1] 2.18ns
+_ifconv:14  %tmp_3 = icmp ult i13 %p_p2, %len_cast4_cast
+
+ST_1: tmp_not [1/1] 1.37ns
+_ifconv:19  %tmp_not = xor i1 %tmp_s, true
+
+ST_1: sel_tmp1 [1/1] 1.37ns
+_ifconv:20  %sel_tmp1 = or i1 %tmp, %tmp_not
+
+
+ <State 2>: 6.85ns
+ST_2: p_cast_cast [1/1] 0.00ns
+_ifconv:8  %p_cast_cast = sext i12 %p_read to i14
+
+ST_2: p_p2_cast_cast [1/1] 0.00ns
+_ifconv:13  %p_p2_cast_cast = zext i13 %p_p2 to i14
+
+ST_2: tmp_4 [1/1] 0.00ns
+_ifconv:15  %tmp_4 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %len_read, i1 false)
+
+ST_2: tmp_4_cast_cast [1/1] 0.00ns
+_ifconv:16  %tmp_4_cast_cast = zext i13 %tmp_4 to i14
+
+ST_2: tmp_5 [1/1] 1.96ns
+_ifconv:17  %tmp_5 = add i14 %tmp_4_cast_cast, -2
+
+ST_2: p_assign_1 [1/1] 1.96ns
+_ifconv:18  %p_assign_1 = sub i14 %tmp_5, %p_p2_cast_cast
+
+ST_2: sel_tmp2 [1/1] 1.37ns
+_ifconv:21  %sel_tmp2 = and i1 %tmp_1, %sel_tmp1
+
+ST_2: sel_tmp6_demorgan [1/1] 1.37ns
+_ifconv:22  %sel_tmp6_demorgan = or i1 %or_cond_58, %tmp_1
+
+ST_2: sel_tmp6 [1/1] 1.37ns
+_ifconv:23  %sel_tmp6 = xor i1 %sel_tmp6_demorgan, true
+
+ST_2: sel_tmp7 [1/1] 1.37ns
+_ifconv:24  %sel_tmp7 = and i1 %tmp_3, %sel_tmp6
+
+ST_2: newSel [1/1] 1.37ns
+_ifconv:25  %newSel = select i1 %sel_tmp7, i13 %p_p2, i13 0
+
+ST_2: newSel_cast [1/1] 0.00ns
+_ifconv:26  %newSel_cast = zext i13 %newSel to i14
+
+ST_2: or_cond [1/1] 1.37ns
+_ifconv:27  %or_cond = or i1 %sel_tmp7, %sel_tmp2
+
+ST_2: newSel9 [1/1] 1.37ns
+_ifconv:28  %newSel9 = select i1 %or_cond_58, i14 %p_cast_cast, i14 %p_assign_1
+
+ST_2: p_assign_2 [1/1] 1.37ns
+_ifconv:29  %p_assign_2 = select i1 %or_cond, i14 %newSel_cast, i14 %newSel9
+
+ST_2: stg_33 [1/1] 0.00ns
+_ifconv:30  ret i14 %p_assign_2
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

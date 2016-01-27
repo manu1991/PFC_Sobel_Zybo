@@ -1,0 +1,2388 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_Filter2D'
+================================================================
+* Date:           Sat Nov 14 10:52:16 2015
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        sobel.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   8.00|      6.86|        1.00|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+--------+-----+--------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    | min |   max  | min |   max  |   Type  |
+    +-----+--------+-----+--------+---------+
+    |  153|  935985|  153|  935985|   none  |
+    +-----+--------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+-----+--------+-----------+-----------+-----------+----------+----------+
+        |               |    Latency   | Iteration |  Initiation Interval  |   Trip   |          |
+        |   Loop Name   | min |   max  |  Latency  |  achieved |   target  |   Count  | Pipelined|
+        +---------------+-----+--------+-----------+-----------+-----------+----------+----------+
+        |- Loop 1       |    2|       2|          1|          -|          -|         3|    no    |
+        |- Loop 2       |    2|       2|          1|          -|          -|         3|    no    |
+        |- Loop 3       |    2|       2|          1|          -|          -|         3|    no    |
+        |- loop_height  |  143|  935975| 11 ~ 1291 |          -|          -| 13 ~ 725 |    no    |
+        | + loop_width  |    8|    1288|          8|          1|          1| 2 ~ 1282 |    yes   |
+        +---------------+-----+--------+-----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|Expression       |        -|      -|      -|      -|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|      -|
+|Register         |        -|      -|      -|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|      0|      0|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|      0|      0|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 14
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 8, States = { 6 7 8 9 10 11 12 13 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!tmp_9)
+	3  / (tmp_9)
+3 --> 
+	3  / (!tmp_2)
+	4  / (tmp_2)
+4 --> 
+	4  / (!tmp_5)
+	5  / (tmp_5)
+5 --> 
+	6  / (tmp_13)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	14  / (!tmp_19)
+	11  / (tmp_19)
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	6  / true
+14 --> 
+	5  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: stg_15 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:0  call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_2_V, [8 x i8]* @str98, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str99, [1 x i8]* @str99, [8 x i8]* @str98)
+
+ST_1: stg_16 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:1  call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_1_V, [8 x i8]* @str94, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str95, [1 x i8]* @str95, [8 x i8]* @str94)
+
+ST_1: stg_17 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:2  call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_0_V, [8 x i8]* @str90, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str91, [1 x i8]* @str91, [8 x i8]* @str90)
+
+ST_1: stg_18 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:3  call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_2_V, [8 x i8]* @str86, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str87, [1 x i8]* @str87, [8 x i8]* @str86)
+
+ST_1: stg_19 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:4  call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_1_V, [8 x i8]* @str82, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str83, [1 x i8]* @str83, [8 x i8]* @str82)
+
+ST_1: stg_20 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:5  call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_0_V, [8 x i8]* @str78, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str79, [1 x i8]* @str79, [8 x i8]* @str78)
+
+ST_1: p_src_cols_V_read_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:6  %p_src_cols_V_read_1 = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %p_src_cols_V_read)
+
+ST_1: p_src_rows_V_read_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:7  %p_src_rows_V_read_1 = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %p_src_rows_V_read)
+
+ST_1: k_buf_0_val_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:8  %k_buf_0_val_0 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_0_val_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:9  %k_buf_0_val_1 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_0_val_2 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:10  %k_buf_0_val_2 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_1_val_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:11  %k_buf_1_val_0 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_1_val_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:12  %k_buf_1_val_1 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_1_val_2 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:13  %k_buf_1_val_2 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_2_val_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:14  %k_buf_2_val_0 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_2_val_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:15  %k_buf_2_val_1 = alloca [1280 x i8], align 1
+
+ST_1: k_buf_2_val_2 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:16  %k_buf_2_val_2 = alloca [1280 x i8], align 1
+
+ST_1: right_border_buf_0_val_0_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:17  %right_border_buf_0_val_0_0 = alloca i8, align 1
+
+ST_1: right_border_buf_0_val_0_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:18  %right_border_buf_0_val_0_1 = alloca i8, align 1
+
+ST_1: right_border_buf_0_val_0_2 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:19  %right_border_buf_0_val_0_2 = alloca i8, align 1
+
+ST_1: right_border_buf_1_val_0_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:20  %right_border_buf_1_val_0_0 = alloca i8, align 1
+
+ST_1: right_border_buf_1_val_0_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:21  %right_border_buf_1_val_0_1 = alloca i8, align 1
+
+ST_1: right_border_buf_1_val_0_2 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:22  %right_border_buf_1_val_0_2 = alloca i8, align 1
+
+ST_1: right_border_buf_2_val_0_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:23  %right_border_buf_2_val_0_0 = alloca i8, align 1
+
+ST_1: right_border_buf_2_val_0_1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:24  %right_border_buf_2_val_0_1 = alloca i8, align 1
+
+ST_1: right_border_buf_2_val_0_2 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:25  %right_border_buf_2_val_0_2 = alloca i8, align 1
+
+ST_1: col_buf_0_val_0_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:26  %col_buf_0_val_0_0 = alloca i8, align 1
+
+ST_1: col_buf_1_val_0_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:27  %col_buf_1_val_0_0 = alloca i8, align 1
+
+ST_1: col_buf_2_val_0_0 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:28  %col_buf_2_val_0_0 = alloca i8, align 1
+
+ST_1: tmp [1/1] 0.00ns
+arrayctor.loop1.i.preheader:29  %tmp = trunc i12 %p_src_rows_V_read_1 to i10
+
+ST_1: tmp_6 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:30  %tmp_6 = trunc i12 %p_src_cols_V_read_1 to i11
+
+ST_1: cols_cast1 [1/1] 0.00ns
+arrayctor.loop1.i.preheader:31  %cols_cast1 = zext i12 %p_src_cols_V_read_1 to i13
+
+ST_1: stg_47 [1/1] 1.57ns
+arrayctor.loop1.i.preheader:32  br label %arrayctor.loop1.i
+
+
+ <State 2>: 2.93ns
+ST_2: tmp_7 [1/1] 0.00ns
+arrayctor.loop1.i:0  %tmp_7 = phi i2 [ %tmp_8, %arrayctor.loop1.i214215 ], [ 0, %arrayctor.loop1.i.preheader ]
+
+ST_2: tmp_8 [1/1] 0.80ns
+arrayctor.loop1.i:1  %tmp_8 = add i2 %tmp_7, 1
+
+ST_2: rbegin_i_i [1/1] 0.00ns
+arrayctor.loop1.i:2  %rbegin_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([61 x i8]* @p_str1) nounwind
+
+ST_2: stg_51 [1/1] 1.62ns
+arrayctor.loop1.i:3  switch i2 %tmp_7, label %branch2 [
+    i2 0, label %branch0
+    i2 1, label %branch1
+  ]
+
+ST_2: stg_52 [1/1] 0.00ns
+branch1:0  br label %arrayctor.loop1.i214
+
+ST_2: stg_53 [1/1] 0.00ns
+branch0:0  br label %arrayctor.loop1.i214
+
+ST_2: stg_54 [1/1] 0.00ns
+branch2:0  br label %arrayctor.loop1.i214
+
+ST_2: stg_55 [1/1] 1.62ns
+arrayctor.loop1.i214:0  switch i2 %tmp_7, label %branch5 [
+    i2 0, label %branch3
+    i2 1, label %branch4
+  ]
+
+ST_2: stg_56 [1/1] 0.00ns
+branch4:0  br label %arrayctor.loop1.i214215
+
+ST_2: stg_57 [1/1] 0.00ns
+branch3:0  br label %arrayctor.loop1.i214215
+
+ST_2: stg_58 [1/1] 0.00ns
+branch5:0  br label %arrayctor.loop1.i214215
+
+ST_2: rend_i_i [1/1] 0.00ns
+arrayctor.loop1.i214215:0  %rend_i_i = call i32 (...)* @_ssdm_op_SpecRegionEnd([61 x i8]* @p_str1, i32 %rbegin_i_i) nounwind
+
+ST_2: tmp_9 [1/1] 1.36ns
+arrayctor.loop1.i214215:1  %tmp_9 = icmp eq i2 %tmp_7, -2
+
+ST_2: stg_61 [1/1] 0.00ns
+arrayctor.loop1.i214215:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+
+ST_2: stg_62 [1/1] 1.57ns
+arrayctor.loop1.i214215:3  br i1 %tmp_9, label %arrayctor.loop2.i, label %arrayctor.loop1.i
+
+
+ <State 3>: 2.93ns
+ST_3: tmp_s [1/1] 0.00ns
+arrayctor.loop2.i:0  %tmp_s = phi i2 [ %tmp_1, %arrayctor.loop2.i291292 ], [ 0, %arrayctor.loop1.i214215 ]
+
+ST_3: tmp_1 [1/1] 0.80ns
+arrayctor.loop2.i:1  %tmp_1 = add i2 %tmp_s, 1
+
+ST_3: rbegin_i251_i [1/1] 0.00ns
+arrayctor.loop2.i:2  %rbegin_i251_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([58 x i8]* @p_str2) nounwind
+
+ST_3: stg_66 [1/1] 1.62ns
+arrayctor.loop2.i:3  switch i2 %tmp_s, label %branch8 [
+    i2 0, label %branch6
+    i2 1, label %branch7
+  ]
+
+ST_3: stg_67 [1/1] 0.00ns
+branch7:0  br label %arrayctor.loop2.i291
+
+ST_3: stg_68 [1/1] 0.00ns
+branch6:0  br label %arrayctor.loop2.i291
+
+ST_3: stg_69 [1/1] 0.00ns
+branch8:0  br label %arrayctor.loop2.i291
+
+ST_3: stg_70 [1/1] 1.62ns
+arrayctor.loop2.i291:0  switch i2 %tmp_s, label %branch11 [
+    i2 0, label %branch9
+    i2 1, label %branch10
+  ]
+
+ST_3: stg_71 [1/1] 0.00ns
+branch10:0  br label %arrayctor.loop2.i291292
+
+ST_3: stg_72 [1/1] 0.00ns
+branch9:0  br label %arrayctor.loop2.i291292
+
+ST_3: stg_73 [1/1] 0.00ns
+branch11:0  br label %arrayctor.loop2.i291292
+
+ST_3: rend_i252_i [1/1] 0.00ns
+arrayctor.loop2.i291292:0  %rend_i252_i = call i32 (...)* @_ssdm_op_SpecRegionEnd([58 x i8]* @p_str2, i32 %rbegin_i251_i) nounwind
+
+ST_3: tmp_2 [1/1] 1.36ns
+arrayctor.loop2.i291292:1  %tmp_2 = icmp eq i2 %tmp_s, -2
+
+ST_3: stg_76 [1/1] 0.00ns
+arrayctor.loop2.i291292:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+
+ST_3: stg_77 [1/1] 1.57ns
+arrayctor.loop2.i291292:3  br i1 %tmp_2, label %arrayctor.loop3.i, label %arrayctor.loop2.i
+
+
+ <State 4>: 1.84ns
+ST_4: tmp_3 [1/1] 0.00ns
+arrayctor.loop3.i:0  %tmp_3 = phi i2 [ %tmp_4, %arrayctor.loop3.i368369 ], [ 0, %arrayctor.loop2.i291292 ]
+
+ST_4: tmp_4 [1/1] 0.80ns
+arrayctor.loop3.i:1  %tmp_4 = add i2 %tmp_3, 1
+
+ST_4: rbegin_i253_i [1/1] 0.00ns
+arrayctor.loop3.i:2  %rbegin_i253_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([58 x i8]* @p_str4) nounwind
+
+ST_4: stg_81 [1/1] 1.62ns
+arrayctor.loop3.i:3  switch i2 %tmp_3, label %branch14 [
+    i2 0, label %branch12
+    i2 1, label %branch13
+  ]
+
+ST_4: stg_82 [1/1] 0.00ns
+branch13:0  br label %arrayctor.loop3.i368
+
+ST_4: stg_83 [1/1] 0.00ns
+branch12:0  br label %arrayctor.loop3.i368
+
+ST_4: stg_84 [1/1] 0.00ns
+branch14:0  br label %arrayctor.loop3.i368
+
+ST_4: stg_85 [1/1] 1.62ns
+arrayctor.loop3.i368:0  switch i2 %tmp_3, label %branch17 [
+    i2 0, label %branch15
+    i2 1, label %branch16
+  ]
+
+ST_4: stg_86 [1/1] 0.00ns
+branch16:0  br label %arrayctor.loop3.i368369
+
+ST_4: stg_87 [1/1] 0.00ns
+branch15:0  br label %arrayctor.loop3.i368369
+
+ST_4: stg_88 [1/1] 0.00ns
+branch17:0  br label %arrayctor.loop3.i368369
+
+ST_4: rend_i254_i [1/1] 0.00ns
+arrayctor.loop3.i368369:0  %rend_i254_i = call i32 (...)* @_ssdm_op_SpecRegionEnd([58 x i8]* @p_str4, i32 %rbegin_i253_i) nounwind
+
+ST_4: tmp_5 [1/1] 1.36ns
+arrayctor.loop3.i368369:1  %tmp_5 = icmp eq i2 %tmp_3, -2
+
+ST_4: stg_91 [1/1] 0.00ns
+arrayctor.loop3.i368369:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+
+ST_4: stg_92 [1/1] 0.00ns
+arrayctor.loop3.i368369:3  br i1 %tmp_5, label %._crit_edge.i, label %arrayctor.loop3.i
+
+ST_4: src_kernel_win_0_val_0_1 [1/1] 0.00ns
+._crit_edge.i:0  %src_kernel_win_0_val_0_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_0_val_0_2 [1/1] 0.00ns
+._crit_edge.i:1  %src_kernel_win_0_val_0_2 = alloca i8, align 1
+
+ST_4: col_buf_2_val_0_0_3 [1/1] 0.00ns
+._crit_edge.i:2  %col_buf_2_val_0_0_3 = alloca i8, align 1
+
+ST_4: src_kernel_win_0_val_2_1 [1/1] 0.00ns
+._crit_edge.i:3  %src_kernel_win_0_val_2_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_0_val_1_1 [1/1] 0.00ns
+._crit_edge.i:4  %src_kernel_win_0_val_1_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_0_val_1_2 [1/1] 0.00ns
+._crit_edge.i:5  %src_kernel_win_0_val_1_2 = alloca i8, align 1
+
+ST_4: col_buf_2_val_0_0_5 [1/1] 0.00ns
+._crit_edge.i:6  %col_buf_2_val_0_0_5 = alloca i8, align 1
+
+ST_4: src_kernel_win_0_val_2_2 [1/1] 0.00ns
+._crit_edge.i:7  %src_kernel_win_0_val_2_2 = alloca i8, align 1
+
+ST_4: col_buf_2_val_0_0_6 [1/1] 0.00ns
+._crit_edge.i:8  %col_buf_2_val_0_0_6 = alloca i8, align 1
+
+ST_4: src_kernel_win_1_val_0_1 [1/1] 0.00ns
+._crit_edge.i:9  %src_kernel_win_1_val_0_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_1_val_0_2 [1/1] 0.00ns
+._crit_edge.i:10  %src_kernel_win_1_val_0_2 = alloca i8, align 1
+
+ST_4: right_border_buf_2_val_1_2_1 [1/1] 0.00ns
+._crit_edge.i:11  %right_border_buf_2_val_1_2_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_1_val_2_1 [1/1] 0.00ns
+._crit_edge.i:12  %src_kernel_win_1_val_2_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_1_val_1_1 [1/1] 0.00ns
+._crit_edge.i:13  %src_kernel_win_1_val_1_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_1_val_1_2 [1/1] 0.00ns
+._crit_edge.i:14  %src_kernel_win_1_val_1_2 = alloca i8, align 1
+
+ST_4: right_border_buf_2_val_1_2_2 [1/1] 0.00ns
+._crit_edge.i:15  %right_border_buf_2_val_1_2_2 = alloca i8, align 1
+
+ST_4: src_kernel_win_1_val_2_2 [1/1] 0.00ns
+._crit_edge.i:16  %src_kernel_win_1_val_2_2 = alloca i8, align 1
+
+ST_4: right_border_buf_2_val_1_2_3 [1/1] 0.00ns
+._crit_edge.i:17  %right_border_buf_2_val_1_2_3 = alloca i8, align 1
+
+ST_4: src_kernel_win_2_val_0_1 [1/1] 0.00ns
+._crit_edge.i:18  %src_kernel_win_2_val_0_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_2_val_0_2 [1/1] 0.00ns
+._crit_edge.i:19  %src_kernel_win_2_val_0_2 = alloca i8, align 1
+
+ST_4: col_buf_1_val_0_0_3 [1/1] 0.00ns
+._crit_edge.i:20  %col_buf_1_val_0_0_3 = alloca i8, align 1
+
+ST_4: src_kernel_win_2_val_2_1 [1/1] 0.00ns
+._crit_edge.i:21  %src_kernel_win_2_val_2_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_2_val_1_1 [1/1] 0.00ns
+._crit_edge.i:22  %src_kernel_win_2_val_1_1 = alloca i8, align 1
+
+ST_4: src_kernel_win_2_val_1_2 [1/1] 0.00ns
+._crit_edge.i:23  %src_kernel_win_2_val_1_2 = alloca i8, align 1
+
+ST_4: col_buf_1_val_0_0_5 [1/1] 0.00ns
+._crit_edge.i:24  %col_buf_1_val_0_0_5 = alloca i8, align 1
+
+ST_4: src_kernel_win_2_val_2_2 [1/1] 0.00ns
+._crit_edge.i:25  %src_kernel_win_2_val_2_2 = alloca i8, align 1
+
+ST_4: col_buf_1_val_0_0_6 [1/1] 0.00ns
+._crit_edge.i:26  %col_buf_1_val_0_0_6 = alloca i8, align 1
+
+ST_4: right_border_buf_0_val_1_2_1 [1/1] 0.00ns
+._crit_edge.i:27  %right_border_buf_0_val_1_2_1 = alloca i8, align 1
+
+ST_4: right_border_buf_0_val_1_2_2 [1/1] 0.00ns
+._crit_edge.i:28  %right_border_buf_0_val_1_2_2 = alloca i8, align 1
+
+ST_4: right_border_buf_0_val_1_2_7 [1/1] 0.00ns
+._crit_edge.i:29  %right_border_buf_0_val_1_2_7 = alloca i8, align 1
+
+ST_4: col_buf_0_val_0_0_3 [1/1] 0.00ns
+._crit_edge.i:30  %col_buf_0_val_0_0_3 = alloca i8, align 1
+
+ST_4: col_buf_0_val_0_0_5 [1/1] 0.00ns
+._crit_edge.i:31  %col_buf_0_val_0_0_5 = alloca i8, align 1
+
+ST_4: col_buf_0_val_0_0_6 [1/1] 0.00ns
+._crit_edge.i:32  %col_buf_0_val_0_0_6 = alloca i8, align 1
+
+ST_4: right_border_buf_1_val_1_2_1 [1/1] 0.00ns
+._crit_edge.i:33  %right_border_buf_1_val_1_2_1 = alloca i8, align 1
+
+ST_4: right_border_buf_1_val_1_2_2 [1/1] 0.00ns
+._crit_edge.i:34  %right_border_buf_1_val_1_2_2 = alloca i8, align 1
+
+ST_4: right_border_buf_1_val_1_2_7 [1/1] 0.00ns
+._crit_edge.i:35  %right_border_buf_1_val_1_2_7 = alloca i8, align 1
+
+ST_4: heightloop [1/1] 1.84ns
+._crit_edge.i:36  %heightloop = add i10 %tmp, 5
+
+ST_4: widthloop [1/1] 1.84ns
+._crit_edge.i:37  %widthloop = add i11 %tmp_6, 2
+
+ST_4: tmp_10 [1/1] 1.84ns
+._crit_edge.i:38  %tmp_10 = add i11 %tmp_6, -3
+
+ST_4: tmp_15_cast [1/1] 0.00ns
+._crit_edge.i:39  %tmp_15_cast = zext i11 %tmp_10 to i12
+
+ST_4: p_neg229_i [1/1] 1.84ns
+._crit_edge.i:40  %p_neg229_i = sub i12 3, %p_src_cols_V_read_1
+
+ST_4: tmp_11 [1/1] 0.00ns
+._crit_edge.i:41  %tmp_11 = trunc i12 %p_neg229_i to i2
+
+ST_4: ref [1/1] 1.84ns
+._crit_edge.i:42  %ref = add i10 %tmp, -1
+
+ST_4: ref_cast [1/1] 0.00ns
+._crit_edge.i:43  %ref_cast = zext i10 %ref to i11
+
+ST_4: tmp_12 [1/1] 0.00ns
+._crit_edge.i:44  %tmp_12 = trunc i10 %ref to i2
+
+ST_4: stg_138 [1/1] 1.57ns
+._crit_edge.i:45  br label %0
+
+
+ <State 5>: 6.69ns
+ST_5: p_012_0_i [1/1] 0.00ns
+:0  %p_012_0_i = phi i10 [ 0, %._crit_edge.i ], [ %i_V, %9 ]
+
+ST_5: tmp_23_cast_cast [1/1] 0.00ns
+:1  %tmp_23_cast_cast = zext i10 %p_012_0_i to i11
+
+ST_5: tmp_13 [1/1] 2.07ns
+:2  %tmp_13 = icmp ult i10 %p_012_0_i, %heightloop
+
+ST_5: stg_142 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 13, i64 725, i64 0)
+
+ST_5: i_V [1/1] 1.84ns
+:4  %i_V = add i10 %p_012_0_i, 1
+
+ST_5: stg_144 [1/1] 0.00ns
+:5  br i1 %tmp_13, label %1, label %"filter<32, 32, ap_int<8>, int, 720, 1280, 3, 3>.exit"
+
+ST_5: stg_145 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str1813) nounwind
+
+ST_5: tmp_14 [1/1] 0.00ns
+:1  %tmp_14 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str1813)
+
+ST_5: tmp_15 [1/1] 2.07ns
+:2  %tmp_15 = icmp ugt i10 %p_012_0_i, 4
+
+ST_5: ImagLoc_y [1/1] 1.84ns
+:3  %ImagLoc_y = add i11 %tmp_23_cast_cast, -4
+
+ST_5: tmp_16 [1/1] 2.11ns
+:4  %tmp_16 = icmp slt i11 %ImagLoc_y, -1
+
+ST_5: tmp_17 [1/1] 0.00ns
+:5  %tmp_17 = call i10 @_ssdm_op_PartSelect.i10.i11.i32.i32(i11 %ImagLoc_y, i32 1, i32 10)
+
+ST_5: icmp [1/1] 2.07ns
+:6  %icmp = icmp sgt i10 %tmp_17, 0
+
+ST_5: tmp_76_2 [1/1] 2.11ns
+:7  %tmp_76_2 = icmp slt i11 %ImagLoc_y, %ref_cast
+
+ST_5: or_cond6_2 [1/1] 1.37ns
+:8  %or_cond6_2 = and i1 %icmp, %tmp_76_2
+
+ST_5: tmp_18 [1/1] 0.00ns
+:9  %tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %ImagLoc_y, i32 10)
+
+ST_5: tmp_21 [1/1] 1.37ns
+:10  %tmp_21 = select i1 %tmp_76_2, i2 -2, i2 %tmp_12
+
+ST_5: ImagLoc_y_cast_cast [1/1] 0.00ns
+:11  %ImagLoc_y_cast_cast = zext i11 %ImagLoc_y to i12
+
+ST_5: y_1_2 [1/1] 1.84ns
+:12  %y_1_2 = add i11 %tmp_23_cast_cast, -5
+
+ST_5: y_1_2_cast_cast [1/1] 0.00ns
+:13  %y_1_2_cast_cast = sext i11 %y_1_2 to i12
+
+ST_5: y_1_2_1 [1/1] 1.84ns
+:14  %y_1_2_1 = add i11 %tmp_23_cast_cast, -6
+
+ST_5: y_1_2_1_cast_cast [1/1] 0.00ns
+:15  %y_1_2_1_cast_cast = sext i11 %y_1_2_1 to i12
+
+ST_5: p_i [1/1] 1.37ns
+:16  %p_i = select i1 %tmp_76_2, i10 2, i10 %ref
+
+ST_5: tmp_22 [1/1] 0.00ns
+:17  %tmp_22 = trunc i10 %p_i to i2
+
+ST_5: tmp_23 [1/1] 0.00ns
+:18  %tmp_23 = trunc i10 %p_i to i2
+
+ST_5: brmerge [1/1] 1.37ns
+:19  %brmerge = or i1 %tmp_16, %or_cond6_2
+
+ST_5: stg_165 [1/1] 1.57ns
+:20  br label %2
+
+ST_5: stg_166 [1/1] 0.00ns
+filter<32, 32, ap_int<8>, int, 720, 1280, 3, 3>.exit:0  ret void
+
+
+ <State 6>: 6.86ns
+ST_6: p_025_0_i [1/1] 0.00ns
+:0  %p_025_0_i = phi i11 [ 0, %1 ], [ %j_V, %._crit_edge246.i.2 ]
+
+ST_6: tmp_27_cast [1/1] 0.00ns
+:10  %tmp_27_cast = zext i11 %p_025_0_i to i12
+
+ST_6: tmp_19 [1/1] 2.11ns
+:11  %tmp_19 = icmp ult i11 %p_025_0_i, %widthloop
+
+ST_6: j_V [1/1] 1.84ns
+:13  %j_V = add i11 %p_025_0_i, 1
+
+ST_6: stg_171 [1/1] 0.00ns
+:14  br i1 %tmp_19, label %.preheader227.i.preheader.0.0, label %9
+
+ST_6: tmp_25 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:3  %tmp_25 = call i10 @_ssdm_op_PartSelect.i10.i11.i32.i32(i11 %p_025_0_i, i32 1, i32 10)
+
+ST_6: icmp1 [1/1] 2.07ns
+.preheader227.i.preheader.0.0:4  %icmp1 = icmp ne i10 %tmp_25, 0
+
+ST_6: or_cond222_i [1/1] 1.37ns
+.preheader227.i.preheader.0.0:5  %or_cond222_i = and i1 %tmp_15, %icmp1
+
+ST_6: ImagLoc_x [1/1] 1.84ns
+.preheader227.i.preheader.0.0:6  %ImagLoc_x = add i12 %tmp_27_cast, -1
+
+ST_6: tmp_26 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:7  %tmp_26 = trunc i12 %ImagLoc_x to i2
+
+ST_6: ImagLoc_x_cast [1/1] 0.00ns
+.preheader227.i.preheader.0.0:8  %ImagLoc_x_cast = sext i12 %ImagLoc_x to i13
+
+ST_6: stg_178 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:20  br i1 %brmerge, label %._crit_edge235.i.0, label %._crit_edge236.i.0
+
+ST_6: stg_179 [1/1] 0.00ns
+._crit_edge236.i.0:0  br i1 %tmp_18, label %.loopexit225.i.0, label %._crit_edge244.i.0.0
+
+ST_6: t_0_2 [2/2] 6.86ns
+._crit_edge244.i.0.0:14  %t_0_2 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_1_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_6: tmp_28 [1/1] 2.11ns
+._crit_edge235.i.0:0  %tmp_28 = icmp ne i11 %p_025_0_i, 0
+
+ST_6: tmp_29 [1/1] 2.14ns
+._crit_edge235.i.0:1  %tmp_29 = icmp slt i13 %ImagLoc_x_cast, %cols_cast1
+
+ST_6: or_cond7 [1/1] 1.37ns
+._crit_edge235.i.0:2  %or_cond7 = and i1 %tmp_28, %tmp_29
+
+ST_6: stg_184 [1/1] 0.00ns
+._crit_edge235.i.0:3  br i1 %or_cond7, label %3, label %._crit_edge239.i.0
+
+ST_6: tmp_31 [1/1] 0.00ns
+._crit_edge239.i.0:0  %tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %ImagLoc_x, i32 11)
+
+ST_6: stg_186 [1/1] 0.00ns
+._crit_edge239.i.0:1  br i1 %tmp_31, label %.loopexit225.i.0.pre, label %4
+
+ST_6: stg_187 [1/1] 0.00ns
+:0  br i1 %tmp_29, label %.loopexit225.i.0, label %.preheader.preheader.i.0
+
+ST_6: tmp_30 [1/1] 2.14ns
+:0  %tmp_30 = icmp slt i12 %ImagLoc_x, %tmp_15_cast
+
+ST_6: stg_189 [1/1] 0.00ns
+:1  br i1 %tmp_30, label %._crit_edge242.i.0.1.critedge.critedge, label %"operator().exit291.i.0"
+
+ST_6: col_assign [1/1] 0.80ns
+operator().exit291.i.0:0  %col_assign = add i2 %tmp_26, %tmp_11
+
+ST_6: stg_191 [1/1] 1.62ns
+operator().exit291.i.0:1  switch i2 %col_assign, label %branch50 [
+    i2 0, label %branch48
+    i2 1, label %branch49
+  ]
+
+ST_6: stg_192 [1/1] 0.00ns
+._crit_edge246.i.0:7  br i1 %brmerge, label %._crit_edge235.i.1, label %._crit_edge236.i.1
+
+ST_6: stg_193 [1/1] 0.00ns
+._crit_edge236.i.1:0  br i1 %tmp_18, label %.loopexit225.i.1, label %._crit_edge244.i.1.0_ifconv
+
+ST_6: t_1_2 [2/2] 6.86ns
+._crit_edge244.i.1.0_ifconv:14  %t_1_2 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_1_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_6: tmp_81_1 [1/1] 2.11ns
+._crit_edge235.i.1:0  %tmp_81_1 = icmp ne i11 %p_025_0_i, 0
+
+ST_6: tmp_83_1 [1/1] 2.14ns
+._crit_edge235.i.1:1  %tmp_83_1 = icmp slt i13 %ImagLoc_x_cast, %cols_cast1
+
+ST_6: or_cond7_1 [1/1] 1.37ns
+._crit_edge235.i.1:2  %or_cond7_1 = and i1 %tmp_81_1, %tmp_83_1
+
+ST_6: stg_198 [1/1] 0.00ns
+._crit_edge235.i.1:3  br i1 %or_cond7_1, label %5, label %._crit_edge239.i.1
+
+ST_6: tmp_39 [1/1] 0.00ns
+._crit_edge239.i.1:0  %tmp_39 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %ImagLoc_x, i32 11)
+
+ST_6: stg_200 [1/1] 0.00ns
+._crit_edge239.i.1:1  br i1 %tmp_39, label %.loopexit225.i.1.pre, label %6
+
+ST_6: stg_201 [1/1] 0.00ns
+:0  br i1 %tmp_83_1, label %.loopexit225.i.1, label %.preheader.preheader.i.1_ifconv
+
+ST_6: tmp_85_1 [1/1] 2.14ns
+:0  %tmp_85_1 = icmp slt i12 %ImagLoc_x, %tmp_15_cast
+
+ST_6: stg_203 [1/1] 0.00ns
+:1  br i1 %tmp_85_1, label %"operator().exit.i.1.critedge.critedge", label %"operator().exit291.i.1"
+
+ST_6: stg_204 [1/1] 0.00ns
+._crit_edge246.i.1:7  br i1 %brmerge, label %._crit_edge235.i.2, label %._crit_edge236.i.2
+
+ST_6: stg_205 [1/1] 0.00ns
+._crit_edge236.i.2:0  br i1 %tmp_18, label %.loopexit225.i.2, label %._crit_edge244.i.2.0_ifconv
+
+ST_6: t_2_2 [2/2] 6.86ns
+._crit_edge244.i.2.0_ifconv:14  %t_2_2 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_1_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_6: tmp_81_2 [1/1] 2.11ns
+._crit_edge235.i.2:0  %tmp_81_2 = icmp ne i11 %p_025_0_i, 0
+
+ST_6: tmp_83_2 [1/1] 2.14ns
+._crit_edge235.i.2:1  %tmp_83_2 = icmp slt i13 %ImagLoc_x_cast, %cols_cast1
+
+ST_6: or_cond7_2 [1/1] 1.37ns
+._crit_edge235.i.2:2  %or_cond7_2 = and i1 %tmp_81_2, %tmp_83_2
+
+ST_6: stg_210 [1/1] 0.00ns
+._crit_edge235.i.2:3  br i1 %or_cond7_2, label %7, label %._crit_edge239.i.2
+
+ST_6: tmp_50 [1/1] 0.00ns
+._crit_edge239.i.2:0  %tmp_50 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %ImagLoc_x, i32 11)
+
+ST_6: stg_212 [1/1] 0.00ns
+._crit_edge239.i.2:1  br i1 %tmp_50, label %.loopexit225.i.2.pre, label %8
+
+ST_6: stg_213 [1/1] 0.00ns
+:0  br i1 %tmp_83_2, label %.loopexit225.i.2, label %.preheader.preheader.i.2_ifconv
+
+ST_6: tmp_85_2 [1/1] 2.14ns
+:0  %tmp_85_2 = icmp slt i12 %ImagLoc_x, %tmp_15_cast
+
+ST_6: stg_215 [1/1] 0.00ns
+:1  br i1 %tmp_85_2, label %"operator().exit.i.2.critedge.critedge", label %"operator().exit291.i.2"
+
+
+ <State 7>: 6.86ns
+ST_7: x [2/2] 6.86ns
+.preheader227.i.preheader.0.0:9  %x = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_x, i12 %p_src_cols_V_read_1) nounwind
+
+ST_7: t_0_2 [1/2] 6.85ns
+._crit_edge244.i.0.0:14  %t_0_2 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_1_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_7: tmp_34 [1/1] 0.00ns
+._crit_edge244.i.0.0:15  %tmp_34 = trunc i14 %t_0_2 to i2
+
+ST_7: t_1_2 [1/2] 6.85ns
+._crit_edge244.i.1.0_ifconv:14  %t_1_2 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_1_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_7: tmp_42 [1/1] 0.00ns
+._crit_edge244.i.1.0_ifconv:15  %tmp_42 = trunc i14 %t_1_2 to i2
+
+ST_7: col_assign_1 [1/1] 1.84ns
+operator().exit291.i.1:0  %col_assign_1 = add i12 %ImagLoc_x, %p_neg229_i
+
+ST_7: tmp_43 [1/1] 0.00ns
+operator().exit291.i.1:1  %tmp_43 = trunc i12 %col_assign_1 to i2
+
+ST_7: stg_223 [1/1] 1.62ns
+operator().exit291.i.1:2  switch i2 %tmp_43, label %branch68 [
+    i2 0, label %branch66
+    i2 1, label %branch67
+  ]
+
+ST_7: t_2_2 [1/2] 6.85ns
+._crit_edge244.i.2.0_ifconv:14  %t_2_2 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_1_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_7: tmp_54 [1/1] 0.00ns
+._crit_edge244.i.2.0_ifconv:15  %tmp_54 = trunc i14 %t_2_2 to i2
+
+ST_7: col_assign_s [1/1] 1.84ns
+operator().exit291.i.2:0  %col_assign_s = add i12 %ImagLoc_x, %p_neg229_i
+
+ST_7: tmp_55 [1/1] 0.00ns
+operator().exit291.i.2:1  %tmp_55 = trunc i12 %col_assign_s to i2
+
+ST_7: stg_228 [1/1] 1.62ns
+operator().exit291.i.2:2  switch i2 %tmp_55, label %branch86 [
+    i2 0, label %branch84
+    i2 1, label %branch85
+  ]
+
+
+ <State 8>: 6.86ns
+ST_8: x [1/2] 6.85ns
+.preheader227.i.preheader.0.0:9  %x = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_x, i12 %p_src_cols_V_read_1) nounwind
+
+ST_8: tmp_27 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:11  %tmp_27 = trunc i14 %x to i2
+
+ST_8: t [2/2] 6.86ns
+._crit_edge244.i.0.0:0  %t = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_y_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_8: t_0_1 [2/2] 6.86ns
+._crit_edge244.i.0.0:7  %t_0_1 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_8: locy_0_2_t [1/1] 0.80ns
+._crit_edge244.i.0.0:16  %locy_0_2_t = sub i2 %tmp_23, %tmp_34
+
+ST_8: stg_234 [1/1] 1.62ns
+._crit_edge244.i.0.0:17  switch i2 %locy_0_2_t, label %branch26 [
+    i2 0, label %branch24
+    i2 1, label %.loopexit225.i.0.pre254
+  ]
+
+ST_8: t_1 [2/2] 6.86ns
+._crit_edge244.i.1.0_ifconv:0  %t_1 = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_y_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_8: t_1_1 [2/2] 6.86ns
+._crit_edge244.i.1.0_ifconv:7  %t_1_1 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_8: locy_1_2_t [1/1] 0.80ns
+._crit_edge244.i.1.0_ifconv:16  %locy_1_2_t = sub i2 %tmp_21, %tmp_42
+
+ST_8: stg_238 [1/1] 1.62ns
+._crit_edge244.i.1.0_ifconv:17  switch i2 %locy_1_2_t, label %branch35 [
+    i2 0, label %branch33
+    i2 1, label %.loopexit225.i.1.pre249
+  ]
+
+ST_8: t_2 [2/2] 6.86ns
+._crit_edge244.i.2.0_ifconv:0  %t_2 = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_y_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_8: t_2_1 [2/2] 6.86ns
+._crit_edge244.i.2.0_ifconv:7  %t_2_1 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_8: locy_2_2_t [1/1] 0.80ns
+._crit_edge244.i.2.0_ifconv:16  %locy_2_2_t = sub i2 %tmp_21, %tmp_54
+
+ST_8: stg_242 [1/1] 1.62ns
+._crit_edge244.i.2.0_ifconv:17  switch i2 %locy_2_2_t, label %branch44 [
+    i2 0, label %branch42
+    i2 1, label %.loopexit225.i.2.pre243
+  ]
+
+
+ <State 9>: 6.85ns
+ST_9: x_ext [1/1] 0.00ns
+.preheader227.i.preheader.0.0:10  %x_ext = sext i14 %x to i32
+
+ST_9: tmp_24 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:12  %tmp_24 = zext i32 %x_ext to i64
+
+ST_9: k_buf_0_val_0_addr [1/1] 0.00ns
+.preheader227.i.preheader.0.0:13  %k_buf_0_val_0_addr = getelementptr [1280 x i8]* %k_buf_0_val_0, i64 0, i64 %tmp_24
+
+ST_9: right_border_buf_0_val_2_0 [2/2] 2.39ns
+.preheader227.i.preheader.0.0:14  %right_border_buf_0_val_2_0 = load i8* %k_buf_0_val_0_addr, align 1
+
+ST_9: k_buf_0_val_1_addr [1/1] 0.00ns
+.preheader227.i.preheader.0.0:16  %k_buf_0_val_1_addr = getelementptr [1280 x i8]* %k_buf_0_val_1, i64 0, i64 %tmp_24
+
+ST_9: right_border_buf_0_val_1_0 [2/2] 2.39ns
+.preheader227.i.preheader.0.0:17  %right_border_buf_0_val_1_0 = load i8* %k_buf_0_val_1_addr, align 1
+
+ST_9: k_buf_0_val_2_addr [1/1] 0.00ns
+.preheader227.i.preheader.0.0:18  %k_buf_0_val_2_addr = getelementptr [1280 x i8]* %k_buf_0_val_2, i64 0, i64 %tmp_24
+
+ST_9: src_kernel_win_0_val_2_0 [2/2] 2.39ns
+.preheader227.i.preheader.0.0:19  %src_kernel_win_0_val_2_0 = load i8* %k_buf_0_val_2_addr, align 1
+
+ST_9: t [1/2] 6.85ns
+._crit_edge244.i.0.0:0  %t = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_y_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_9: tmp_32 [1/1] 0.00ns
+._crit_edge244.i.0.0:1  %tmp_32 = trunc i14 %t to i2
+
+ST_9: t_0_1 [1/2] 6.85ns
+._crit_edge244.i.0.0:7  %t_0_1 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_9: tmp_33 [1/1] 0.00ns
+._crit_edge244.i.0.0:8  %tmp_33 = trunc i14 %t_0_1 to i2
+
+ST_9: k_buf_1_val_0_addr [1/1] 0.00ns
+._crit_edge246.i.0:0  %k_buf_1_val_0_addr = getelementptr [1280 x i8]* %k_buf_1_val_0, i64 0, i64 %tmp_24
+
+ST_9: right_border_buf_1_val_2_0 [2/2] 2.39ns
+._crit_edge246.i.0:1  %right_border_buf_1_val_2_0 = load i8* %k_buf_1_val_0_addr, align 1
+
+ST_9: k_buf_1_val_1_addr [1/1] 0.00ns
+._crit_edge246.i.0:3  %k_buf_1_val_1_addr = getelementptr [1280 x i8]* %k_buf_1_val_1, i64 0, i64 %tmp_24
+
+ST_9: right_border_buf_1_val_1_0 [2/2] 2.39ns
+._crit_edge246.i.0:4  %right_border_buf_1_val_1_0 = load i8* %k_buf_1_val_1_addr, align 1
+
+ST_9: k_buf_1_val_2_addr [1/1] 0.00ns
+._crit_edge246.i.0:5  %k_buf_1_val_2_addr = getelementptr [1280 x i8]* %k_buf_1_val_2, i64 0, i64 %tmp_24
+
+ST_9: src_kernel_win_1_val_2_0 [2/2] 2.39ns
+._crit_edge246.i.0:6  %src_kernel_win_1_val_2_0 = load i8* %k_buf_1_val_2_addr, align 1
+
+ST_9: t_1 [1/2] 6.85ns
+._crit_edge244.i.1.0_ifconv:0  %t_1 = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_y_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_9: tmp_40 [1/1] 0.00ns
+._crit_edge244.i.1.0_ifconv:1  %tmp_40 = trunc i14 %t_1 to i2
+
+ST_9: t_1_1 [1/2] 6.85ns
+._crit_edge244.i.1.0_ifconv:7  %t_1_1 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_9: tmp_41 [1/1] 0.00ns
+._crit_edge244.i.1.0_ifconv:8  %tmp_41 = trunc i14 %t_1_1 to i2
+
+ST_9: k_buf_2_val_0_addr [1/1] 0.00ns
+._crit_edge246.i.1:0  %k_buf_2_val_0_addr = getelementptr [1280 x i8]* %k_buf_2_val_0, i64 0, i64 %tmp_24
+
+ST_9: right_border_buf_2_val_2_0 [2/2] 2.39ns
+._crit_edge246.i.1:1  %right_border_buf_2_val_2_0 = load i8* %k_buf_2_val_0_addr, align 1
+
+ST_9: k_buf_2_val_1_addr [1/1] 0.00ns
+._crit_edge246.i.1:3  %k_buf_2_val_1_addr = getelementptr [1280 x i8]* %k_buf_2_val_1, i64 0, i64 %tmp_24
+
+ST_9: right_border_buf_2_val_1_0 [2/2] 2.39ns
+._crit_edge246.i.1:4  %right_border_buf_2_val_1_0 = load i8* %k_buf_2_val_1_addr, align 1
+
+ST_9: k_buf_2_val_2_addr [1/1] 0.00ns
+._crit_edge246.i.1:5  %k_buf_2_val_2_addr = getelementptr [1280 x i8]* %k_buf_2_val_2, i64 0, i64 %tmp_24
+
+ST_9: src_kernel_win_2_val_2_0 [2/2] 2.39ns
+._crit_edge246.i.1:6  %src_kernel_win_2_val_2_0 = load i8* %k_buf_2_val_2_addr, align 1
+
+ST_9: t_2 [1/2] 6.85ns
+._crit_edge244.i.2.0_ifconv:0  %t_2 = call fastcc i14 @sobel_borderInterpolate(i12 %ImagLoc_y_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_9: tmp_52 [1/1] 0.00ns
+._crit_edge244.i.2.0_ifconv:1  %tmp_52 = trunc i14 %t_2 to i2
+
+ST_9: t_2_1 [1/2] 6.85ns
+._crit_edge244.i.2.0_ifconv:7  %t_2_1 = call fastcc i14 @sobel_borderInterpolate(i12 %y_1_2_cast_cast, i12 %p_src_rows_V_read_1) nounwind
+
+ST_9: tmp_53 [1/1] 0.00ns
+._crit_edge244.i.2.0_ifconv:8  %tmp_53 = trunc i14 %t_2_1 to i2
+
+
+ <State 10>: 6.70ns
+ST_10: src_kernel_win_0_val_0_1_6 [1/1] 0.00ns
+:1  %src_kernel_win_0_val_0_1_6 = load i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: src_kernel_win_0_val_2_1_9 [1/1] 0.00ns
+:2  %src_kernel_win_0_val_2_1_9 = load i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: src_kernel_win_0_val_1_1_6 [1/1] 0.00ns
+:3  %src_kernel_win_0_val_1_1_6 = load i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: src_kernel_win_1_val_0_1_6 [1/1] 0.00ns
+:4  %src_kernel_win_1_val_0_1_6 = load i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: src_kernel_win_1_val_2_1_9 [1/1] 0.00ns
+:5  %src_kernel_win_1_val_2_1_9 = load i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: src_kernel_win_1_val_1_1_6 [1/1] 0.00ns
+:6  %src_kernel_win_1_val_1_1_6 = load i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: src_kernel_win_2_val_0_1_6 [1/1] 0.00ns
+:7  %src_kernel_win_2_val_0_1_6 = load i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: src_kernel_win_2_val_2_1_9 [1/1] 0.00ns
+:8  %src_kernel_win_2_val_2_1_9 = load i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: src_kernel_win_2_val_1_1_6 [1/1] 0.00ns
+:9  %src_kernel_win_2_val_1_1_6 = load i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_284 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 1282, i64 0)
+
+ST_10: stg_285 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:0  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str1814) nounwind
+
+ST_10: tmp_20 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:1  %tmp_20 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1814)
+
+ST_10: stg_287 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_10: right_border_buf_0_val_2_0 [1/2] 2.39ns
+.preheader227.i.preheader.0.0:14  %right_border_buf_0_val_2_0 = load i8* %k_buf_0_val_0_addr, align 1
+
+ST_10: stg_289 [1/1] 0.00ns
+.preheader227.i.preheader.0.0:15  store i8 %right_border_buf_0_val_2_0, i8* %col_buf_0_val_0_0, align 1
+
+ST_10: right_border_buf_0_val_1_0 [1/2] 2.39ns
+.preheader227.i.preheader.0.0:17  %right_border_buf_0_val_1_0 = load i8* %k_buf_0_val_1_addr, align 1
+
+ST_10: src_kernel_win_0_val_2_0 [1/2] 2.39ns
+.preheader227.i.preheader.0.0:19  %src_kernel_win_0_val_2_0 = load i8* %k_buf_0_val_2_addr, align 1
+
+ST_10: locy [1/1] 0.80ns
+._crit_edge244.i.0.0:2  %locy = sub i2 %tmp_22, %tmp_32
+
+ST_10: sel_tmp8 [1/1] 1.36ns
+._crit_edge244.i.0.0:3  %sel_tmp8 = icmp eq i2 %tmp_22, %tmp_32
+
+ST_10: sel_tmp9 [1/1] 1.37ns
+._crit_edge244.i.0.0:4  %sel_tmp9 = select i1 %sel_tmp8, i8 %right_border_buf_0_val_2_0, i8 %src_kernel_win_0_val_2_0
+
+ST_10: sel_tmp1 [1/1] 1.36ns
+._crit_edge244.i.0.0:5  %sel_tmp1 = icmp eq i2 %locy, 1
+
+ST_10: src_kernel_win_0_val_0_1_3 [1/1] 1.37ns
+._crit_edge244.i.0.0:6  %src_kernel_win_0_val_0_1_3 = select i1 %sel_tmp1, i8 %right_border_buf_0_val_1_0, i8 %sel_tmp9
+
+ST_10: locy_0_1_t [1/1] 0.80ns
+._crit_edge244.i.0.0:9  %locy_0_1_t = sub i2 %tmp_23, %tmp_33
+
+ST_10: sel_tmp3 [1/1] 1.36ns
+._crit_edge244.i.0.0:10  %sel_tmp3 = icmp eq i2 %tmp_23, %tmp_33
+
+ST_10: sel_tmp4 [1/1] 1.37ns
+._crit_edge244.i.0.0:11  %sel_tmp4 = select i1 %sel_tmp3, i8 %right_border_buf_0_val_2_0, i8 %src_kernel_win_0_val_2_0
+
+ST_10: sel_tmp5 [1/1] 1.36ns
+._crit_edge244.i.0.0:12  %sel_tmp5 = icmp eq i2 %locy_0_1_t, 1
+
+ST_10: src_kernel_win_0_val_1_1_3 [1/1] 1.37ns
+._crit_edge244.i.0.0:13  %src_kernel_win_0_val_1_1_3 = select i1 %sel_tmp5, i8 %right_border_buf_0_val_1_0, i8 %sel_tmp4
+
+ST_10: stg_302 [1/1] 1.57ns
+.loopexit225.i.0.pre254:0  store i8 %src_kernel_win_0_val_1_1_3, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_303 [1/1] 1.94ns
+.loopexit225.i.0.pre254:1  store i8 %right_border_buf_0_val_1_0, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_304 [1/1] 1.57ns
+.loopexit225.i.0.pre254:2  store i8 %src_kernel_win_0_val_0_1_3, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_305 [1/1] 0.00ns
+.loopexit225.i.0.pre254:3  br label %.loopexit225.i.0
+
+ST_10: stg_306 [1/1] 1.57ns
+branch24:0  store i8 %src_kernel_win_0_val_1_1_3, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_307 [1/1] 1.94ns
+branch24:1  store i8 %right_border_buf_0_val_2_0, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_308 [1/1] 1.57ns
+branch24:2  store i8 %src_kernel_win_0_val_0_1_3, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_309 [1/1] 0.00ns
+branch24:3  br label %.loopexit225.i.0
+
+ST_10: stg_310 [1/1] 1.57ns
+branch26:0  store i8 %src_kernel_win_0_val_1_1_3, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_311 [1/1] 1.94ns
+branch26:1  store i8 %src_kernel_win_0_val_2_0, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_312 [1/1] 1.57ns
+branch26:2  store i8 %src_kernel_win_0_val_0_1_3, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_313 [1/1] 0.00ns
+branch26:3  br label %.loopexit225.i.0
+
+ST_10: right_border_buf_0_val_1_2_3_27 [1/1] 0.00ns
+.preheader.preheader.i.0:0  %right_border_buf_0_val_1_2_3_27 = load i8* %right_border_buf_0_val_1_2_1, align 1
+
+ST_10: right_border_buf_0_val_1_2_4_28 [1/1] 0.00ns
+.preheader.preheader.i.0:1  %right_border_buf_0_val_1_2_4_28 = load i8* %right_border_buf_0_val_1_2_2, align 1
+
+ST_10: right_border_buf_0_val_1_2_5_29 [1/1] 0.00ns
+.preheader.preheader.i.0:2  %right_border_buf_0_val_1_2_5_29 = load i8* %right_border_buf_0_val_1_2_7, align 1
+
+ST_10: col_buf_0_val_0_0_3_load [1/1] 0.00ns
+.preheader.preheader.i.0:3  %col_buf_0_val_0_0_3_load = load i8* %col_buf_0_val_0_0_3, align 1
+
+ST_10: col_buf_0_val_0_0_5_load [1/1] 0.00ns
+.preheader.preheader.i.0:4  %col_buf_0_val_0_0_5_load = load i8* %col_buf_0_val_0_0_5, align 1
+
+ST_10: col_buf_0_val_0_0_6_load [1/1] 0.00ns
+.preheader.preheader.i.0:5  %col_buf_0_val_0_0_6_load = load i8* %col_buf_0_val_0_0_6, align 1
+
+ST_10: col_assign_3 [1/1] 0.80ns
+.preheader.preheader.i.0:6  %col_assign_3 = add i2 %tmp_27, %tmp_11
+
+ST_10: sel_tmp [1/1] 1.36ns
+.preheader.preheader.i.0:7  %sel_tmp = icmp eq i2 %col_assign_3, 1
+
+ST_10: col_buf_0_val_0_0_2 [1/1] 1.37ns
+.preheader.preheader.i.0:8  %col_buf_0_val_0_0_2 = select i1 %sel_tmp, i8 %col_buf_0_val_0_0_5_load, i8 %col_buf_0_val_0_0_6_load
+
+ST_10: sel_tmp2 [1/1] 1.36ns
+.preheader.preheader.i.0:9  %sel_tmp2 = icmp eq i2 %col_assign_3, 0
+
+ST_10: col_buf_0_val_0_0_9 [1/1] 1.37ns
+.preheader.preheader.i.0:10  %col_buf_0_val_0_0_9 = select i1 %sel_tmp2, i8 %col_buf_0_val_0_0_3_load, i8 %col_buf_0_val_0_0_2
+
+ST_10: right_border_buf_0_val_1_2 [1/1] 1.37ns
+.preheader.preheader.i.0:11  %right_border_buf_0_val_1_2 = select i1 %sel_tmp, i8 %right_border_buf_0_val_1_2_4_28, i8 %right_border_buf_0_val_1_2_5_29
+
+ST_10: right_border_buf_0_val_1_2_11 [1/1] 1.37ns
+.preheader.preheader.i.0:12  %right_border_buf_0_val_1_2_11 = select i1 %sel_tmp2, i8 %right_border_buf_0_val_1_2_3_27, i8 %right_border_buf_0_val_1_2
+
+ST_10: stg_327 [1/1] 1.62ns
+.preheader.preheader.i.0:13  switch i2 %col_assign_3, label %branch47 [
+    i2 0, label %branch45
+    i2 1, label %branch46
+  ]
+
+ST_10: src_kernel_win_0_val_2_1_7 [1/1] 0.00ns
+branch46:0  %src_kernel_win_0_val_2_1_7 = load i8* %right_border_buf_0_val_0_1, align 1
+
+ST_10: stg_329 [1/1] 1.57ns
+branch46:1  store i8 %right_border_buf_0_val_1_2_11, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_330 [1/1] 1.94ns
+branch46:2  store i8 %src_kernel_win_0_val_2_1_7, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_331 [1/1] 1.57ns
+branch46:3  store i8 %col_buf_0_val_0_0_9, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_332 [1/1] 0.00ns
+branch46:4  br label %.loopexit225.i.0
+
+ST_10: src_kernel_win_0_val_2_1_6 [1/1] 0.00ns
+branch45:0  %src_kernel_win_0_val_2_1_6 = load i8* %right_border_buf_0_val_0_0, align 1
+
+ST_10: stg_334 [1/1] 1.57ns
+branch45:1  store i8 %right_border_buf_0_val_1_2_11, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_335 [1/1] 1.94ns
+branch45:2  store i8 %src_kernel_win_0_val_2_1_6, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_336 [1/1] 1.57ns
+branch45:3  store i8 %col_buf_0_val_0_0_9, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_337 [1/1] 0.00ns
+branch45:4  br label %.loopexit225.i.0
+
+ST_10: src_kernel_win_0_val_2_1_5 [1/1] 0.00ns
+branch47:0  %src_kernel_win_0_val_2_1_5 = load i8* %right_border_buf_0_val_0_2, align 1
+
+ST_10: stg_339 [1/1] 1.57ns
+branch47:1  store i8 %right_border_buf_0_val_1_2_11, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_340 [1/1] 1.94ns
+branch47:2  store i8 %src_kernel_win_0_val_2_1_5, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_341 [1/1] 1.57ns
+branch47:3  store i8 %col_buf_0_val_0_0_9, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_342 [1/1] 0.00ns
+branch47:4  br label %.loopexit225.i.0
+
+ST_10: stg_343 [1/1] 1.57ns
+.loopexit225.i.0.pre:0  store i8 %right_border_buf_0_val_1_0, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_344 [1/1] 1.94ns
+.loopexit225.i.0.pre:1  store i8 %src_kernel_win_0_val_2_0, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_345 [1/1] 1.57ns
+.loopexit225.i.0.pre:2  store i8 %right_border_buf_0_val_2_0, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_346 [1/1] 0.00ns
+.loopexit225.i.0.pre:3  br label %.loopexit225.i.0
+
+ST_10: stg_347 [1/1] 0.00ns
+branch49:0  store i8 %src_kernel_win_0_val_2_0, i8* %right_border_buf_0_val_0_1, align 1
+
+ST_10: stg_348 [1/1] 0.00ns
+branch49:1  br label %"operator().exit291.i.0886"
+
+ST_10: stg_349 [1/1] 0.00ns
+branch48:0  store i8 %src_kernel_win_0_val_2_0, i8* %right_border_buf_0_val_0_0, align 1
+
+ST_10: stg_350 [1/1] 0.00ns
+branch48:1  br label %"operator().exit291.i.0886"
+
+ST_10: stg_351 [1/1] 0.00ns
+branch50:0  store i8 %src_kernel_win_0_val_2_0, i8* %right_border_buf_0_val_0_2, align 1
+
+ST_10: stg_352 [1/1] 0.00ns
+branch50:1  br label %"operator().exit291.i.0886"
+
+ST_10: right_border_buf_0_val_1_2_s [1/1] 0.00ns
+operator().exit291.i.0886:0  %right_border_buf_0_val_1_2_s = load i8* %right_border_buf_0_val_1_2_1, align 1
+
+ST_10: right_border_buf_0_val_1_2_1_25 [1/1] 0.00ns
+operator().exit291.i.0886:1  %right_border_buf_0_val_1_2_1_25 = load i8* %right_border_buf_0_val_1_2_2, align 1
+
+ST_10: right_border_buf_0_val_1_2_2_26 [1/1] 0.00ns
+operator().exit291.i.0886:2  %right_border_buf_0_val_1_2_2_26 = load i8* %right_border_buf_0_val_1_2_7, align 1
+
+ST_10: stg_356 [1/1] 2.39ns
+operator().exit291.i.0886:3  store i8 %right_border_buf_0_val_1_0, i8* %k_buf_0_val_2_addr, align 1
+
+ST_10: sel_tmp6 [1/1] 1.36ns
+operator().exit291.i.0886:4  %sel_tmp6 = icmp eq i2 %col_assign, 1
+
+ST_10: right_border_buf_0_val_1_2_3 [1/1] 1.37ns
+operator().exit291.i.0886:5  %right_border_buf_0_val_1_2_3 = select i1 %sel_tmp6, i8 %right_border_buf_0_val_1_2_2_26, i8 %right_border_buf_0_val_1_0
+
+ST_10: sel_tmp7 [1/1] 1.36ns
+operator().exit291.i.0886:6  %sel_tmp7 = icmp eq i2 %col_assign, 0
+
+ST_10: right_border_buf_0_val_1_2_4 [1/1] 1.37ns
+operator().exit291.i.0886:7  %right_border_buf_0_val_1_2_4 = select i1 %sel_tmp7, i8 %right_border_buf_0_val_1_2_2_26, i8 %right_border_buf_0_val_1_2_3
+
+ST_10: right_border_buf_0_val_1_2_5 [1/1] 1.37ns
+operator().exit291.i.0886:8  %right_border_buf_0_val_1_2_5 = select i1 %sel_tmp6, i8 %right_border_buf_0_val_1_0, i8 %right_border_buf_0_val_1_2_1_25
+
+ST_10: right_border_buf_0_val_1_2_6 [1/1] 1.37ns
+operator().exit291.i.0886:9  %right_border_buf_0_val_1_2_6 = select i1 %sel_tmp7, i8 %right_border_buf_0_val_1_2_1_25, i8 %right_border_buf_0_val_1_2_5
+
+ST_10: right_border_buf_0_val_1_2_8 [1/1] 1.37ns
+operator().exit291.i.0886:10  %right_border_buf_0_val_1_2_8 = select i1 %sel_tmp7, i8 %right_border_buf_0_val_1_0, i8 %right_border_buf_0_val_1_2_s
+
+ST_10: stg_364 [1/1] 2.39ns
+operator().exit291.i.0886:11  store i8 %right_border_buf_0_val_2_0, i8* %k_buf_0_val_1_addr, align 1
+
+ST_10: stg_365 [1/1] 1.62ns
+operator().exit291.i.0886:12  switch i2 %col_assign, label %branch62 [
+    i2 0, label %._crit_edge242.i.0.1.pre
+    i2 1, label %branch61
+  ]
+
+ST_10: stg_366 [1/1] 0.00ns
+branch61:0  store i8 %right_border_buf_0_val_2_0, i8* %col_buf_0_val_0_0_5, align 1
+
+ST_10: stg_367 [1/1] 0.00ns
+branch61:1  store i8 %right_border_buf_0_val_1_2_4, i8* %right_border_buf_0_val_1_2_7, align 1
+
+ST_10: stg_368 [1/1] 0.00ns
+branch61:2  store i8 %right_border_buf_0_val_1_2_6, i8* %right_border_buf_0_val_1_2_2, align 1
+
+ST_10: stg_369 [1/1] 0.00ns
+branch61:3  store i8 %right_border_buf_0_val_1_2_8, i8* %right_border_buf_0_val_1_2_1, align 1
+
+ST_10: stg_370 [1/1] 0.00ns
+branch61:4  br label %._crit_edge242.i.0.1
+
+ST_10: stg_371 [1/1] 0.00ns
+._crit_edge242.i.0.1.pre:0  store i8 %right_border_buf_0_val_2_0, i8* %col_buf_0_val_0_0_3, align 1
+
+ST_10: stg_372 [1/1] 0.00ns
+._crit_edge242.i.0.1.pre:1  store i8 %right_border_buf_0_val_1_2_4, i8* %right_border_buf_0_val_1_2_7, align 1
+
+ST_10: stg_373 [1/1] 0.00ns
+._crit_edge242.i.0.1.pre:2  store i8 %right_border_buf_0_val_1_2_6, i8* %right_border_buf_0_val_1_2_2, align 1
+
+ST_10: stg_374 [1/1] 0.00ns
+._crit_edge242.i.0.1.pre:3  store i8 %right_border_buf_0_val_1_2_8, i8* %right_border_buf_0_val_1_2_1, align 1
+
+ST_10: stg_375 [1/1] 0.00ns
+._crit_edge242.i.0.1.pre:4  br label %._crit_edge242.i.0.1
+
+ST_10: stg_376 [1/1] 0.00ns
+branch62:0  store i8 %right_border_buf_0_val_2_0, i8* %col_buf_0_val_0_0_6, align 1
+
+ST_10: stg_377 [1/1] 0.00ns
+branch62:1  store i8 %right_border_buf_0_val_1_2_4, i8* %right_border_buf_0_val_1_2_7, align 1
+
+ST_10: stg_378 [1/1] 0.00ns
+branch62:2  store i8 %right_border_buf_0_val_1_2_6, i8* %right_border_buf_0_val_1_2_2, align 1
+
+ST_10: stg_379 [1/1] 0.00ns
+branch62:3  store i8 %right_border_buf_0_val_1_2_8, i8* %right_border_buf_0_val_1_2_1, align 1
+
+ST_10: stg_380 [1/1] 0.00ns
+branch62:4  br label %._crit_edge242.i.0.1
+
+ST_10: stg_381 [1/1] 2.39ns
+._crit_edge242.i.0.1.critedge.critedge:0  store i8 %right_border_buf_0_val_1_0, i8* %k_buf_0_val_2_addr, align 1
+
+ST_10: stg_382 [1/1] 2.39ns
+._crit_edge242.i.0.1.critedge.critedge:1  store i8 %right_border_buf_0_val_2_0, i8* %k_buf_0_val_1_addr, align 1
+
+ST_10: stg_383 [1/1] 0.00ns
+._crit_edge242.i.0.1.critedge.critedge:2  br label %._crit_edge242.i.0.1
+
+ST_10: tmp_35 [1/1] 1.70ns
+._crit_edge242.i.0.1:0  %tmp_35 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %p_src_data_stream_0_V)
+
+ST_10: stg_385 [1/1] 2.39ns
+._crit_edge242.i.0.1:1  store i8 %tmp_35, i8* %k_buf_0_val_0_addr, align 1
+
+ST_10: stg_386 [1/1] 1.57ns
+._crit_edge242.i.0.1:2  store i8 %right_border_buf_0_val_1_0, i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_10: stg_387 [1/1] 1.94ns
+._crit_edge242.i.0.1:3  store i8 %src_kernel_win_0_val_2_0, i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_10: stg_388 [1/1] 1.57ns
+._crit_edge242.i.0.1:4  store i8 %right_border_buf_0_val_2_0, i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_10: stg_389 [1/1] 0.00ns
+._crit_edge242.i.0.1:5  br label %.loopexit225.i.0
+
+ST_10: right_border_buf_1_val_2_0 [1/2] 2.39ns
+._crit_edge246.i.0:1  %right_border_buf_1_val_2_0 = load i8* %k_buf_1_val_0_addr, align 1
+
+ST_10: stg_391 [1/1] 0.00ns
+._crit_edge246.i.0:2  store i8 %right_border_buf_1_val_2_0, i8* %col_buf_1_val_0_0, align 1
+
+ST_10: right_border_buf_1_val_1_0 [1/2] 2.39ns
+._crit_edge246.i.0:4  %right_border_buf_1_val_1_0 = load i8* %k_buf_1_val_1_addr, align 1
+
+ST_10: src_kernel_win_1_val_2_0 [1/2] 2.39ns
+._crit_edge246.i.0:6  %src_kernel_win_1_val_2_0 = load i8* %k_buf_1_val_2_addr, align 1
+
+ST_10: locy_1_0_t [1/1] 0.80ns
+._crit_edge244.i.1.0_ifconv:2  %locy_1_0_t = sub i2 %tmp_21, %tmp_40
+
+ST_10: sel_tmp10 [1/1] 1.36ns
+._crit_edge244.i.1.0_ifconv:3  %sel_tmp10 = icmp eq i2 %tmp_21, %tmp_40
+
+ST_10: sel_tmp11 [1/1] 1.37ns
+._crit_edge244.i.1.0_ifconv:4  %sel_tmp11 = select i1 %sel_tmp10, i8 %right_border_buf_1_val_2_0, i8 %src_kernel_win_1_val_2_0
+
+ST_10: sel_tmp12 [1/1] 1.36ns
+._crit_edge244.i.1.0_ifconv:5  %sel_tmp12 = icmp eq i2 %locy_1_0_t, 1
+
+ST_10: src_kernel_win_1_val_0_1_3 [1/1] 1.37ns
+._crit_edge244.i.1.0_ifconv:6  %src_kernel_win_1_val_0_1_3 = select i1 %sel_tmp12, i8 %right_border_buf_1_val_1_0, i8 %sel_tmp11
+
+ST_10: locy_1_1_t [1/1] 0.80ns
+._crit_edge244.i.1.0_ifconv:9  %locy_1_1_t = sub i2 %tmp_21, %tmp_41
+
+ST_10: sel_tmp13 [1/1] 1.36ns
+._crit_edge244.i.1.0_ifconv:10  %sel_tmp13 = icmp eq i2 %tmp_21, %tmp_41
+
+ST_10: sel_tmp14 [1/1] 1.37ns
+._crit_edge244.i.1.0_ifconv:11  %sel_tmp14 = select i1 %sel_tmp13, i8 %right_border_buf_1_val_2_0, i8 %src_kernel_win_1_val_2_0
+
+ST_10: sel_tmp15 [1/1] 1.36ns
+._crit_edge244.i.1.0_ifconv:12  %sel_tmp15 = icmp eq i2 %locy_1_1_t, 1
+
+ST_10: src_kernel_win_1_val_1_1_3 [1/1] 1.37ns
+._crit_edge244.i.1.0_ifconv:13  %src_kernel_win_1_val_1_1_3 = select i1 %sel_tmp15, i8 %right_border_buf_1_val_1_0, i8 %sel_tmp14
+
+ST_10: stg_404 [1/1] 1.57ns
+.loopexit225.i.1.pre249:0  store i8 %src_kernel_win_1_val_1_1_3, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_405 [1/1] 1.94ns
+.loopexit225.i.1.pre249:1  store i8 %right_border_buf_1_val_1_0, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_406 [1/1] 1.57ns
+.loopexit225.i.1.pre249:2  store i8 %src_kernel_win_1_val_0_1_3, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_407 [1/1] 0.00ns
+.loopexit225.i.1.pre249:3  br label %.loopexit225.i.1
+
+ST_10: stg_408 [1/1] 1.57ns
+branch33:0  store i8 %src_kernel_win_1_val_1_1_3, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_409 [1/1] 1.94ns
+branch33:1  store i8 %right_border_buf_1_val_2_0, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_410 [1/1] 1.57ns
+branch33:2  store i8 %src_kernel_win_1_val_0_1_3, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_411 [1/1] 0.00ns
+branch33:3  br label %.loopexit225.i.1
+
+ST_10: stg_412 [1/1] 1.57ns
+branch35:0  store i8 %src_kernel_win_1_val_1_1_3, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_413 [1/1] 1.94ns
+branch35:1  store i8 %src_kernel_win_1_val_2_0, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_414 [1/1] 1.57ns
+branch35:2  store i8 %src_kernel_win_1_val_0_1_3, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_415 [1/1] 0.00ns
+branch35:3  br label %.loopexit225.i.1
+
+ST_10: col_buf_1_val_0_0_3_load [1/1] 0.00ns
+.preheader.preheader.i.1_ifconv:0  %col_buf_1_val_0_0_3_load = load i8* %col_buf_1_val_0_0_3, align 1
+
+ST_10: col_buf_1_val_0_0_5_load [1/1] 0.00ns
+.preheader.preheader.i.1_ifconv:1  %col_buf_1_val_0_0_5_load = load i8* %col_buf_1_val_0_0_5, align 1
+
+ST_10: col_buf_1_val_0_0_6_load [1/1] 0.00ns
+.preheader.preheader.i.1_ifconv:2  %col_buf_1_val_0_0_6_load = load i8* %col_buf_1_val_0_0_6, align 1
+
+ST_10: right_border_buf_1_val_1_2_3_34 [1/1] 0.00ns
+.preheader.preheader.i.1_ifconv:3  %right_border_buf_1_val_1_2_3_34 = load i8* %right_border_buf_1_val_1_2_1, align 1
+
+ST_10: right_border_buf_1_val_1_2_4_35 [1/1] 0.00ns
+.preheader.preheader.i.1_ifconv:4  %right_border_buf_1_val_1_2_4_35 = load i8* %right_border_buf_1_val_1_2_2, align 1
+
+ST_10: right_border_buf_1_val_1_2_5_36 [1/1] 0.00ns
+.preheader.preheader.i.1_ifconv:5  %right_border_buf_1_val_1_2_5_36 = load i8* %right_border_buf_1_val_1_2_7, align 1
+
+ST_10: col_assign_3_1_t1 [1/1] 0.80ns
+.preheader.preheader.i.1_ifconv:6  %col_assign_3_1_t1 = add i2 %tmp_27, %tmp_11
+
+ST_10: sel_tmp16 [1/1] 1.36ns
+.preheader.preheader.i.1_ifconv:7  %sel_tmp16 = icmp eq i2 %col_assign_3_1_t1, 1
+
+ST_10: col_buf_1_val_0_0_2 [1/1] 1.37ns
+.preheader.preheader.i.1_ifconv:8  %col_buf_1_val_0_0_2 = select i1 %sel_tmp16, i8 %col_buf_1_val_0_0_5_load, i8 %col_buf_1_val_0_0_3_load
+
+ST_10: sel_tmp17 [1/1] 1.36ns
+.preheader.preheader.i.1_ifconv:9  %sel_tmp17 = icmp eq i2 %col_assign_3_1_t1, 0
+
+ST_10: col_buf_1_val_0_0_9 [1/1] 1.37ns
+.preheader.preheader.i.1_ifconv:10  %col_buf_1_val_0_0_9 = select i1 %sel_tmp17, i8 %col_buf_1_val_0_0_6_load, i8 %col_buf_1_val_0_0_2
+
+ST_10: right_border_buf_1_val_1_2 [1/1] 1.37ns
+.preheader.preheader.i.1_ifconv:11  %right_border_buf_1_val_1_2 = select i1 %sel_tmp16, i8 %right_border_buf_1_val_1_2_4_35, i8 %right_border_buf_1_val_1_2_5_36
+
+ST_10: right_border_buf_1_val_1_2_11 [1/1] 1.37ns
+.preheader.preheader.i.1_ifconv:12  %right_border_buf_1_val_1_2_11 = select i1 %sel_tmp17, i8 %right_border_buf_1_val_1_2_3_34, i8 %right_border_buf_1_val_1_2
+
+ST_10: stg_429 [1/1] 1.62ns
+.preheader.preheader.i.1_ifconv:13  switch i2 %col_assign_3_1_t1, label %branch65 [
+    i2 0, label %branch63
+    i2 1, label %branch64
+  ]
+
+ST_10: src_kernel_win_1_val_2_1_7 [1/1] 0.00ns
+branch64:0  %src_kernel_win_1_val_2_1_7 = load i8* %right_border_buf_1_val_0_1, align 1
+
+ST_10: stg_431 [1/1] 1.57ns
+branch64:1  store i8 %right_border_buf_1_val_1_2_11, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_432 [1/1] 1.94ns
+branch64:2  store i8 %src_kernel_win_1_val_2_1_7, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_433 [1/1] 1.57ns
+branch64:3  store i8 %col_buf_1_val_0_0_9, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_434 [1/1] 0.00ns
+branch64:4  br label %.loopexit225.i.1
+
+ST_10: src_kernel_win_1_val_2_1_6 [1/1] 0.00ns
+branch63:0  %src_kernel_win_1_val_2_1_6 = load i8* %right_border_buf_1_val_0_0, align 1
+
+ST_10: stg_436 [1/1] 1.57ns
+branch63:1  store i8 %right_border_buf_1_val_1_2_11, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_437 [1/1] 1.94ns
+branch63:2  store i8 %src_kernel_win_1_val_2_1_6, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_438 [1/1] 1.57ns
+branch63:3  store i8 %col_buf_1_val_0_0_9, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_439 [1/1] 0.00ns
+branch63:4  br label %.loopexit225.i.1
+
+ST_10: src_kernel_win_1_val_2_1_5 [1/1] 0.00ns
+branch65:0  %src_kernel_win_1_val_2_1_5 = load i8* %right_border_buf_1_val_0_2, align 1
+
+ST_10: stg_441 [1/1] 1.57ns
+branch65:1  store i8 %right_border_buf_1_val_1_2_11, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_442 [1/1] 1.94ns
+branch65:2  store i8 %src_kernel_win_1_val_2_1_5, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_443 [1/1] 1.57ns
+branch65:3  store i8 %col_buf_1_val_0_0_9, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_444 [1/1] 0.00ns
+branch65:4  br label %.loopexit225.i.1
+
+ST_10: stg_445 [1/1] 1.57ns
+.loopexit225.i.1.pre:0  store i8 %right_border_buf_1_val_1_0, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_446 [1/1] 1.94ns
+.loopexit225.i.1.pre:1  store i8 %src_kernel_win_1_val_2_0, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_447 [1/1] 1.57ns
+.loopexit225.i.1.pre:2  store i8 %right_border_buf_1_val_2_0, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_448 [1/1] 0.00ns
+.loopexit225.i.1.pre:3  br label %.loopexit225.i.1
+
+ST_10: stg_449 [1/1] 0.00ns
+branch67:0  store i8 %src_kernel_win_1_val_2_0, i8* %right_border_buf_1_val_0_1, align 1
+
+ST_10: stg_450 [1/1] 0.00ns
+branch67:1  br label %"operator().exit291.i.1923"
+
+ST_10: stg_451 [1/1] 0.00ns
+branch66:0  store i8 %src_kernel_win_1_val_2_0, i8* %right_border_buf_1_val_0_0, align 1
+
+ST_10: stg_452 [1/1] 0.00ns
+branch66:1  br label %"operator().exit291.i.1923"
+
+ST_10: stg_453 [1/1] 0.00ns
+branch68:0  store i8 %src_kernel_win_1_val_2_0, i8* %right_border_buf_1_val_0_2, align 1
+
+ST_10: stg_454 [1/1] 0.00ns
+branch68:1  br label %"operator().exit291.i.1923"
+
+ST_10: right_border_buf_1_val_1_2_s [1/1] 0.00ns
+operator().exit291.i.1923:0  %right_border_buf_1_val_1_2_s = load i8* %right_border_buf_1_val_1_2_1, align 1
+
+ST_10: right_border_buf_1_val_1_2_1_32 [1/1] 0.00ns
+operator().exit291.i.1923:1  %right_border_buf_1_val_1_2_1_32 = load i8* %right_border_buf_1_val_1_2_2, align 1
+
+ST_10: right_border_buf_1_val_1_2_2_33 [1/1] 0.00ns
+operator().exit291.i.1923:2  %right_border_buf_1_val_1_2_2_33 = load i8* %right_border_buf_1_val_1_2_7, align 1
+
+ST_10: stg_458 [1/1] 2.39ns
+operator().exit291.i.1923:3  store i8 %right_border_buf_1_val_1_0, i8* %k_buf_1_val_2_addr, align 1
+
+ST_10: sel_tmp18 [1/1] 1.36ns
+operator().exit291.i.1923:4  %sel_tmp18 = icmp eq i2 %tmp_43, 1
+
+ST_10: right_border_buf_1_val_1_2_3 [1/1] 1.37ns
+operator().exit291.i.1923:5  %right_border_buf_1_val_1_2_3 = select i1 %sel_tmp18, i8 %right_border_buf_1_val_1_2_2_33, i8 %right_border_buf_1_val_1_0
+
+ST_10: sel_tmp19 [1/1] 1.36ns
+operator().exit291.i.1923:6  %sel_tmp19 = icmp eq i2 %tmp_43, 0
+
+ST_10: right_border_buf_1_val_1_2_4 [1/1] 1.37ns
+operator().exit291.i.1923:7  %right_border_buf_1_val_1_2_4 = select i1 %sel_tmp19, i8 %right_border_buf_1_val_1_2_2_33, i8 %right_border_buf_1_val_1_2_3
+
+ST_10: right_border_buf_1_val_1_2_5 [1/1] 1.37ns
+operator().exit291.i.1923:8  %right_border_buf_1_val_1_2_5 = select i1 %sel_tmp18, i8 %right_border_buf_1_val_1_0, i8 %right_border_buf_1_val_1_2_1_32
+
+ST_10: right_border_buf_1_val_1_2_6 [1/1] 1.37ns
+operator().exit291.i.1923:9  %right_border_buf_1_val_1_2_6 = select i1 %sel_tmp19, i8 %right_border_buf_1_val_1_2_1_32, i8 %right_border_buf_1_val_1_2_5
+
+ST_10: right_border_buf_1_val_1_2_8 [1/1] 1.37ns
+operator().exit291.i.1923:10  %right_border_buf_1_val_1_2_8 = select i1 %sel_tmp19, i8 %right_border_buf_1_val_1_0, i8 %right_border_buf_1_val_1_2_s
+
+ST_10: stg_466 [1/1] 2.39ns
+operator().exit291.i.1923:11  store i8 %right_border_buf_1_val_2_0, i8* %k_buf_1_val_1_addr, align 1
+
+ST_10: stg_467 [1/1] 1.62ns
+operator().exit291.i.1923:12  switch i2 %tmp_43, label %branch80 [
+    i2 0, label %"operator().exit.i.1.pre"
+    i2 1, label %branch79
+  ]
+
+ST_10: stg_468 [1/1] 0.00ns
+branch79:0  store i8 %right_border_buf_1_val_1_2_4, i8* %right_border_buf_1_val_1_2_7, align 1
+
+ST_10: stg_469 [1/1] 0.00ns
+branch79:1  store i8 %right_border_buf_1_val_1_2_6, i8* %right_border_buf_1_val_1_2_2, align 1
+
+ST_10: stg_470 [1/1] 0.00ns
+branch79:2  store i8 %right_border_buf_1_val_1_2_8, i8* %right_border_buf_1_val_1_2_1, align 1
+
+ST_10: stg_471 [1/1] 0.00ns
+branch79:3  store i8 %right_border_buf_1_val_2_0, i8* %col_buf_1_val_0_0_5, align 1
+
+ST_10: stg_472 [1/1] 0.00ns
+branch79:4  br label %"operator().exit.i.1"
+
+ST_10: stg_473 [1/1] 0.00ns
+operator().exit.i.1.pre:0  store i8 %right_border_buf_1_val_1_2_4, i8* %right_border_buf_1_val_1_2_7, align 1
+
+ST_10: stg_474 [1/1] 0.00ns
+operator().exit.i.1.pre:1  store i8 %right_border_buf_1_val_1_2_6, i8* %right_border_buf_1_val_1_2_2, align 1
+
+ST_10: stg_475 [1/1] 0.00ns
+operator().exit.i.1.pre:2  store i8 %right_border_buf_1_val_1_2_8, i8* %right_border_buf_1_val_1_2_1, align 1
+
+ST_10: stg_476 [1/1] 0.00ns
+operator().exit.i.1.pre:3  store i8 %right_border_buf_1_val_2_0, i8* %col_buf_1_val_0_0_6, align 1
+
+ST_10: stg_477 [1/1] 0.00ns
+operator().exit.i.1.pre:4  br label %"operator().exit.i.1"
+
+ST_10: stg_478 [1/1] 0.00ns
+branch80:0  store i8 %right_border_buf_1_val_1_2_4, i8* %right_border_buf_1_val_1_2_7, align 1
+
+ST_10: stg_479 [1/1] 0.00ns
+branch80:1  store i8 %right_border_buf_1_val_1_2_6, i8* %right_border_buf_1_val_1_2_2, align 1
+
+ST_10: stg_480 [1/1] 0.00ns
+branch80:2  store i8 %right_border_buf_1_val_1_2_8, i8* %right_border_buf_1_val_1_2_1, align 1
+
+ST_10: stg_481 [1/1] 0.00ns
+branch80:3  store i8 %right_border_buf_1_val_2_0, i8* %col_buf_1_val_0_0_3, align 1
+
+ST_10: stg_482 [1/1] 0.00ns
+branch80:4  br label %"operator().exit.i.1"
+
+ST_10: stg_483 [1/1] 2.39ns
+operator().exit.i.1.critedge.critedge:0  store i8 %right_border_buf_1_val_1_0, i8* %k_buf_1_val_2_addr, align 1
+
+ST_10: stg_484 [1/1] 2.39ns
+operator().exit.i.1.critedge.critedge:1  store i8 %right_border_buf_1_val_2_0, i8* %k_buf_1_val_1_addr, align 1
+
+ST_10: stg_485 [1/1] 0.00ns
+operator().exit.i.1.critedge.critedge:2  br label %"operator().exit.i.1"
+
+ST_10: tmp_44 [1/1] 1.70ns
+operator().exit.i.1:0  %tmp_44 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %p_src_data_stream_1_V)
+
+ST_10: stg_487 [1/1] 2.39ns
+operator().exit.i.1:1  store i8 %tmp_44, i8* %k_buf_1_val_0_addr, align 1
+
+ST_10: stg_488 [1/1] 1.57ns
+operator().exit.i.1:2  store i8 %right_border_buf_1_val_1_0, i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_10: stg_489 [1/1] 1.94ns
+operator().exit.i.1:3  store i8 %src_kernel_win_1_val_2_0, i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_10: stg_490 [1/1] 1.57ns
+operator().exit.i.1:4  store i8 %right_border_buf_1_val_2_0, i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_10: stg_491 [1/1] 0.00ns
+operator().exit.i.1:5  br label %.loopexit225.i.1
+
+ST_10: right_border_buf_2_val_2_0 [1/2] 2.39ns
+._crit_edge246.i.1:1  %right_border_buf_2_val_2_0 = load i8* %k_buf_2_val_0_addr, align 1
+
+ST_10: stg_493 [1/1] 0.00ns
+._crit_edge246.i.1:2  store i8 %right_border_buf_2_val_2_0, i8* %col_buf_2_val_0_0, align 1
+
+ST_10: right_border_buf_2_val_1_0 [1/2] 2.39ns
+._crit_edge246.i.1:4  %right_border_buf_2_val_1_0 = load i8* %k_buf_2_val_1_addr, align 1
+
+ST_10: src_kernel_win_2_val_2_0 [1/2] 2.39ns
+._crit_edge246.i.1:6  %src_kernel_win_2_val_2_0 = load i8* %k_buf_2_val_2_addr, align 1
+
+ST_10: locy_2_0_t [1/1] 0.80ns
+._crit_edge244.i.2.0_ifconv:2  %locy_2_0_t = sub i2 %tmp_21, %tmp_52
+
+ST_10: sel_tmp20 [1/1] 1.36ns
+._crit_edge244.i.2.0_ifconv:3  %sel_tmp20 = icmp eq i2 %tmp_21, %tmp_52
+
+ST_10: sel_tmp21 [1/1] 1.37ns
+._crit_edge244.i.2.0_ifconv:4  %sel_tmp21 = select i1 %sel_tmp20, i8 %right_border_buf_2_val_2_0, i8 %src_kernel_win_2_val_2_0
+
+ST_10: sel_tmp22 [1/1] 1.36ns
+._crit_edge244.i.2.0_ifconv:5  %sel_tmp22 = icmp eq i2 %locy_2_0_t, 1
+
+ST_10: src_kernel_win_2_val_0_1_3 [1/1] 1.37ns
+._crit_edge244.i.2.0_ifconv:6  %src_kernel_win_2_val_0_1_3 = select i1 %sel_tmp22, i8 %right_border_buf_2_val_1_0, i8 %sel_tmp21
+
+ST_10: locy_2_1_t [1/1] 0.80ns
+._crit_edge244.i.2.0_ifconv:9  %locy_2_1_t = sub i2 %tmp_21, %tmp_53
+
+ST_10: sel_tmp23 [1/1] 1.36ns
+._crit_edge244.i.2.0_ifconv:10  %sel_tmp23 = icmp eq i2 %tmp_21, %tmp_53
+
+ST_10: sel_tmp24 [1/1] 1.37ns
+._crit_edge244.i.2.0_ifconv:11  %sel_tmp24 = select i1 %sel_tmp23, i8 %right_border_buf_2_val_2_0, i8 %src_kernel_win_2_val_2_0
+
+ST_10: sel_tmp25 [1/1] 1.36ns
+._crit_edge244.i.2.0_ifconv:12  %sel_tmp25 = icmp eq i2 %locy_2_1_t, 1
+
+ST_10: src_kernel_win_2_val_1_1_3 [1/1] 1.37ns
+._crit_edge244.i.2.0_ifconv:13  %src_kernel_win_2_val_1_1_3 = select i1 %sel_tmp25, i8 %right_border_buf_2_val_1_0, i8 %sel_tmp24
+
+ST_10: stg_506 [1/1] 1.57ns
+.loopexit225.i.2.pre243:0  store i8 %src_kernel_win_2_val_1_1_3, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_507 [1/1] 1.94ns
+.loopexit225.i.2.pre243:1  store i8 %right_border_buf_2_val_1_0, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_508 [1/1] 1.57ns
+.loopexit225.i.2.pre243:2  store i8 %src_kernel_win_2_val_0_1_3, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_509 [1/1] 0.00ns
+.loopexit225.i.2.pre243:3  br label %.loopexit225.i.2
+
+ST_10: stg_510 [1/1] 1.57ns
+branch42:0  store i8 %src_kernel_win_2_val_1_1_3, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_511 [1/1] 1.94ns
+branch42:1  store i8 %right_border_buf_2_val_2_0, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_512 [1/1] 1.57ns
+branch42:2  store i8 %src_kernel_win_2_val_0_1_3, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_513 [1/1] 0.00ns
+branch42:3  br label %.loopexit225.i.2
+
+ST_10: stg_514 [1/1] 1.57ns
+branch44:0  store i8 %src_kernel_win_2_val_1_1_3, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_515 [1/1] 1.94ns
+branch44:1  store i8 %src_kernel_win_2_val_2_0, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_516 [1/1] 1.57ns
+branch44:2  store i8 %src_kernel_win_2_val_0_1_3, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_517 [1/1] 0.00ns
+branch44:3  br label %.loopexit225.i.2
+
+ST_10: col_buf_2_val_0_0_3_load [1/1] 0.00ns
+.preheader.preheader.i.2_ifconv:0  %col_buf_2_val_0_0_3_load = load i8* %col_buf_2_val_0_0_3, align 1
+
+ST_10: col_buf_2_val_0_0_5_load [1/1] 0.00ns
+.preheader.preheader.i.2_ifconv:1  %col_buf_2_val_0_0_5_load = load i8* %col_buf_2_val_0_0_5, align 1
+
+ST_10: col_buf_2_val_0_0_6_load [1/1] 0.00ns
+.preheader.preheader.i.2_ifconv:2  %col_buf_2_val_0_0_6_load = load i8* %col_buf_2_val_0_0_6, align 1
+
+ST_10: right_border_buf_2_val_1_2_3_41 [1/1] 0.00ns
+.preheader.preheader.i.2_ifconv:3  %right_border_buf_2_val_1_2_3_41 = load i8* %right_border_buf_2_val_1_2_1, align 1
+
+ST_10: right_border_buf_2_val_1_2_4_42 [1/1] 0.00ns
+.preheader.preheader.i.2_ifconv:4  %right_border_buf_2_val_1_2_4_42 = load i8* %right_border_buf_2_val_1_2_2, align 1
+
+ST_10: right_border_buf_2_val_1_2_5_43 [1/1] 0.00ns
+.preheader.preheader.i.2_ifconv:5  %right_border_buf_2_val_1_2_5_43 = load i8* %right_border_buf_2_val_1_2_3, align 1
+
+ST_10: col_assign_3_2_t1 [1/1] 0.80ns
+.preheader.preheader.i.2_ifconv:6  %col_assign_3_2_t1 = add i2 %tmp_27, %tmp_11
+
+ST_10: sel_tmp26 [1/1] 1.36ns
+.preheader.preheader.i.2_ifconv:7  %sel_tmp26 = icmp eq i2 %col_assign_3_2_t1, 1
+
+ST_10: col_buf_2_val_0_0_2 [1/1] 1.37ns
+.preheader.preheader.i.2_ifconv:8  %col_buf_2_val_0_0_2 = select i1 %sel_tmp26, i8 %col_buf_2_val_0_0_5_load, i8 %col_buf_2_val_0_0_3_load
+
+ST_10: sel_tmp27 [1/1] 1.36ns
+.preheader.preheader.i.2_ifconv:9  %sel_tmp27 = icmp eq i2 %col_assign_3_2_t1, 0
+
+ST_10: col_buf_2_val_0_0_9 [1/1] 1.37ns
+.preheader.preheader.i.2_ifconv:10  %col_buf_2_val_0_0_9 = select i1 %sel_tmp27, i8 %col_buf_2_val_0_0_6_load, i8 %col_buf_2_val_0_0_2
+
+ST_10: right_border_buf_2_val_1_2 [1/1] 1.37ns
+.preheader.preheader.i.2_ifconv:11  %right_border_buf_2_val_1_2 = select i1 %sel_tmp26, i8 %right_border_buf_2_val_1_2_4_42, i8 %right_border_buf_2_val_1_2_3_41
+
+ST_10: right_border_buf_2_val_1_2_11 [1/1] 1.37ns
+.preheader.preheader.i.2_ifconv:12  %right_border_buf_2_val_1_2_11 = select i1 %sel_tmp27, i8 %right_border_buf_2_val_1_2_5_43, i8 %right_border_buf_2_val_1_2
+
+ST_10: stg_531 [1/1] 1.62ns
+.preheader.preheader.i.2_ifconv:13  switch i2 %col_assign_3_2_t1, label %branch83 [
+    i2 0, label %branch81
+    i2 1, label %branch82
+  ]
+
+ST_10: src_kernel_win_2_val_2_1_7 [1/1] 0.00ns
+branch82:0  %src_kernel_win_2_val_2_1_7 = load i8* %right_border_buf_2_val_0_1, align 1
+
+ST_10: stg_533 [1/1] 1.57ns
+branch82:1  store i8 %right_border_buf_2_val_1_2_11, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_534 [1/1] 1.94ns
+branch82:2  store i8 %src_kernel_win_2_val_2_1_7, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_535 [1/1] 1.57ns
+branch82:3  store i8 %col_buf_2_val_0_0_9, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_536 [1/1] 0.00ns
+branch82:4  br label %.loopexit225.i.2
+
+ST_10: src_kernel_win_2_val_2_1_6 [1/1] 0.00ns
+branch81:0  %src_kernel_win_2_val_2_1_6 = load i8* %right_border_buf_2_val_0_0, align 1
+
+ST_10: stg_538 [1/1] 1.57ns
+branch81:1  store i8 %right_border_buf_2_val_1_2_11, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_539 [1/1] 1.94ns
+branch81:2  store i8 %src_kernel_win_2_val_2_1_6, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_540 [1/1] 1.57ns
+branch81:3  store i8 %col_buf_2_val_0_0_9, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_541 [1/1] 0.00ns
+branch81:4  br label %.loopexit225.i.2
+
+ST_10: src_kernel_win_2_val_2_1_5 [1/1] 0.00ns
+branch83:0  %src_kernel_win_2_val_2_1_5 = load i8* %right_border_buf_2_val_0_2, align 1
+
+ST_10: stg_543 [1/1] 1.57ns
+branch83:1  store i8 %right_border_buf_2_val_1_2_11, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_544 [1/1] 1.94ns
+branch83:2  store i8 %src_kernel_win_2_val_2_1_5, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_545 [1/1] 1.57ns
+branch83:3  store i8 %col_buf_2_val_0_0_9, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_546 [1/1] 0.00ns
+branch83:4  br label %.loopexit225.i.2
+
+ST_10: stg_547 [1/1] 1.57ns
+.loopexit225.i.2.pre:0  store i8 %right_border_buf_2_val_1_0, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_548 [1/1] 1.94ns
+.loopexit225.i.2.pre:1  store i8 %src_kernel_win_2_val_2_0, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_549 [1/1] 1.57ns
+.loopexit225.i.2.pre:2  store i8 %right_border_buf_2_val_2_0, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_550 [1/1] 0.00ns
+.loopexit225.i.2.pre:3  br label %.loopexit225.i.2
+
+ST_10: stg_551 [1/1] 0.00ns
+branch85:0  store i8 %src_kernel_win_2_val_2_0, i8* %right_border_buf_2_val_0_1, align 1
+
+ST_10: stg_552 [1/1] 0.00ns
+branch85:1  br label %"operator().exit291.i.2960"
+
+ST_10: stg_553 [1/1] 0.00ns
+branch84:0  store i8 %src_kernel_win_2_val_2_0, i8* %right_border_buf_2_val_0_0, align 1
+
+ST_10: stg_554 [1/1] 0.00ns
+branch84:1  br label %"operator().exit291.i.2960"
+
+ST_10: stg_555 [1/1] 0.00ns
+branch86:0  store i8 %src_kernel_win_2_val_2_0, i8* %right_border_buf_2_val_0_2, align 1
+
+ST_10: stg_556 [1/1] 0.00ns
+branch86:1  br label %"operator().exit291.i.2960"
+
+ST_10: right_border_buf_2_val_1_2_s [1/1] 0.00ns
+operator().exit291.i.2960:0  %right_border_buf_2_val_1_2_s = load i8* %right_border_buf_2_val_1_2_1, align 1
+
+ST_10: right_border_buf_2_val_1_2_1_39 [1/1] 0.00ns
+operator().exit291.i.2960:1  %right_border_buf_2_val_1_2_1_39 = load i8* %right_border_buf_2_val_1_2_2, align 1
+
+ST_10: right_border_buf_2_val_1_2_2_40 [1/1] 0.00ns
+operator().exit291.i.2960:2  %right_border_buf_2_val_1_2_2_40 = load i8* %right_border_buf_2_val_1_2_3, align 1
+
+ST_10: stg_560 [1/1] 2.39ns
+operator().exit291.i.2960:3  store i8 %right_border_buf_2_val_1_0, i8* %k_buf_2_val_2_addr, align 1
+
+ST_10: sel_tmp28 [1/1] 1.36ns
+operator().exit291.i.2960:4  %sel_tmp28 = icmp eq i2 %tmp_55, 0
+
+ST_10: right_border_buf_2_val_1_2_4 [1/1] 1.37ns
+operator().exit291.i.2960:5  %right_border_buf_2_val_1_2_4 = select i1 %sel_tmp28, i8 %right_border_buf_2_val_1_0, i8 %right_border_buf_2_val_1_2_2_40
+
+ST_10: sel_tmp29 [1/1] 1.36ns
+operator().exit291.i.2960:6  %sel_tmp29 = icmp eq i2 %tmp_55, 1
+
+ST_10: right_border_buf_2_val_1_2_5 [1/1] 1.37ns
+operator().exit291.i.2960:7  %right_border_buf_2_val_1_2_5 = select i1 %sel_tmp29, i8 %right_border_buf_2_val_1_0, i8 %right_border_buf_2_val_1_2_1_39
+
+ST_10: right_border_buf_2_val_1_2_6 [1/1] 1.37ns
+operator().exit291.i.2960:8  %right_border_buf_2_val_1_2_6 = select i1 %sel_tmp28, i8 %right_border_buf_2_val_1_2_1_39, i8 %right_border_buf_2_val_1_2_5
+
+ST_10: right_border_buf_2_val_1_2_7 [1/1] 1.37ns
+operator().exit291.i.2960:9  %right_border_buf_2_val_1_2_7 = select i1 %sel_tmp29, i8 %right_border_buf_2_val_1_2_s, i8 %right_border_buf_2_val_1_0
+
+ST_10: right_border_buf_2_val_1_2_8 [1/1] 1.37ns
+operator().exit291.i.2960:10  %right_border_buf_2_val_1_2_8 = select i1 %sel_tmp28, i8 %right_border_buf_2_val_1_2_s, i8 %right_border_buf_2_val_1_2_7
+
+ST_10: stg_568 [1/1] 2.39ns
+operator().exit291.i.2960:11  store i8 %right_border_buf_2_val_2_0, i8* %k_buf_2_val_1_addr, align 1
+
+ST_10: stg_569 [1/1] 1.62ns
+operator().exit291.i.2960:12  switch i2 %tmp_55, label %branch98 [
+    i2 0, label %"operator().exit.i.2.pre"
+    i2 1, label %branch97
+  ]
+
+ST_10: stg_570 [1/1] 0.00ns
+branch97:0  store i8 %right_border_buf_2_val_1_2_4, i8* %right_border_buf_2_val_1_2_3, align 1
+
+ST_10: stg_571 [1/1] 0.00ns
+branch97:1  store i8 %right_border_buf_2_val_1_2_6, i8* %right_border_buf_2_val_1_2_2, align 1
+
+ST_10: stg_572 [1/1] 0.00ns
+branch97:2  store i8 %right_border_buf_2_val_1_2_8, i8* %right_border_buf_2_val_1_2_1, align 1
+
+ST_10: stg_573 [1/1] 0.00ns
+branch97:3  store i8 %right_border_buf_2_val_2_0, i8* %col_buf_2_val_0_0_5, align 1
+
+ST_10: stg_574 [1/1] 0.00ns
+branch97:4  br label %"operator().exit.i.2"
+
+ST_10: stg_575 [1/1] 0.00ns
+operator().exit.i.2.pre:0  store i8 %right_border_buf_2_val_1_2_4, i8* %right_border_buf_2_val_1_2_3, align 1
+
+ST_10: stg_576 [1/1] 0.00ns
+operator().exit.i.2.pre:1  store i8 %right_border_buf_2_val_1_2_6, i8* %right_border_buf_2_val_1_2_2, align 1
+
+ST_10: stg_577 [1/1] 0.00ns
+operator().exit.i.2.pre:2  store i8 %right_border_buf_2_val_1_2_8, i8* %right_border_buf_2_val_1_2_1, align 1
+
+ST_10: stg_578 [1/1] 0.00ns
+operator().exit.i.2.pre:3  store i8 %right_border_buf_2_val_2_0, i8* %col_buf_2_val_0_0_6, align 1
+
+ST_10: stg_579 [1/1] 0.00ns
+operator().exit.i.2.pre:4  br label %"operator().exit.i.2"
+
+ST_10: stg_580 [1/1] 0.00ns
+branch98:0  store i8 %right_border_buf_2_val_1_2_4, i8* %right_border_buf_2_val_1_2_3, align 1
+
+ST_10: stg_581 [1/1] 0.00ns
+branch98:1  store i8 %right_border_buf_2_val_1_2_6, i8* %right_border_buf_2_val_1_2_2, align 1
+
+ST_10: stg_582 [1/1] 0.00ns
+branch98:2  store i8 %right_border_buf_2_val_1_2_8, i8* %right_border_buf_2_val_1_2_1, align 1
+
+ST_10: stg_583 [1/1] 0.00ns
+branch98:3  store i8 %right_border_buf_2_val_2_0, i8* %col_buf_2_val_0_0_3, align 1
+
+ST_10: stg_584 [1/1] 0.00ns
+branch98:4  br label %"operator().exit.i.2"
+
+ST_10: stg_585 [1/1] 2.39ns
+operator().exit.i.2.critedge.critedge:0  store i8 %right_border_buf_2_val_1_0, i8* %k_buf_2_val_2_addr, align 1
+
+ST_10: stg_586 [1/1] 2.39ns
+operator().exit.i.2.critedge.critedge:1  store i8 %right_border_buf_2_val_2_0, i8* %k_buf_2_val_1_addr, align 1
+
+ST_10: stg_587 [1/1] 0.00ns
+operator().exit.i.2.critedge.critedge:2  br label %"operator().exit.i.2"
+
+ST_10: tmp_56 [1/1] 1.70ns
+operator().exit.i.2:0  %tmp_56 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %p_src_data_stream_2_V)
+
+ST_10: stg_589 [1/1] 2.39ns
+operator().exit.i.2:1  store i8 %tmp_56, i8* %k_buf_2_val_0_addr, align 1
+
+ST_10: stg_590 [1/1] 1.57ns
+operator().exit.i.2:2  store i8 %right_border_buf_2_val_1_0, i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_10: stg_591 [1/1] 1.94ns
+operator().exit.i.2:3  store i8 %src_kernel_win_2_val_2_0, i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_10: stg_592 [1/1] 1.57ns
+operator().exit.i.2:4  store i8 %right_border_buf_2_val_2_0, i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_10: stg_593 [1/1] 0.00ns
+operator().exit.i.2:5  br label %.loopexit225.i.2
+
+
+ <State 11>: 6.77ns
+ST_11: stg_594 [1/1] 0.00ns
+.loopexit225.i.0:0  br i1 %or_cond222_i, label %.preheader.0, label %._crit_edge246.i.0
+
+ST_11: src_kernel_win_0_val_0_1_lo [1/1] 0.00ns
+.preheader.0:0  %src_kernel_win_0_val_0_1_lo = load i8* %src_kernel_win_0_val_0_1, align 1
+
+ST_11: src_kernel_win_0_val_0_2_lo [1/1] 0.00ns
+.preheader.0:1  %src_kernel_win_0_val_0_2_lo = load i8* %src_kernel_win_0_val_0_2, align 1
+
+ST_11: src_kernel_win_0_val_2_1_lo [1/1] 0.00ns
+.preheader.0:2  %src_kernel_win_0_val_2_1_lo = load i8* %src_kernel_win_0_val_2_1, align 1
+
+ST_11: src_kernel_win_0_val_1_1_lo [1/1] 0.00ns
+.preheader.0:3  %src_kernel_win_0_val_1_1_lo = load i8* %src_kernel_win_0_val_1_1, align 1
+
+ST_11: src_kernel_win_0_val_1_2_lo [1/1] 0.00ns
+.preheader.0:4  %src_kernel_win_0_val_1_2_lo = load i8* %src_kernel_win_0_val_1_2, align 1
+
+ST_11: src_kernel_win_0_val_2_2_lo [1/1] 0.00ns
+.preheader.0:5  %src_kernel_win_0_val_2_2_lo = load i8* %src_kernel_win_0_val_2_2, align 1
+
+ST_11: OP1_V_0_0_cast [1/1] 0.00ns
+.preheader.0:6  %OP1_V_0_0_cast = zext i8 %src_kernel_win_0_val_2_2_lo to i9
+
+ST_11: tmp_136_0_0_2_cast [1/1] 0.00ns
+.preheader.0:7  %tmp_136_0_0_2_cast = zext i8 %src_kernel_win_0_val_2_1_lo to i9
+
+ST_11: p_Val2_3_0_0_2 [1/1] 1.72ns
+.preheader.0:8  %p_Val2_3_0_0_2 = sub i9 %tmp_136_0_0_2_cast, %OP1_V_0_0_cast
+
+ST_11: p_Val2_3_0_0_2_cast_cast [1/1] 0.00ns
+.preheader.0:9  %p_Val2_3_0_0_2_cast_cast = sext i9 %p_Val2_3_0_0_2 to i10
+
+ST_11: p_shl [1/1] 0.00ns
+.preheader.0:10  %p_shl = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %src_kernel_win_0_val_1_2_lo, i1 false)
+
+ST_11: p_shl_cast [1/1] 0.00ns
+.preheader.0:11  %p_shl_cast = zext i9 %p_shl to i10
+
+ST_11: p_Val2_0_1 [1/1] 1.84ns
+.preheader.0:12  %p_Val2_0_1 = sub i10 0, %p_shl_cast
+
+ST_11: tmp_136_0_1_cast [1/1] 0.00ns
+.preheader.0:13  %tmp_136_0_1_cast = sext i10 %p_Val2_0_1 to i11
+
+ST_11: p_Val2_0_1_2 [1/1] 0.00ns
+.preheader.0:14  %p_Val2_0_1_2 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %src_kernel_win_0_val_1_1_lo, i1 false)
+
+ST_11: tmp_136_0_1_cast_30 [1/1] 0.00ns
+.preheader.0:15  %tmp_136_0_1_cast_30 = zext i9 %p_Val2_0_1_2 to i11
+
+ST_11: OP1_V_0_2_cast [1/1] 0.00ns
+.preheader.0:16  %OP1_V_0_2_cast = zext i8 %src_kernel_win_0_val_0_2_lo to i9
+
+ST_11: p_Val2_0_2 [1/1] 1.72ns
+.preheader.0:17  %p_Val2_0_2 = sub i9 0, %OP1_V_0_2_cast
+
+ST_11: tmp_136_0_2_cast [1/1] 0.00ns
+.preheader.0:18  %tmp_136_0_2_cast = sext i9 %p_Val2_0_2 to i11
+
+ST_11: tmp_136_0_2_2_cast_cast [1/1] 0.00ns
+.preheader.0:19  %tmp_136_0_2_2_cast_cast = zext i8 %src_kernel_win_0_val_0_1_lo to i10
+
+ST_11: tmp13 [1/1] 1.37ns
+.preheader.0:20  %tmp13 = add i11 %tmp_136_0_1_cast, %tmp_136_0_2_cast
+
+ST_11: tmp14 [1/1] 1.84ns
+.preheader.0:21  %tmp14 = add i10 %p_Val2_3_0_0_2_cast_cast, %tmp_136_0_2_2_cast_cast
+
+ST_11: tmp88_cast [1/1] 0.00ns
+.preheader.0:22  %tmp88_cast = sext i10 %tmp14 to i11
+
+ST_11: tmp15 [1/1] 1.84ns
+.preheader.0:23  %tmp15 = add i11 %tmp88_cast, %tmp_136_0_1_cast_30
+
+ST_11: p_Val2_1 [1/1] 1.37ns
+.preheader.0:24  %p_Val2_1 = add i11 %tmp15, %tmp13
+
+ST_11: isneg [1/1] 0.00ns
+.preheader.0:25  %isneg = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %p_Val2_1, i32 10)
+
+ST_11: p_Val2_2 [1/1] 0.00ns
+.preheader.0:26  %p_Val2_2 = trunc i11 %p_Val2_1 to i8
+
+ST_11: tmp_36 [1/1] 0.00ns
+.preheader.0:27  %tmp_36 = call i3 @_ssdm_op_PartSelect.i3.i11.i32.i32(i11 %p_Val2_1, i32 8, i32 10)
+
+ST_11: stg_623 [1/1] 0.00ns
+.loopexit225.i.1:0  br i1 %or_cond222_i, label %.preheader.1, label %._crit_edge246.i.1
+
+ST_11: src_kernel_win_1_val_0_1_lo [1/1] 0.00ns
+.preheader.1:0  %src_kernel_win_1_val_0_1_lo = load i8* %src_kernel_win_1_val_0_1, align 1
+
+ST_11: src_kernel_win_1_val_0_2_lo [1/1] 0.00ns
+.preheader.1:1  %src_kernel_win_1_val_0_2_lo = load i8* %src_kernel_win_1_val_0_2, align 1
+
+ST_11: src_kernel_win_1_val_2_1_lo [1/1] 0.00ns
+.preheader.1:2  %src_kernel_win_1_val_2_1_lo = load i8* %src_kernel_win_1_val_2_1, align 1
+
+ST_11: src_kernel_win_1_val_1_1_lo [1/1] 0.00ns
+.preheader.1:3  %src_kernel_win_1_val_1_1_lo = load i8* %src_kernel_win_1_val_1_1, align 1
+
+ST_11: src_kernel_win_1_val_1_2_lo [1/1] 0.00ns
+.preheader.1:4  %src_kernel_win_1_val_1_2_lo = load i8* %src_kernel_win_1_val_1_2, align 1
+
+ST_11: src_kernel_win_1_val_2_2_lo [1/1] 0.00ns
+.preheader.1:5  %src_kernel_win_1_val_2_2_lo = load i8* %src_kernel_win_1_val_2_2, align 1
+
+ST_11: OP1_V_1_0_cast [1/1] 0.00ns
+.preheader.1:6  %OP1_V_1_0_cast = zext i8 %src_kernel_win_1_val_2_2_lo to i9
+
+ST_11: tmp_136_1_0_2_cast [1/1] 0.00ns
+.preheader.1:7  %tmp_136_1_0_2_cast = zext i8 %src_kernel_win_1_val_2_1_lo to i9
+
+ST_11: p_Val2_3_1_0_2 [1/1] 1.72ns
+.preheader.1:8  %p_Val2_3_1_0_2 = sub i9 %tmp_136_1_0_2_cast, %OP1_V_1_0_cast
+
+ST_11: p_Val2_3_1_0_2_cast_cast [1/1] 0.00ns
+.preheader.1:9  %p_Val2_3_1_0_2_cast_cast = sext i9 %p_Val2_3_1_0_2 to i10
+
+ST_11: p_shl1 [1/1] 0.00ns
+.preheader.1:10  %p_shl1 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %src_kernel_win_1_val_1_2_lo, i1 false)
+
+ST_11: p_shl1_cast [1/1] 0.00ns
+.preheader.1:11  %p_shl1_cast = zext i9 %p_shl1 to i10
+
+ST_11: p_Val2_112_1 [1/1] 1.84ns
+.preheader.1:12  %p_Val2_112_1 = sub i10 0, %p_shl1_cast
+
+ST_11: tmp_136_1_1_cast [1/1] 0.00ns
+.preheader.1:13  %tmp_136_1_1_cast = sext i10 %p_Val2_112_1 to i11
+
+ST_11: p_Val2_112_1_2 [1/1] 0.00ns
+.preheader.1:14  %p_Val2_112_1_2 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %src_kernel_win_1_val_1_1_lo, i1 false)
+
+ST_11: tmp_136_1_1_cast_37 [1/1] 0.00ns
+.preheader.1:15  %tmp_136_1_1_cast_37 = zext i9 %p_Val2_112_1_2 to i11
+
+ST_11: OP1_V_1_2_cast [1/1] 0.00ns
+.preheader.1:16  %OP1_V_1_2_cast = zext i8 %src_kernel_win_1_val_0_2_lo to i9
+
+ST_11: p_Val2_112_2 [1/1] 1.72ns
+.preheader.1:17  %p_Val2_112_2 = sub i9 0, %OP1_V_1_2_cast
+
+ST_11: tmp_136_1_2_cast [1/1] 0.00ns
+.preheader.1:18  %tmp_136_1_2_cast = sext i9 %p_Val2_112_2 to i11
+
+ST_11: tmp_136_1_2_2_cast_cast [1/1] 0.00ns
+.preheader.1:19  %tmp_136_1_2_2_cast_cast = zext i8 %src_kernel_win_1_val_0_1_lo to i10
+
+ST_11: tmp43 [1/1] 1.37ns
+.preheader.1:20  %tmp43 = add i11 %tmp_136_1_1_cast, %tmp_136_1_2_cast
+
+ST_11: tmp44 [1/1] 1.84ns
+.preheader.1:21  %tmp44 = add i10 %p_Val2_3_1_0_2_cast_cast, %tmp_136_1_2_2_cast_cast
+
+ST_11: tmp93_cast [1/1] 0.00ns
+.preheader.1:22  %tmp93_cast = sext i10 %tmp44 to i11
+
+ST_11: tmp45 [1/1] 1.84ns
+.preheader.1:23  %tmp45 = add i11 %tmp93_cast, %tmp_136_1_1_cast_37
+
+ST_11: p_Val2_4 [1/1] 1.37ns
+.preheader.1:24  %p_Val2_4 = add i11 %tmp45, %tmp43
+
+ST_11: isneg_1 [1/1] 0.00ns
+.preheader.1:25  %isneg_1 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %p_Val2_4, i32 10)
+
+ST_11: p_Val2_5 [1/1] 0.00ns
+.preheader.1:26  %p_Val2_5 = trunc i11 %p_Val2_4 to i8
+
+ST_11: tmp_37 [1/1] 0.00ns
+.preheader.1:27  %tmp_37 = call i3 @_ssdm_op_PartSelect.i3.i11.i32.i32(i11 %p_Val2_4, i32 8, i32 10)
+
+ST_11: stg_652 [1/1] 0.00ns
+.loopexit225.i.2:0  br i1 %or_cond222_i, label %.preheader.2, label %._crit_edge246.i.2
+
+ST_11: src_kernel_win_2_val_0_1_lo [1/1] 0.00ns
+.preheader.2:0  %src_kernel_win_2_val_0_1_lo = load i8* %src_kernel_win_2_val_0_1, align 1
+
+ST_11: src_kernel_win_2_val_0_2_lo [1/1] 0.00ns
+.preheader.2:1  %src_kernel_win_2_val_0_2_lo = load i8* %src_kernel_win_2_val_0_2, align 1
+
+ST_11: src_kernel_win_2_val_2_1_lo [1/1] 0.00ns
+.preheader.2:2  %src_kernel_win_2_val_2_1_lo = load i8* %src_kernel_win_2_val_2_1, align 1
+
+ST_11: src_kernel_win_2_val_1_1_lo [1/1] 0.00ns
+.preheader.2:3  %src_kernel_win_2_val_1_1_lo = load i8* %src_kernel_win_2_val_1_1, align 1
+
+ST_11: src_kernel_win_2_val_1_2_lo [1/1] 0.00ns
+.preheader.2:4  %src_kernel_win_2_val_1_2_lo = load i8* %src_kernel_win_2_val_1_2, align 1
+
+ST_11: src_kernel_win_2_val_2_2_lo [1/1] 0.00ns
+.preheader.2:5  %src_kernel_win_2_val_2_2_lo = load i8* %src_kernel_win_2_val_2_2, align 1
+
+ST_11: OP1_V_2_0_cast [1/1] 0.00ns
+.preheader.2:6  %OP1_V_2_0_cast = zext i8 %src_kernel_win_2_val_2_2_lo to i9
+
+ST_11: tmp_136_2_0_2_cast [1/1] 0.00ns
+.preheader.2:7  %tmp_136_2_0_2_cast = zext i8 %src_kernel_win_2_val_2_1_lo to i9
+
+ST_11: p_Val2_3_2_0_2 [1/1] 1.72ns
+.preheader.2:8  %p_Val2_3_2_0_2 = sub i9 %tmp_136_2_0_2_cast, %OP1_V_2_0_cast
+
+ST_11: p_Val2_3_2_0_2_cast_cast [1/1] 0.00ns
+.preheader.2:9  %p_Val2_3_2_0_2_cast_cast = sext i9 %p_Val2_3_2_0_2 to i10
+
+ST_11: p_shl2 [1/1] 0.00ns
+.preheader.2:10  %p_shl2 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %src_kernel_win_2_val_1_2_lo, i1 false)
+
+ST_11: p_shl2_cast [1/1] 0.00ns
+.preheader.2:11  %p_shl2_cast = zext i9 %p_shl2 to i10
+
+ST_11: p_Val2_2_1 [1/1] 1.84ns
+.preheader.2:12  %p_Val2_2_1 = sub i10 0, %p_shl2_cast
+
+ST_11: tmp_136_2_1_cast [1/1] 0.00ns
+.preheader.2:13  %tmp_136_2_1_cast = sext i10 %p_Val2_2_1 to i11
+
+ST_11: p_Val2_2_1_2 [1/1] 0.00ns
+.preheader.2:14  %p_Val2_2_1_2 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %src_kernel_win_2_val_1_1_lo, i1 false)
+
+ST_11: tmp_136_2_1_cast_44 [1/1] 0.00ns
+.preheader.2:15  %tmp_136_2_1_cast_44 = zext i9 %p_Val2_2_1_2 to i11
+
+ST_11: OP1_V_2_2_cast [1/1] 0.00ns
+.preheader.2:16  %OP1_V_2_2_cast = zext i8 %src_kernel_win_2_val_0_2_lo to i9
+
+ST_11: p_Val2_2_2 [1/1] 1.72ns
+.preheader.2:17  %p_Val2_2_2 = sub i9 0, %OP1_V_2_2_cast
+
+ST_11: tmp_136_2_2_cast [1/1] 0.00ns
+.preheader.2:18  %tmp_136_2_2_cast = sext i9 %p_Val2_2_2 to i11
+
+ST_11: tmp_136_2_2_2_cast_cast [1/1] 0.00ns
+.preheader.2:19  %tmp_136_2_2_2_cast_cast = zext i8 %src_kernel_win_2_val_0_1_lo to i10
+
+ST_11: tmp48 [1/1] 1.37ns
+.preheader.2:20  %tmp48 = add i11 %tmp_136_2_1_cast, %tmp_136_2_2_cast
+
+ST_11: tmp49 [1/1] 1.84ns
+.preheader.2:21  %tmp49 = add i10 %p_Val2_3_2_0_2_cast_cast, %tmp_136_2_2_2_cast_cast
+
+ST_11: tmp98_cast [1/1] 0.00ns
+.preheader.2:22  %tmp98_cast = sext i10 %tmp49 to i11
+
+ST_11: tmp50 [1/1] 1.84ns
+.preheader.2:23  %tmp50 = add i11 %tmp98_cast, %tmp_136_2_1_cast_44
+
+ST_11: p_Val2_s [1/1] 1.37ns
+.preheader.2:24  %p_Val2_s = add i11 %tmp50, %tmp48
+
+ST_11: isneg_2 [1/1] 0.00ns
+.preheader.2:25  %isneg_2 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %p_Val2_s, i32 10)
+
+ST_11: p_Val2_7 [1/1] 0.00ns
+.preheader.2:26  %p_Val2_7 = trunc i11 %p_Val2_s to i8
+
+ST_11: tmp_45 [1/1] 0.00ns
+.preheader.2:27  %tmp_45 = call i3 @_ssdm_op_PartSelect.i3.i11.i32.i32(i11 %p_Val2_s, i32 8, i32 10)
+
+ST_11: empty [1/1] 0.00ns
+._crit_edge246.i.2:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1814, i32 %tmp_20)
+
+ST_11: stg_682 [1/1] 0.00ns
+._crit_edge246.i.2:1  store i8 %src_kernel_win_2_val_2_1_9, i8* %src_kernel_win_2_val_2_2, align 1
+
+ST_11: stg_683 [1/1] 0.00ns
+._crit_edge246.i.2:2  store i8 %src_kernel_win_2_val_1_1_6, i8* %src_kernel_win_2_val_1_2, align 1
+
+ST_11: stg_684 [1/1] 0.00ns
+._crit_edge246.i.2:3  store i8 %src_kernel_win_2_val_0_1_6, i8* %src_kernel_win_2_val_0_2, align 1
+
+ST_11: stg_685 [1/1] 0.00ns
+._crit_edge246.i.2:4  store i8 %src_kernel_win_1_val_2_1_9, i8* %src_kernel_win_1_val_2_2, align 1
+
+ST_11: stg_686 [1/1] 0.00ns
+._crit_edge246.i.2:5  store i8 %src_kernel_win_1_val_1_1_6, i8* %src_kernel_win_1_val_1_2, align 1
+
+ST_11: stg_687 [1/1] 0.00ns
+._crit_edge246.i.2:6  store i8 %src_kernel_win_1_val_0_1_6, i8* %src_kernel_win_1_val_0_2, align 1
+
+ST_11: stg_688 [1/1] 0.00ns
+._crit_edge246.i.2:7  store i8 %src_kernel_win_0_val_2_1_9, i8* %src_kernel_win_0_val_2_2, align 1
+
+ST_11: stg_689 [1/1] 0.00ns
+._crit_edge246.i.2:8  store i8 %src_kernel_win_0_val_1_1_6, i8* %src_kernel_win_0_val_1_2, align 1
+
+ST_11: stg_690 [1/1] 0.00ns
+._crit_edge246.i.2:9  store i8 %src_kernel_win_0_val_0_1_6, i8* %src_kernel_win_0_val_0_2, align 1
+
+ST_11: stg_691 [1/1] 0.00ns
+._crit_edge246.i.2:10  br label %2
+
+
+ <State 12>: 5.73ns
+ST_12: tmp_i_i [1/1] 1.37ns
+.preheader.0:28  %tmp_i_i = xor i1 %isneg, true
+
+ST_12: not_i_i_i [1/1] 1.62ns
+.preheader.0:29  %not_i_i_i = icmp ne i3 %tmp_36, 0
+
+ST_12: overflow [1/1] 1.37ns
+.preheader.0:30  %overflow = and i1 %not_i_i_i, %tmp_i_i
+
+ST_12: p_mux_i_i_cast [1/1] 1.37ns
+.preheader.0:31  %p_mux_i_i_cast = select i1 %tmp_i_i, i8 -1, i8 0
+
+ST_12: tmp_i_i_31 [1/1] 1.37ns
+.preheader.0:32  %tmp_i_i_31 = or i1 %isneg, %overflow
+
+ST_12: p_Val2_9 [1/1] 1.37ns
+.preheader.0:33  %p_Val2_9 = select i1 %tmp_i_i_31, i8 %p_mux_i_i_cast, i8 %p_Val2_2
+
+ST_12: tmp_i_i1 [1/1] 1.37ns
+.preheader.1:28  %tmp_i_i1 = xor i1 %isneg_1, true
+
+ST_12: not_i_i_i1 [1/1] 1.62ns
+.preheader.1:29  %not_i_i_i1 = icmp ne i3 %tmp_37, 0
+
+ST_12: overflow_1 [1/1] 1.37ns
+.preheader.1:30  %overflow_1 = and i1 %not_i_i_i1, %tmp_i_i1
+
+ST_12: p_mux_i_i39_cast [1/1] 1.37ns
+.preheader.1:31  %p_mux_i_i39_cast = select i1 %tmp_i_i1, i8 -1, i8 0
+
+ST_12: tmp_i_i1_38 [1/1] 1.37ns
+.preheader.1:32  %tmp_i_i1_38 = or i1 %isneg_1, %overflow_1
+
+ST_12: p_Val2_10 [1/1] 1.37ns
+.preheader.1:33  %p_Val2_10 = select i1 %tmp_i_i1_38, i8 %p_mux_i_i39_cast, i8 %p_Val2_5
+
+ST_12: tmp_i_i2 [1/1] 1.37ns
+.preheader.2:28  %tmp_i_i2 = xor i1 %isneg_2, true
+
+ST_12: not_i_i_i2 [1/1] 1.62ns
+.preheader.2:29  %not_i_i_i2 = icmp ne i3 %tmp_45, 0
+
+ST_12: overflow_2 [1/1] 1.37ns
+.preheader.2:30  %overflow_2 = and i1 %not_i_i_i2, %tmp_i_i2
+
+ST_12: p_mux_i_i48_cast [1/1] 1.37ns
+.preheader.2:31  %p_mux_i_i48_cast = select i1 %tmp_i_i2, i8 -1, i8 0
+
+ST_12: tmp_i_i2_45 [1/1] 1.37ns
+.preheader.2:32  %tmp_i_i2_45 = or i1 %isneg_2, %overflow_2
+
+ST_12: p_Val2_11 [1/1] 1.37ns
+.preheader.2:33  %p_Val2_11 = select i1 %tmp_i_i2_45, i8 %p_mux_i_i48_cast, i8 %p_Val2_7
+
+
+ <State 13>: 1.70ns
+ST_13: stg_710 [1/1] 1.70ns
+.preheader.0:34  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_dst_data_stream_0_V, i8 %p_Val2_9)
+
+ST_13: stg_711 [1/1] 0.00ns
+.preheader.0:35  br label %._crit_edge246.i.0
+
+ST_13: stg_712 [1/1] 1.70ns
+.preheader.1:34  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_dst_data_stream_1_V, i8 %p_Val2_10)
+
+ST_13: stg_713 [1/1] 0.00ns
+.preheader.1:35  br label %._crit_edge246.i.1
+
+ST_13: stg_714 [1/1] 1.70ns
+.preheader.2:34  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_dst_data_stream_2_V, i8 %p_Val2_11)
+
+ST_13: stg_715 [1/1] 0.00ns
+.preheader.2:35  br label %._crit_edge246.i.2
+
+
+ <State 14>: 0.00ns
+ST_14: empty_46 [1/1] 0.00ns
+:0  %empty_46 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str1813, i32 %tmp_14)
+
+ST_14: stg_717 [1/1] 0.00ns
+:1  br label %0
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

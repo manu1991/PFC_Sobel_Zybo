@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1447495349">
+  <File Type="PWROPT-DCP" Name="sobel_pwropt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="sobel_timing_summary_postroute_physopted.pb"/>
+  <File Type="PA-DCP" Name="sobel.dcp"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DRC" Name="sobel_drc_pwropted.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="sobel_timing_summary_routed.rpt"/>
+  <File Type="PA-TCL" Name="sobel.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DCP" Name="sobel_opt.dcp"/>
+  <File Type="OPT-DRC" Name="sobel_drc_opted.rpt"/>
+  <File Type="PLACE-DCP" Name="sobel_placed.dcp"/>
+  <File Type="PLACE-IO" Name="sobel_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="sobel_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="sobel_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="sobel_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="sobel_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="sobel_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="sobel_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sobel_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="sobel_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="sobel_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="sobel_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="sobel_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="sobel_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="sobel_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="sobel_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="sobel_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="sobel_route_status.pb"/>
+  <File Type="ROUTE-TIMING-PB" Name="sobel_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="sobel_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="sobel_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sobel_postroute_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="sobel.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="sobel_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="sobel_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="sobel.bit"/>
+  <File Type="BG-BIN" Name="sobel.bin"/>
+  <File Type="BITSTR-MSK" Name="sobel.msk"/>
+  <File Type="BITSTR-RBT" Name="sobel.rbt"/>
+  <File Type="BITSTR-NKY" Name="sobel.nky"/>
+  <File Type="BITSTR-BMM" Name="sobel_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="sobel.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="sobel.sysdef"/>
+  <File Type="BG-BGN" Name="sobel.bgn"/>
+  <File Type="BG-DRC" Name="sobel.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/sobel_borderInterpolate.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel_Filter2D_k_buf_0_val_0.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel_Filter2D.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_0_cols_V_channel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_0_cols_V_channel1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_0_data_stream_0_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_0_data_stream_1_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_0_data_stream_2_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_0_rows_V_channel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_0_rows_V_channel1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_1_cols_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_1_data_stream_0_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_1_data_stream_1_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_1_data_stream_2_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/FIFO_sobel_img_1_rows_V.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel_AXIvideo2Mat.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel_Block_proc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel_Mat2AXIvideo.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel_Sobel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sobel"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/sobel.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

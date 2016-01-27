@@ -1,0 +1,109 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sat Nov 14 11:04:58 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : report_control_sets -verbose -file sobel_control_sets_placed.rpt
+| Design       : sobel
+| Device       : xc7z010
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    56 |
+| Minimum Number of register sites lost to control set restrictions |   148 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              63 |           30 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              56 |           23 |
+| Yes          | No                    | No                     |             900 |          320 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             121 |           34 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                      Enable Signal                                     |                            Set/Reset Signal                           | Slice Load Count | Bel Load Count |
++--------------+----------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/O1          | sobel_Block_proc_U0/ap_rst                                            |                3 |              4 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/tmp_32_reg_32360                               |                                                                       |                2 |              4 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/locy_0_2_t_reg_32060                           |                                                                       |                1 |              4 |
+|  ap_clk      |                                                                                        | sobel_Block_proc_U0/O2                                                |                3 |              6 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ce_0                                           |                                                                       |                1 |              8 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_34150                            | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_p_Val2_9_reg_3410[7]_i_1  |                1 |              8 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_34150                            | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_p_Val2_11_reg_3420[7]_i_1 |                2 |              8 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ce                                             |                                                                       |                1 |              8 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ce_1                                           |                                                                       |                1 |              8 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_626/ap_ce       |                                                                       |                5 |              8 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_34150                            | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_p_Val2_10_reg_3415[7]_i_1 |                1 |              8 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_79_in                                        |                                                                       |                5 |              9 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/O14[0]                                         |                                                                       |                5 |             10 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_sig_bdd_672                                 | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_p_012_0_i_reg_603[9]_i_1  |                4 |             10 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/tmp_27_reg_31990                               |                                                                       |                5 |             11 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_addr_reg_32180                   |                                                                       |                3 |             11 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_025_0_i_reg_6140                             | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_p_025_0_i_reg_614[10]_i_1 |                2 |             11 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/ap_sig_bdd_181                                                   | sobel_AXIvideo2Mat_U0/ap_sig_bdd_188                                  |                3 |             12 |
+|  ap_clk      | img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/ce                   |                                                                       |                2 |             12 |
+|  ap_clk      | img_0_cols_V_channel1_U/U_FIFO_sobel_img_0_cols_V_channel1_shiftReg/ce                 |                                                                       |                2 |             12 |
+|  ap_clk      | img_1_cols_V_U/U_FIFO_sobel_img_1_cols_V_shiftReg/ce                                   |                                                                       |                2 |             12 |
+|  ap_clk      | img_1_rows_V_U/U_FIFO_sobel_img_1_rows_V_shiftReg/ce                                   |                                                                       |                2 |             12 |
+|  ap_clk      | sobel_Mat2AXIvideo_U0/ap_sig_bdd_130                                                   | sobel_Mat2AXIvideo_U0/n_0_p_s_reg_159[11]_i_1                         |                3 |             12 |
+|  ap_clk      | sobel_Mat2AXIvideo_U0/p_3_reg_1700                                                     | sobel_Mat2AXIvideo_U0/n_0_p_3_reg_170[0]_i_1                          |                3 |             12 |
+|  ap_clk      | img_0_rows_V_channel1_U/U_FIFO_sobel_img_0_rows_V_channel1_shiftReg/ce                 |                                                                       |                2 |             12 |
+|  ap_clk      | img_0_rows_V_channel_U/U_FIFO_sobel_img_0_rows_V_channel_shiftReg/ce                   |                                                                       |                2 |             12 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/p_1_reg_2060                                                     | sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1                          |                3 |             12 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/Q[0]                                                             |                                                                       |                4 |             12 |
+|  ap_clk      | sobel_Mat2AXIvideo_U0/O2[0]                                                            |                                                                       |                4 |             12 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ImagLoc_x_reg_31060                            |                                                                       |                4 |             13 |
+|  ap_clk      | sobel_Mat2AXIvideo_U0/p_s_reg_1590                                                     |                                                                       |                4 |             13 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_656/E[0]        |                                                                       |                6 |             13 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/tmp_7_reg_5700                                 |                                                                       |               10 |             22 |
+|  ap_clk      | sobel_Block_proc_U0/n_0_ap_return_4_preg[10]_i_1                                       | sobel_Block_proc_U0/ap_rst                                            |                9 |             24 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/ce                                                               |                                                                       |                3 |             24 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_col_buf_0_val_0_0_3_fu_360[7]_i_1          |                                                                       |                7 |             24 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_col_buf_0_val_0_0_5_fu_364[7]_i_1          |                                                                       |                9 |             24 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_col_buf_0_val_0_0_6_fu_368[7]_i_1          |                                                                       |                6 |             24 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/ap_reg_ppiten_pp1_it10                                           |                                                                       |                8 |             24 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/ap_NS_fsm[3]                                                     |                                                                       |                5 |             25 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/tmp_data_V_reg_4020                                              |                                                                       |                5 |             25 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/n_0_axi_data_V_1_reg_195[23]_i_1                                 |                                                                       |                4 |             25 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/p_5_in                                                           |                                                                       |               10 |             26 |
+|  ap_clk      | sobel_AXIvideo2Mat_U0/n_0_eol_3_reg_288[0]_i_1                                         |                                                                       |                9 |             26 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/isneg_1_reg_33780                              |                                                                       |                9 |             33 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/ap_ce17_out |                                                                       |               10 |             35 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_reg_ppiten_pp0_it00                         |                                                                       |               11 |             36 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_6030                             |                                                                       |               11 |             43 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_col_buf_1_val_0_0_5_fu_336[7]_i_1          |                                                                       |               18 |             48 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_col_buf_1_val_0_0_6_fu_344[7]_i_1          |                                                                       |               18 |             48 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_col_buf_1_val_0_0_3_fu_320[7]_i_1          |                                                                       |               20 |             48 |
+|  ap_clk      |                                                                                        | sobel_Block_proc_U0/ap_rst                                            |               20 |             50 |
+|  ap_clk      |                                                                                        |                                                                       |               30 |             63 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_0_src_kernel_win_0_val_0_1_fu_240[7]_i_1     |                                                                       |               32 |             72 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/src_kernel_win_0_val_0_2_fu_2440               |                                                                       |               31 |             72 |
+|  ap_clk      | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/O1          |                                                                       |               40 |            101 |
++--------------+----------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_Sobel'
+================================================================
+* Date:           Sat Nov 14 10:52:27 2015
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        sobel.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   8.00|      6.86|        1.00|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+--------+-----+--------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    | min |   max  | min |   max  |   Type  |
+    +-----+--------+-----+--------+---------+
+    |  154|  935986|  154|  935986|   none  |
+    +-----+--------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------+----------------+-----+--------+-----+--------+---------+
+        |                          |                |    Latency   |   Interval   | Pipeline|
+        |         Instance         |     Module     | min |   max  | min |   max  |   Type  |
+        +--------------------------+----------------+-----+--------+-----+--------+---------+
+        |grp_sobel_Filter2D_fu_61  |sobel_Filter2D  |  153|  935985|  153|  935985|   none  |
+        +--------------------------+----------------+-----+--------+-----+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|Expression       |        -|      -|      0|      1|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        9|      -|   1278|   2663|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|      7|
+|Register         |        -|      -|      4|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        9|      0|   1282|   2671|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        7|      0|      3|     15|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------+---------+-------+------+------+
+    |         Instance         |     Module     | BRAM_18K| DSP48E|  FF  |  LUT |
+    +--------------------------+----------------+---------+-------+------+------+
+    |grp_sobel_Filter2D_fu_61  |sobel_Filter2D  |        9|      0|  1278|  2663|
+    +--------------------------+----------------+---------+-------+------+------+
+    |Total                     |                |        9|      0|  1278|  2663|
+    +--------------------------+----------------+---------+-------+------+------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------+----------+-------+---+----+------------+------------+
+    | Variable Name | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------+----------+-------+---+----+------------+------------+
+    |ap_sig_bdd_59  |    or    |      0|  0|   1|           1|           1|
+    +---------------+----------+-------+---+----+------------+------------+
+    |Total          |          |      0|  0|   1|           1|           1|
+    +---------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |   1|          3|    1|          3|
+    |p_dst_data_stream_0_V_write  |   1|          2|    1|          2|
+    |p_dst_data_stream_1_V_write  |   1|          2|    1|          2|
+    |p_dst_data_stream_2_V_write  |   1|          2|    1|          2|
+    |p_src_data_stream_0_V_read   |   1|          2|    1|          2|
+    |p_src_data_stream_1_V_read   |   1|          2|    1|          2|
+    |p_src_data_stream_2_V_read   |   1|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |   7|         15|    7|         15|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+---+----+-----+-----------+
+    |                      Name                      | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                       |  2|   0|    2|          0|
+    |ap_done_reg                                     |  1|   0|    1|          0|
+    |grp_sobel_Filter2D_fu_61_ap_start_ap_start_reg  |  1|   0|    1|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Total                                           |  4|   0|    4|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-----------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                         |  in |    1| ap_ctrl_hs |      sobel_Sobel      | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs |      sobel_Sobel      | return value |
+|ap_start                       |  in |    1| ap_ctrl_hs |      sobel_Sobel      | return value |
+|ap_done                        | out |    1| ap_ctrl_hs |      sobel_Sobel      | return value |
+|ap_continue                    |  in |    1| ap_ctrl_hs |      sobel_Sobel      | return value |
+|ap_idle                        | out |    1| ap_ctrl_hs |      sobel_Sobel      | return value |
+|ap_ready                       | out |    1| ap_ctrl_hs |      sobel_Sobel      | return value |
+|p_src_rows_V_read              |  in |   12|   ap_none  |   p_src_rows_V_read   |    scalar    |
+|p_src_cols_V_read              |  in |   12|   ap_none  |   p_src_cols_V_read   |    scalar    |
+|p_src_data_stream_0_V_dout     |  in |    8|   ap_fifo  | p_src_data_stream_0_V |    pointer   |
+|p_src_data_stream_0_V_empty_n  |  in |    1|   ap_fifo  | p_src_data_stream_0_V |    pointer   |
+|p_src_data_stream_0_V_read     | out |    1|   ap_fifo  | p_src_data_stream_0_V |    pointer   |
+|p_src_data_stream_1_V_dout     |  in |    8|   ap_fifo  | p_src_data_stream_1_V |    pointer   |
+|p_src_data_stream_1_V_empty_n  |  in |    1|   ap_fifo  | p_src_data_stream_1_V |    pointer   |
+|p_src_data_stream_1_V_read     | out |    1|   ap_fifo  | p_src_data_stream_1_V |    pointer   |
+|p_src_data_stream_2_V_dout     |  in |    8|   ap_fifo  | p_src_data_stream_2_V |    pointer   |
+|p_src_data_stream_2_V_empty_n  |  in |    1|   ap_fifo  | p_src_data_stream_2_V |    pointer   |
+|p_src_data_stream_2_V_read     | out |    1|   ap_fifo  | p_src_data_stream_2_V |    pointer   |
+|p_dst_data_stream_0_V_din      | out |    8|   ap_fifo  | p_dst_data_stream_0_V |    pointer   |
+|p_dst_data_stream_0_V_full_n   |  in |    1|   ap_fifo  | p_dst_data_stream_0_V |    pointer   |
+|p_dst_data_stream_0_V_write    | out |    1|   ap_fifo  | p_dst_data_stream_0_V |    pointer   |
+|p_dst_data_stream_1_V_din      | out |    8|   ap_fifo  | p_dst_data_stream_1_V |    pointer   |
+|p_dst_data_stream_1_V_full_n   |  in |    1|   ap_fifo  | p_dst_data_stream_1_V |    pointer   |
+|p_dst_data_stream_1_V_write    | out |    1|   ap_fifo  | p_dst_data_stream_1_V |    pointer   |
+|p_dst_data_stream_2_V_din      | out |    8|   ap_fifo  | p_dst_data_stream_2_V |    pointer   |
+|p_dst_data_stream_2_V_full_n   |  in |    1|   ap_fifo  | p_dst_data_stream_2_V |    pointer   |
+|p_dst_data_stream_2_V_write    | out |    1|   ap_fifo  | p_dst_data_stream_2_V |    pointer   |
++-------------------------------+-----+-----+------------+-----------------------+--------------+
+

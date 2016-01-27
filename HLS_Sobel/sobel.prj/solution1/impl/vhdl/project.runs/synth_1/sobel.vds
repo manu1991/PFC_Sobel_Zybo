@@ -1,0 +1,1292 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Sat Nov 14 10:59:20 2015
+# Process ID: 3620
+# Log file: D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/project.runs/synth_1/sobel.vds
+# Journal file: D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source sobel.tcl
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7z010clg400-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/project.cache/wt [current_project]
+# set_property parent.project_path D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/project.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language VHDL [current_project]
+# read_vhdl -library xil_defaultlib {
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_AXIvideo2Mat.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Block_proc.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Mat2AXIvideo.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Sobel.vhd
+#   D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd
+# }
+# read_xdc D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.xdc
+# set_property used_in_implementation false [get_files D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.xdc]
+# catch { write_hwdef -file sobel.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top sobel -part xc7z010clg400-1 -no_iobuf -mode out_of_context
+Command: synth_design -top sobel -part xc7z010clg400-1 -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 243.285 ; gain = 80.742
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sobel' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:43]
+INFO: [Synth 8-3491] module 'sobel_Block_proc' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Block_proc.vhd:12' bound to instance 'sobel_Block_proc_U0' of component 'sobel_Block_proc' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:552]
+INFO: [Synth 8-638] synthesizing module 'sobel_Block_proc' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Block_proc.vhd:32]
+INFO: [Synth 8-4472] Detected and applied attribute fsm_encoding = none [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Block_proc.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'sobel_Block_proc' (1#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Block_proc.vhd:32]
+INFO: [Synth 8-3491] module 'sobel_AXIvideo2Mat' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_AXIvideo2Mat.vhd:12' bound to instance 'sobel_AXIvideo2Mat_U0' of component 'sobel_AXIvideo2Mat' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:570]
+INFO: [Synth 8-638] synthesizing module 'sobel_AXIvideo2Mat' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_AXIvideo2Mat.vhd:44]
+INFO: [Synth 8-4472] Detected and applied attribute fsm_encoding = none [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_AXIvideo2Mat.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'sobel_AXIvideo2Mat' (2#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_AXIvideo2Mat.vhd:44]
+INFO: [Synth 8-3491] module 'sobel_Sobel' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Sobel.vhd:12' bound to instance 'sobel_Sobel_U0' of component 'sobel_Sobel' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:600]
+INFO: [Synth 8-638] synthesizing module 'sobel_Sobel' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Sobel.vhd:44]
+INFO: [Synth 8-4472] Detected and applied attribute fsm_encoding = none [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Sobel.vhd:54]
+INFO: [Synth 8-3491] module 'sobel_Filter2D' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:12' bound to instance 'grp_sobel_Filter2D_fu_61' of component 'sobel_Filter2D' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Sobel.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'sobel_Filter2D' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:43]
+INFO: [Synth 8-4472] Detected and applied attribute fsm_encoding = none [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:89]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_0_val_0_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:671]
+INFO: [Synth 8-638] synthesizing module 'sobel_Filter2D_k_buf_0_val_0__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:105]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0_ram' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:13' bound to instance 'sobel_Filter2D_k_buf_0_val_0_ram_U' of component 'sobel_Filter2D_k_buf_0_val_0_ram' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'sobel_Filter2D_k_buf_0_val_0_ram' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:33]
+	Parameter mem_type bound to: block - type: string 
+	Parameter dwidth bound to: 8 - type: integer 
+	Parameter awidth bound to: 11 - type: integer 
+	Parameter mem_size bound to: 1280 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sobel_Filter2D_k_buf_0_val_0_ram' (3#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'sobel_Filter2D_k_buf_0_val_0__parameterized0' (4#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:105]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_0_val_1_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:687]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_0_val_2_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:703]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_1_val_0_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:719]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_1_val_1_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:735]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_1_val_2_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:751]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_2_val_0_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:767]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_2_val_1_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:783]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1280 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_Filter2D_k_buf_0_val_0' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D_k_buf_0_val_0.vhd:88' bound to instance 'k_buf_2_val_2_U' of component 'sobel_Filter2D_k_buf_0_val_0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:799]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_626' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:815]
+INFO: [Synth 8-638] synthesizing module 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'sobel_borderInterpolate' (5#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:23]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_632' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:824]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_638' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:833]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_644' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:842]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_650' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:851]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_656' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:860]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_662' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:869]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_668' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:878]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_674' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:887]
+INFO: [Synth 8-3491] module 'sobel_borderInterpolate' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_borderInterpolate.vhd:12' bound to instance 'grp_sobel_borderInterpolate_fu_680' of component 'sobel_borderInterpolate' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:896]
+INFO: [Synth 8-256] done synthesizing module 'sobel_Filter2D' (6#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'sobel_Sobel' (7#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Sobel.vhd:44]
+INFO: [Synth 8-3491] module 'sobel_Mat2AXIvideo' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Mat2AXIvideo.vhd:12' bound to instance 'sobel_Mat2AXIvideo_U0' of component 'sobel_Mat2AXIvideo' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:630]
+INFO: [Synth 8-638] synthesizing module 'sobel_Mat2AXIvideo' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Mat2AXIvideo.vhd:44]
+INFO: [Synth 8-4472] Detected and applied attribute fsm_encoding = none [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Mat2AXIvideo.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'sobel_Mat2AXIvideo' (8#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Mat2AXIvideo.vhd:44]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_rows_V_channel' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd:49' bound to instance 'img_0_rows_V_channel_U' of component 'FIFO_sobel_img_0_rows_V_channel' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:660]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_rows_V_channel' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd:68]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_rows_V_channel_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd:13' bound to instance 'U_FIFO_sobel_img_0_rows_V_channel_shiftReg' of component 'FIFO_sobel_img_0_rows_V_channel_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_rows_V_channel_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd:26]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_rows_V_channel_shiftReg__parameterized0' (9#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_rows_V_channel' (10#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_rows_V_channel1' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd:49' bound to instance 'img_0_rows_V_channel1_U' of component 'FIFO_sobel_img_0_rows_V_channel1' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:673]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_rows_V_channel1' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd:68]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_rows_V_channel1_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd:13' bound to instance 'U_FIFO_sobel_img_0_rows_V_channel1_shiftReg' of component 'FIFO_sobel_img_0_rows_V_channel1_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_rows_V_channel1_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd:26]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_rows_V_channel1_shiftReg__parameterized0' (11#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_rows_V_channel1' (12#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_rows_V_channel1.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_cols_V_channel' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd:49' bound to instance 'img_0_cols_V_channel_U' of component 'FIFO_sobel_img_0_cols_V_channel' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:686]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_cols_V_channel' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd:68]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_cols_V_channel_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd:13' bound to instance 'U_FIFO_sobel_img_0_cols_V_channel_shiftReg' of component 'FIFO_sobel_img_0_cols_V_channel_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_cols_V_channel_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd:26]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_cols_V_channel_shiftReg__parameterized0' (13#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_cols_V_channel' (14#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_cols_V_channel1' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd:49' bound to instance 'img_0_cols_V_channel1_U' of component 'FIFO_sobel_img_0_cols_V_channel1' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:699]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_cols_V_channel1' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd:68]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_cols_V_channel1_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd:13' bound to instance 'U_FIFO_sobel_img_0_cols_V_channel1_shiftReg' of component 'FIFO_sobel_img_0_cols_V_channel1_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_cols_V_channel1_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd:26]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_cols_V_channel1_shiftReg__parameterized0' (15#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_cols_V_channel1' (16#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_cols_V_channel1.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_rows_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd:49' bound to instance 'img_1_rows_V_U' of component 'FIFO_sobel_img_1_rows_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:712]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_rows_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd:68]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_rows_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd:13' bound to instance 'U_FIFO_sobel_img_1_rows_V_shiftReg' of component 'FIFO_sobel_img_1_rows_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_rows_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_rows_V_shiftReg__parameterized0' (17#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_rows_V' (18#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_rows_V.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_cols_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd:49' bound to instance 'img_1_cols_V_U' of component 'FIFO_sobel_img_1_cols_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:725]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_cols_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd:68]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_cols_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd:13' bound to instance 'U_FIFO_sobel_img_1_cols_V_shiftReg' of component 'FIFO_sobel_img_1_cols_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_cols_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_cols_V_shiftReg__parameterized0' (19#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_cols_V' (20#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_cols_V.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_data_stream_0_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd:49' bound to instance 'img_0_data_stream_0_V_U' of component 'FIFO_sobel_img_0_data_stream_0_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:738]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_data_stream_0_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd:68]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_data_stream_0_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd:13' bound to instance 'U_FIFO_sobel_img_0_data_stream_0_V_shiftReg' of component 'FIFO_sobel_img_0_data_stream_0_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_data_stream_0_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_data_stream_0_V_shiftReg__parameterized0' (21#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_data_stream_0_V' (22#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_0_V.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_data_stream_1_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd:49' bound to instance 'img_0_data_stream_1_V_U' of component 'FIFO_sobel_img_0_data_stream_1_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:751]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_data_stream_1_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd:68]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_data_stream_1_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd:13' bound to instance 'U_FIFO_sobel_img_0_data_stream_1_V_shiftReg' of component 'FIFO_sobel_img_0_data_stream_1_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_data_stream_1_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_data_stream_1_V_shiftReg__parameterized0' (23#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_data_stream_1_V' (24#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_1_V.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_data_stream_2_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd:49' bound to instance 'img_0_data_stream_2_V_U' of component 'FIFO_sobel_img_0_data_stream_2_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:764]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_data_stream_2_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd:68]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_0_data_stream_2_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd:13' bound to instance 'U_FIFO_sobel_img_0_data_stream_2_V_shiftReg' of component 'FIFO_sobel_img_0_data_stream_2_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_0_data_stream_2_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_data_stream_2_V_shiftReg__parameterized0' (25#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_0_data_stream_2_V' (26#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_0_data_stream_2_V.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_data_stream_0_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd:49' bound to instance 'img_1_data_stream_0_V_U' of component 'FIFO_sobel_img_1_data_stream_0_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:777]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_data_stream_0_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd:68]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_data_stream_0_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd:13' bound to instance 'U_FIFO_sobel_img_1_data_stream_0_V_shiftReg' of component 'FIFO_sobel_img_1_data_stream_0_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_data_stream_0_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_data_stream_0_V_shiftReg__parameterized0' (27#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_data_stream_0_V' (28#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_0_V.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_data_stream_1_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd:49' bound to instance 'img_1_data_stream_1_V_U' of component 'FIFO_sobel_img_1_data_stream_1_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:790]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_data_stream_1_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd:68]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_data_stream_1_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd:13' bound to instance 'U_FIFO_sobel_img_1_data_stream_1_V_shiftReg' of component 'FIFO_sobel_img_1_data_stream_1_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_data_stream_1_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_data_stream_1_V_shiftReg__parameterized0' (29#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_data_stream_1_V' (30#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_1_V.vhd:68]
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_data_stream_2_V' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd:49' bound to instance 'img_1_data_stream_2_V_U' of component 'FIFO_sobel_img_1_data_stream_2_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:803]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_data_stream_2_V' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd:68]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO_sobel_img_1_data_stream_2_V_shiftReg' declared at 'D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd:13' bound to instance 'U_FIFO_sobel_img_1_data_stream_2_V_shiftReg' of component 'FIFO_sobel_img_1_data_stream_2_V_shiftReg' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'FIFO_sobel_img_1_data_stream_2_V_shiftReg__parameterized0' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_data_stream_2_V_shiftReg__parameterized0' (31#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_sobel_img_1_data_stream_2_V' (32#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/FIFO_sobel_img_1_data_stream_2_V.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'sobel' (33#1) [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.vhd:43]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 287.293 ; gain = 124.750
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 287.293 ; gain = 124.750
+---------------------------------------------------------------------------------
+Loading clock regions from c:/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/zynq/xc7z010/ClockRegion.xml
+Loading clock buffers from c:/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/zynq/xc7z010/ClockBuffers.xml
+Loading clock placement rules from c:/Xilinx/Vivado/2014.4/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from c:/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/PinFunctions.xml...
+Loading package from c:/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/zynq/xc7z010/clg400/Package.xml
+Loading io standards from c:/Xilinx/Vivado/2014.4/data\./parts/xilinx/zynq/IOStandards.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.xdc]
+Finished Parsing XDC File [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.486 . Memory (MB): peak = 600.895 ; gain = 0.137
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:57 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:57 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:57 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+ROM "tmp_1_fu_69_p2" won't be mapped to RAM because it is too sparse.
+INFO: [Synth 8-4471] merging register 'tmp_22_reg_3076_reg[1:0]' into 'tmp_23_reg_3082_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1287]
+INFO: [Synth 8-4471] merging register 'k_buf_0_val_1_addr_reg_3224_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1582]
+INFO: [Synth 8-4471] merging register 'k_buf_0_val_2_addr_reg_3230_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1583]
+INFO: [Synth 8-4471] merging register 'k_buf_1_val_0_addr_reg_3248_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1584]
+INFO: [Synth 8-4471] merging register 'k_buf_1_val_1_addr_reg_3254_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1585]
+INFO: [Synth 8-4471] merging register 'k_buf_1_val_2_addr_reg_3260_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1586]
+INFO: [Synth 8-4471] merging register 'k_buf_2_val_0_addr_reg_3278_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1587]
+INFO: [Synth 8-4471] merging register 'k_buf_2_val_1_addr_reg_3284_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1588]
+INFO: [Synth 8-4471] merging register 'k_buf_2_val_2_addr_reg_3290_reg[10:0]' into 'k_buf_0_val_0_addr_reg_3218_reg[10:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1589]
+INFO: [Synth 8-4471] merging register 'or_cond7_2_reg_3155_reg[0:0]' into 'or_cond7_1_reg_3139_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1303]
+INFO: [Synth 8-4471] merging register 'or_cond7_reg_3117_reg[0:0]' into 'or_cond7_1_reg_3139_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1304]
+INFO: [Synth 8-4471] merging register 'tmp_83_1_reg_3135_reg[0:0]' into 'tmp_29_reg_3113_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1311]
+INFO: [Synth 8-4471] merging register 'tmp_83_2_reg_3151_reg[0:0]' into 'tmp_29_reg_3113_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1312]
+INFO: [Synth 8-4471] merging register 'tmp_39_reg_3143_reg[0:0]' into 'tmp_31_reg_3121_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1309]
+INFO: [Synth 8-4471] merging register 'tmp_50_reg_3159_reg[0:0]' into 'tmp_31_reg_3121_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1310]
+INFO: [Synth 8-4471] merging register 'tmp_30_reg_3125_reg[0:0]' into 'tmp_85_1_reg_3147_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1307]
+INFO: [Synth 8-4471] merging register 'tmp_85_2_reg_3163_reg[0:0]' into 'tmp_85_1_reg_3147_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1314]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_or_cond7_2_reg_3155_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_or_cond7_1_reg_3139_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1303]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_or_cond7_reg_3117_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_or_cond7_1_reg_3139_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1304]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_83_1_reg_3135_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_tmp_29_reg_3113_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1311]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_83_2_reg_3151_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_tmp_29_reg_3113_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1312]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_39_reg_3143_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_tmp_31_reg_3121_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1309]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_50_reg_3159_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_tmp_31_reg_3121_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1310]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_30_reg_3125_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_tmp_85_1_reg_3147_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1307]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_85_2_reg_3163_pp0_it1_reg[0:0]' into 'ap_reg_ppstg_tmp_85_1_reg_3147_pp0_it1_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1314]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_or_cond7_reg_3117_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_or_cond7_2_reg_3155_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1339]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_83_2_reg_3151_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_tmp_83_1_reg_3135_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1361]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_50_reg_3159_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_tmp_39_reg_3143_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1355]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_85_2_reg_3163_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_tmp_30_reg_3125_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1365]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_or_cond7_1_reg_3139_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_or_cond7_2_reg_3155_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1335]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_or_cond7_2_reg_3155_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_or_cond7_1_reg_3139_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1176]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_or_cond7_reg_3117_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_or_cond7_1_reg_3139_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1080]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_29_reg_3113_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_tmp_83_1_reg_3135_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1345]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_31_reg_3121_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_tmp_39_reg_3143_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1349]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_39_reg_3143_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_tmp_31_reg_3121_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1128]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_50_reg_3159_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_tmp_31_reg_3121_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1176]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_83_1_reg_3135_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_tmp_29_reg_3113_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1130]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_83_2_reg_3151_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_tmp_29_reg_3113_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1178]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_85_1_reg_3147_pp0_it2_reg[0:0]' into 'ap_reg_ppstg_tmp_30_reg_3125_pp0_it2_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1363]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_85_1_reg_3147_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_tmp_30_reg_3125_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1364]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_85_2_reg_3163_pp0_it3_reg[0:0]' into 'ap_reg_ppstg_tmp_30_reg_3125_pp0_it3_reg[0:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1366]
+INFO: [Synth 8-4471] merging register 'tmp_55_reg_3188_reg[1:0]' into 'tmp_43_reg_3177_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1357]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_55_reg_3188_pp0_it2_reg[1:0]' into 'ap_reg_ppstg_tmp_43_reg_3177_pp0_it2_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1357]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_tmp_55_reg_3188_pp0_it3_reg[1:0]' into 'ap_reg_ppstg_tmp_43_reg_3177_pp0_it3_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1358]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ref_reg_3008_reg' and it is trimmed from '10' to '2' bits. [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1529]
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_neg229_i_reg_2994_reg' and it is trimmed from '12' to '2' bits. [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1518]
+INFO: [Synth 8-4471] merging register 'p_neg229_i_reg_2994_reg[1:0]' into 'tmp_11_reg_3000_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1518]
+INFO: [Synth 8-4471] merging register 'tmp_12_reg_3018_reg[1:0]' into 'ref_reg_3008_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1531]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+ROM "tmp_9_fu_860_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "tmp_2_fu_872_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "tmp_5_fu_884_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp1_fu_1328_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp16_fu_1640_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp17_fu_1654_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp5_fu_1359_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp12_fu_1571_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp15_fu_1602_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp22_fu_1814_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp25_fu_1845_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "icmp1_fu_1076_p2" won't be mapped to RAM because it is too sparse.
+ROM "tmp_28_fu_1101_p2" won't be mapped to RAM because it is too sparse.
+ROM "not_i_i_i1_fu_2527_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "not_i_i_i2_fu_2563_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "not_i_i_i_fu_2491_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "sel_tmp7_fu_1495_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp6_fu_1482_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp19_fu_1738_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp18_fu_1725_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "tmp_9_fu_860_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "tmp_2_fu_872_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "tmp_5_fu_884_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp1_fu_1328_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp16_fu_1640_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp17_fu_1654_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp5_fu_1359_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp12_fu_1571_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp15_fu_1602_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp22_fu_1814_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp25_fu_1845_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "icmp1_fu_1076_p2" won't be mapped to RAM because it is too sparse.
+ROM "tmp_28_fu_1101_p2" won't be mapped to RAM because it is too sparse.
+ROM "not_i_i_i1_fu_2527_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "not_i_i_i2_fu_2563_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "not_i_i_i_fu_2491_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "sel_tmp7_fu_1495_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp6_fu_1482_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp19_fu_1738_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp18_fu_1725_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:01:02 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_626' (sobel_borderInterpolate) to 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_632'
+INFO: [Synth 8-223] decloning instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_626' (sobel_borderInterpolate) to 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_638'
+INFO: [Synth 8-223] decloning instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_650' (sobel_borderInterpolate) to 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_662'
+INFO: [Synth 8-223] decloning instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_650' (sobel_borderInterpolate) to 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_674'
+INFO: [Synth 8-223] decloning instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_656' (sobel_borderInterpolate) to 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_668'
+INFO: [Synth 8-223] decloning instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_656' (sobel_borderInterpolate) to 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_680'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     14 Bit       Adders := 4     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 6     
+	   4 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 6     
+	   3 Input      9 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 12    
+	   3 Input      2 Bit       Adders := 9     
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
++---Registers : 
+	               32 Bit    Registers := 5     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 6     
+	               12 Bit    Registers := 21    
+	               11 Bit    Registers := 7     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 72    
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 38    
+	                1 Bit    Registers := 112   
++---RAMs : 
+	              10K Bit         RAMs := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 8     
+	   2 Input     13 Bit        Muxes := 8     
+	   2 Input     12 Bit        Muxes := 12    
+	   2 Input      8 Bit        Muxes := 39    
+	   2 Input      7 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 12    
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 118   
+	   6 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module sobel 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 7     
+Module sobel_Block_proc 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 1     
+Module sobel_AXIvideo2Mat 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+Module sobel_Filter2D_k_buf_0_val_0_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              10K Bit         RAMs := 1     
+Module sobel_Filter2D_k_buf_0_val_0__parameterized0 
+Detailed RTL Component Info : 
+Module sobel_borderInterpolate 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     14 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module sobel_Filter2D 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 6     
+	   4 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 6     
+	   3 Input      9 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 6     
+	   3 Input      2 Bit       Adders := 9     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 7     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 60    
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 31    
+	                1 Bit    Registers := 42    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 39    
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 43    
+	   6 Input      1 Bit        Muxes := 3     
+Module sobel_Sobel 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module sobel_Mat2AXIvideo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module FIFO_sobel_img_0_rows_V_channel_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_0_rows_V_channel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_0_rows_V_channel1_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_0_rows_V_channel1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_0_cols_V_channel_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_0_cols_V_channel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_0_cols_V_channel1_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_0_cols_V_channel1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_1_rows_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_1_rows_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_1_cols_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_1_cols_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_0_data_stream_0_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_0_data_stream_0_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_0_data_stream_1_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_0_data_stream_1_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_0_data_stream_2_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_0_data_stream_2_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_1_data_stream_0_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_1_data_stream_0_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_1_data_stream_1_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_1_data_stream_1_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO_sobel_img_1_data_stream_2_V_shiftReg__parameterized0 
+Detailed RTL Component Info : 
+Module FIFO_sobel_img_1_data_stream_2_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+ROM "tmp_1_fu_69_p2" won't be mapped to RAM because it is too sparse.
+ROM "tmp_1_fu_69_p2" won't be mapped to RAM because it is too sparse.
+ROM "tmp_1_fu_69_p2" won't be mapped to RAM because it is too sparse.
+ROM "tmp_1_fu_69_p2" won't be mapped to RAM because it is too sparse.
+INFO: [Synth 8-4471] merging register 'tmp_42_reg_3172_reg[1:0]' into 'tmp_34_reg_3167_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1739]
+INFO: [Synth 8-4471] merging register 'tmp_40_reg_3266_reg[1:0]' into 'tmp_32_reg_3236_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1725]
+INFO: [Synth 8-4471] merging register 'tmp_41_reg_3272_reg[1:0]' into 'tmp_33_reg_3242_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1726]
+INFO: [Synth 8-4471] merging register 'tmp_54_reg_3183_reg[1:0]' into 'tmp_34_reg_3167_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1740]
+INFO: [Synth 8-4471] merging register 'locy_2_2_t_reg_3214_reg[1:0]' into 'locy_1_2_t_reg_3210_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1329]
+INFO: [Synth 8-4471] merging register 'ap_reg_ppstg_locy_2_2_t_reg_3214_pp0_it3_reg[1:0]' into 'ap_reg_ppstg_locy_1_2_t_reg_3210_pp0_it3_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1180]
+INFO: [Synth 8-4471] merging register 'tmp_52_reg_3296_reg[1:0]' into 'tmp_32_reg_3236_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1727]
+INFO: [Synth 8-4471] merging register 'tmp_53_reg_3302_reg[1:0]' into 'tmp_33_reg_3242_reg[1:0]' [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1728]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x_reg_3194_reg' and it is trimmed from '14' to '11' bits. [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:1693]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:2565]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:2568]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/vhdl/sobel_Filter2D.vhd:2571]
+ROM "sel_tmp1_fu_1328_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp16_fu_1640_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp17_fu_1654_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp5_fu_1359_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp12_fu_1571_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "sel_tmp15_fu_1602_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "tmp_28_fu_1101_p2" won't be mapped to RAM because it is too sparse.
+ROM "icmp1_fu_1076_p2" won't be mapped to RAM because it is too sparse.
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[31] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[30] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[29] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[28] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[27] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[26] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[25] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDATA[24] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TKEEP[3] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TKEEP[2] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TKEEP[1] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TKEEP[0] driven by constant 1
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TSTRB[3] driven by constant 0
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TSTRB[2] driven by constant 0
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TSTRB[1] driven by constant 0
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TSTRB[0] driven by constant 0
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TID[0] driven by constant 0
+WARNING: [Synth 8-3917] design sobel has port OUTPUT_STREAM_TDEST[0] driven by constant 0
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TKEEP[3]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TKEEP[2]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TKEEP[1]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TKEEP[0]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TSTRB[3]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TSTRB[2]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TSTRB[1]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TSTRB[0]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TID[0]
+WARNING: [Synth 8-3331] design sobel has unconnected port INPUT_STREAM_TDEST[0]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[31]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[30]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[29]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[28]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[27]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[26]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[25]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[24]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[23]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[22]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[21]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[20]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[19]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[18]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[17]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[16]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[15]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[14]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[13]
+WARNING: [Synth 8-3331] design sobel has unconnected port rows[12]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[31]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[30]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[29]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[28]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[27]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[26]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[25]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[24]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[23]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[22]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[21]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[20]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[19]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[18]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[17]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[16]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[15]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[14]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[13]
+WARNING: [Synth 8-3331] design sobel has unconnected port cols[12]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:05 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:53 ; elapsed = 00:01:05 . Memory (MB): peak = 600.895 ; gain = 438.352
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++---------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------------+
+|Module Name    | RTL Object                                                 | PORT A (depth X width) | W | R | PORT B (depth X width) | W | R | OUT_REG      | RAMB18 | RAMB36 | Hierarchical Name               | 
++---------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------------+
+|sobel_Filter2D | k_buf_0_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__10 | 
+|sobel_Filter2D | k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__12 | 
+|sobel_Filter2D | k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__14 | 
+|sobel_Filter2D | k_buf_1_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__16 | 
+|sobel_Filter2D | k_buf_1_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__18 | 
+|sobel_Filter2D | k_buf_1_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__20 | 
+|sobel_Filter2D | k_buf_2_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__22 | 
+|sobel_Filter2D | k_buf_2_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__24 | 
+|sobel_Filter2D | k_buf_2_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg | 2 K X 8(READ_FIRST)    | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | sobel/sobel_Filter2D/extram__26 | 
++---------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------------+
+
+Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sobel_Sobel_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sobel_AXIvideo2Mat_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sobel_Block_proc_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sobel_Mat2AXIvideo_U0/ap_done_reg_reg )
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_read_reg_200_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[12] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/p_p2_reg_217_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_626/len_read_reg_195_reg[1] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_644/p_read_reg_200_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_644/p_p2_reg_217_reg[12] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_644/p_p2_reg_217_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_644/len_read_reg_195_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_644/len_read_reg_195_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[12] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_p2_reg_217_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/len_read_reg_195_reg[1] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[0] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_650/p_read_reg_200_reg[1] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_read_reg_200_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[12] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[3] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/p_p2_reg_217_reg[2] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[11] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[10] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[9] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[8] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[7] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[6] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[5] ) is unused and will be removed from module sobel_Filter2D.
+WARNING: [Synth 8-3332] Sequential element (\grp_sobel_borderInterpolate_fu_656/len_read_reg_195_reg[4] ) is unused and will be removed from module sobel_Filter2D.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 600.895 ; gain = 438.352
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:49 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:50 . Memory (MB): peak = 600.895 ; gain = 438.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:40 ; elapsed = 00:01:55 . Memory (MB): peak = 604.762 ; gain = 442.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:01:56 . Memory (MB): peak = 604.762 ; gain = 442.219
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:01:56 . Memory (MB): peak = 604.762 ; gain = 442.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:42 ; elapsed = 00:01:57 . Memory (MB): peak = 604.762 ; gain = 442.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+-------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|sobel       | sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_reg_ppstg_or_cond222_i_reg_3102_pp0_it4_reg[0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[2] | 4      | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | SRL_SIG_reg[2] | 4      | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | SRL_SIG_reg[2] | 4      | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__3     | SRL_SIG_reg[2] | 4      | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | SRL_SIG_reg[2] | 4      | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | SRL_SIG_reg[2] | 4      | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__6     | SRL_SIG_reg[1] | 2      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | SRL_SIG_reg[1] | 2      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__8     | SRL_SIG_reg[1] | 2      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__9     | SRL_SIG_reg[1] | 2      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__10    | SRL_SIG_reg[1] | 2      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__11    | SRL_SIG_reg[1] | 2      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__12    | SRL_SIG_reg[2] | 4      | 12         | 12     | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    89|
+|2     |LUT1     |   121|
+|3     |LUT2     |   151|
+|4     |LUT3     |   154|
+|5     |LUT4     |   256|
+|6     |LUT5     |   233|
+|7     |LUT6     |   442|
+|8     |RAMB18E1 |     9|
+|9     |SRL16E   |   121|
+|10    |XORCY    |     3|
+|11    |FDRE     |  1082|
+|12    |FDSE     |    58|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------------------------------------+----------------------------------------------------------+------+
+|      |Instance                                        |Module                                                    |Cells |
++------+------------------------------------------------+----------------------------------------------------------+------+
+|1     |top                                             |                                                          |  2719|
+|2     |  img_0_cols_V_channel1_U                       |FIFO_sobel_img_0_cols_V_channel1                          |    41|
+|3     |    U_FIFO_sobel_img_0_cols_V_channel1_shiftReg |FIFO_sobel_img_0_cols_V_channel1_shiftReg__parameterized0 |    28|
+|4     |  img_0_cols_V_channel_U                        |FIFO_sobel_img_0_cols_V_channel                           |    28|
+|5     |    U_FIFO_sobel_img_0_cols_V_channel_shiftReg  |FIFO_sobel_img_0_cols_V_channel_shiftReg__parameterized0  |    15|
+|6     |  img_0_data_stream_0_V_U                       |FIFO_sobel_img_0_data_stream_0_V                          |    18|
+|7     |    U_FIFO_sobel_img_0_data_stream_0_V_shiftReg |FIFO_sobel_img_0_data_stream_0_V_shiftReg__parameterized0 |     9|
+|8     |  img_0_data_stream_1_V_U                       |FIFO_sobel_img_0_data_stream_1_V                          |    17|
+|9     |    U_FIFO_sobel_img_0_data_stream_1_V_shiftReg |FIFO_sobel_img_0_data_stream_1_V_shiftReg__parameterized0 |     9|
+|10    |  img_0_data_stream_2_V_U                       |FIFO_sobel_img_0_data_stream_2_V                          |    17|
+|11    |    U_FIFO_sobel_img_0_data_stream_2_V_shiftReg |FIFO_sobel_img_0_data_stream_2_V_shiftReg__parameterized0 |     9|
+|12    |  img_0_rows_V_channel1_U                       |FIFO_sobel_img_0_rows_V_channel1                          |    72|
+|13    |    U_FIFO_sobel_img_0_rows_V_channel1_shiftReg |FIFO_sobel_img_0_rows_V_channel1_shiftReg__parameterized0 |    60|
+|14    |  img_0_rows_V_channel_U                        |FIFO_sobel_img_0_rows_V_channel                           |    29|
+|15    |    U_FIFO_sobel_img_0_rows_V_channel_shiftReg  |FIFO_sobel_img_0_rows_V_channel_shiftReg__parameterized0  |    15|
+|16    |  img_1_cols_V_U                                |FIFO_sobel_img_1_cols_V                                   |    44|
+|17    |    U_FIFO_sobel_img_1_cols_V_shiftReg          |FIFO_sobel_img_1_cols_V_shiftReg__parameterized0          |    32|
+|18    |  img_1_data_stream_0_V_U                       |FIFO_sobel_img_1_data_stream_0_V                          |    17|
+|19    |    U_FIFO_sobel_img_1_data_stream_0_V_shiftReg |FIFO_sobel_img_1_data_stream_0_V_shiftReg__parameterized0 |     9|
+|20    |  img_1_data_stream_1_V_U                       |FIFO_sobel_img_1_data_stream_1_V                          |    18|
+|21    |    U_FIFO_sobel_img_1_data_stream_1_V_shiftReg |FIFO_sobel_img_1_data_stream_1_V_shiftReg__parameterized0 |     9|
+|22    |  img_1_data_stream_2_V_U                       |FIFO_sobel_img_1_data_stream_2_V                          |    17|
+|23    |    U_FIFO_sobel_img_1_data_stream_2_V_shiftReg |FIFO_sobel_img_1_data_stream_2_V_shiftReg__parameterized0 |     9|
+|24    |  img_1_rows_V_U                                |FIFO_sobel_img_1_rows_V                                   |    29|
+|25    |    U_FIFO_sobel_img_1_rows_V_shiftReg          |FIFO_sobel_img_1_rows_V_shiftReg__parameterized0          |    16|
+|26    |  sobel_AXIvideo2Mat_U0                         |sobel_AXIvideo2Mat                                        |   397|
+|27    |  sobel_Block_proc_U0                           |sobel_Block_proc                                          |    53|
+|28    |  sobel_Mat2AXIvideo_U0                         |sobel_Mat2AXIvideo                                        |   126|
+|29    |  sobel_Sobel_U0                                |sobel_Sobel                                               |  1787|
+|30    |    grp_sobel_Filter2D_fu_61                    |sobel_Filter2D                                            |  1776|
+|31    |      grp_sobel_borderInterpolate_fu_626        |sobel_borderInterpolate                                   |    44|
+|32    |      grp_sobel_borderInterpolate_fu_644        |sobel_borderInterpolate_0                                 |   102|
+|33    |      grp_sobel_borderInterpolate_fu_650        |sobel_borderInterpolate_1                                 |    24|
+|34    |      grp_sobel_borderInterpolate_fu_656        |sobel_borderInterpolate_2                                 |    39|
+|35    |      k_buf_0_val_0_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0              |    17|
+|36    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_18                       |    17|
+|37    |      k_buf_0_val_1_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_3            |    25|
+|38    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_17                       |    25|
+|39    |      k_buf_0_val_2_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_4            |     9|
+|40    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_16                       |     9|
+|41    |      k_buf_1_val_0_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_5            |    17|
+|42    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_15                       |    17|
+|43    |      k_buf_1_val_1_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_6            |     9|
+|44    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_14                       |     9|
+|45    |      k_buf_1_val_2_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_7            |    25|
+|46    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_13                       |    25|
+|47    |      k_buf_2_val_0_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_8            |    18|
+|48    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_12                       |    18|
+|49    |      k_buf_2_val_1_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_9            |     9|
+|50    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram_11                       |     9|
+|51    |      k_buf_2_val_2_U                           |sobel_Filter2D_k_buf_0_val_0__parameterized0_10           |    27|
+|52    |        sobel_Filter2D_k_buf_0_val_0_ram_U      |sobel_Filter2D_k_buf_0_val_0_ram                          |    27|
++------+------------------------------------------------+----------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:42 ; elapsed = 00:01:57 . Memory (MB): peak = 604.762 ; gain = 442.219
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 288 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:01:29 . Memory (MB): peak = 604.762 ; gain = 101.309
+Synthesis Optimization Complete : Time (s): cpu = 00:01:42 ; elapsed = 00:01:58 . Memory (MB): peak = 604.762 ; gain = 442.219
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+INFO: [Netlist 29-17] Analyzing 101 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+212 Infos, 180 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 604.762 ; gain = 414.973
+# write_checkpoint -noxdef sobel.dcp
+# catch { report_utilization -file sobel_utilization_synth.rpt -pb sobel_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 604.762 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 14 11:01:25 2015...

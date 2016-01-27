@@ -1,0 +1,50 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sat Nov 14 11:05:56 2015
+| Host         : Manu-Asus running 64-bit major release  (build 7600)
+| Command      : report_drc
+------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_sobel
+      Design limits: <entire design considered>
+           Ruledeck: default
+           Max violations: <unlimited>
+         Violations found: 3
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+NDRV-2#1 Warning
+Out of context terminal  
+Port OUTPUT_STREAM_TDEST[0:0], OUTPUT_STREAM_TDATA[24], ap_start, ap_rst_n, ap_ready, ap_done, OUTPUT_STREAM_TDATA[0], OUTPUT_STREAM_TDATA[1], OUTPUT_STREAM_TDATA[2], OUTPUT_STREAM_TDATA[3], OUTPUT_STREAM_TDATA[4], OUTPUT_STREAM_TDATA[5], OUTPUT_STREAM_TDATA[6], OUTPUT_STREAM_TDATA[7], OUTPUT_STREAM_TDATA[8] (the first 15 of 87 listed) does not have an associated HD.PARTPIN_LOCS property, which will prevent the partial routing of the signal %ELG. Without this partial route, timing analysis to/from this port will not be accurate and no routing information for this port can be exported.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

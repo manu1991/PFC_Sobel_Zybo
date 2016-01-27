@@ -1,0 +1,1250 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date              : Sat Nov 14 11:05:58 2015
+| Host              : Manu-Asus running 64-bit major release  (build 7600)
+| Command           : report_timing_summary -warn_on_violation -max_paths 10 -file sobel_timing_summary_routed.rpt -rpx sobel_timing_summary_routed.rpx
+| Design            : sobel
+| Device            : 7z010-clg400
+| Speed File        : -1  PRODUCTION 1.11 2014-09-11
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking unexpandable_clocks
+13. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 30 input ports with no input delay specified. (HIGH)
+
+ There are 24 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay
+---------------------------
+ There are 31 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking unexpandable_clocks
+--------------------------------
+ There are 0 unexpandable clock pairs.
+
+
+13. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.753        0.000                      0                 2750        0.078        0.000                      0                 2750        2.996        0.000                       0                  1279  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+ap_clk  {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              0.753        0.000                      0                 2750        0.078        0.000                      0                 2750        2.996        0.000                       0                  1279  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.753ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.078ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.996ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.753ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.759ns  (logic 1.976ns (29.233%)  route 4.783ns (70.767%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.492ns = ( 9.492 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.659     8.424    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y28         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.492     9.492    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y28                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[0]/C
+                         clock pessimism              0.150     9.642    
+                         clock uncertainty           -0.035     9.607    
+    SLICE_X14Y28         FDRE (Setup_fdre_C_R)       -0.429     9.178    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[0]
+  -------------------------------------------------------------------
+                         required time                          9.178    
+                         arrival time                          -8.424    
+  -------------------------------------------------------------------
+                         slack                                  0.753    
+
+Slack (MET) :             0.753ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.759ns  (logic 1.976ns (29.233%)  route 4.783ns (70.767%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.492ns = ( 9.492 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.659     8.424    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y28         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.492     9.492    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y28                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[1]/C
+                         clock pessimism              0.150     9.642    
+                         clock uncertainty           -0.035     9.607    
+    SLICE_X14Y28         FDRE (Setup_fdre_C_R)       -0.429     9.178    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[1]
+  -------------------------------------------------------------------
+                         required time                          9.178    
+                         arrival time                          -8.424    
+  -------------------------------------------------------------------
+                         slack                                  0.753    
+
+Slack (MET) :             0.753ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.759ns  (logic 1.976ns (29.233%)  route 4.783ns (70.767%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.492ns = ( 9.492 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.659     8.424    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y28         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.492     9.492    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y28                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[2]/C
+                         clock pessimism              0.150     9.642    
+                         clock uncertainty           -0.035     9.607    
+    SLICE_X14Y28         FDRE (Setup_fdre_C_R)       -0.429     9.178    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[2]
+  -------------------------------------------------------------------
+                         required time                          9.178    
+                         arrival time                          -8.424    
+  -------------------------------------------------------------------
+                         slack                                  0.753    
+
+Slack (MET) :             0.753ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.759ns  (logic 1.976ns (29.233%)  route 4.783ns (70.767%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.492ns = ( 9.492 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.659     8.424    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y28         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.492     9.492    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y28                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[3]/C
+                         clock pessimism              0.150     9.642    
+                         clock uncertainty           -0.035     9.607    
+    SLICE_X14Y28         FDRE (Setup_fdre_C_R)       -0.429     9.178    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[3]
+  -------------------------------------------------------------------
+                         required time                          9.178    
+                         arrival time                          -8.424    
+  -------------------------------------------------------------------
+                         slack                                  0.753    
+
+Slack (MET) :             0.858ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[4]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.656ns  (logic 1.976ns (29.690%)  route 4.680ns (70.310%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.493ns = ( 9.493 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.555     8.321    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y29         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.493     9.493    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y29                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[4]/C
+                         clock pessimism              0.150     9.643    
+                         clock uncertainty           -0.035     9.608    
+    SLICE_X14Y29         FDRE (Setup_fdre_C_R)       -0.429     9.179    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[4]
+  -------------------------------------------------------------------
+                         required time                          9.179    
+                         arrival time                          -8.321    
+  -------------------------------------------------------------------
+                         slack                                  0.858    
+
+Slack (MET) :             0.858ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[5]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.656ns  (logic 1.976ns (29.690%)  route 4.680ns (70.310%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.493ns = ( 9.493 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.555     8.321    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y29         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.493     9.493    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y29                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[5]/C
+                         clock pessimism              0.150     9.643    
+                         clock uncertainty           -0.035     9.608    
+    SLICE_X14Y29         FDRE (Setup_fdre_C_R)       -0.429     9.179    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[5]
+  -------------------------------------------------------------------
+                         required time                          9.179    
+                         arrival time                          -8.321    
+  -------------------------------------------------------------------
+                         slack                                  0.858    
+
+Slack (MET) :             0.858ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[6]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.656ns  (logic 1.976ns (29.690%)  route 4.680ns (70.310%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.493ns = ( 9.493 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.555     8.321    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y29         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[6]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.493     9.493    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y29                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[6]/C
+                         clock pessimism              0.150     9.643    
+                         clock uncertainty           -0.035     9.608    
+    SLICE_X14Y29         FDRE (Setup_fdre_C_R)       -0.429     9.179    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[6]
+  -------------------------------------------------------------------
+                         required time                          9.179    
+                         arrival time                          -8.321    
+  -------------------------------------------------------------------
+                         slack                                  0.858    
+
+Slack (MET) :             0.858ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[7]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.656ns  (logic 1.976ns (29.690%)  route 4.680ns (70.310%))
+  Logic Levels:           7  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.493ns = ( 9.493 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.150ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.711     7.303    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X15Y30         LUT4 (Prop_lut4_I1_O)        0.124     7.427 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_1/O
+                         net (fo=15, routed)          0.214     7.641    sobel_AXIvideo2Mat_U0/p_1_reg_2060
+    SLICE_X15Y30         LUT3 (Prop_lut3_I2_O)        0.124     7.765 r  sobel_AXIvideo2Mat_U0/p_1_reg_206[0]_i_1/O
+                         net (fo=12, routed)          0.555     8.321    sobel_AXIvideo2Mat_U0/n_0_p_1_reg_206[0]_i_1
+    SLICE_X14Y29         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[7]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.493     9.493    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X14Y29                                                      r  sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[7]/C
+                         clock pessimism              0.150     9.643    
+                         clock uncertainty           -0.035     9.608    
+    SLICE_X14Y29         FDRE (Setup_fdre_C_R)       -0.429     9.179    sobel_AXIvideo2Mat_U0/p_1_reg_206_reg[7]
+  -------------------------------------------------------------------
+                         required time                          9.179    
+                         arrival time                          -8.321    
+  -------------------------------------------------------------------
+                         slack                                  0.858    
+
+Slack (MET) :             0.963ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[17]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.743ns  (logic 1.976ns (29.306%)  route 4.767ns (70.694%))
+  Logic Levels:           7  (CARRY4=1 LUT2=3 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.496ns = ( 9.496 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.437     7.030    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X13Y30         LUT2 (Prop_lut2_I0_O)        0.124     7.154 f  sobel_AXIvideo2Mat_U0/axi_last_V_2_reg_229[0]_i_3/O
+                         net (fo=4, routed)           0.178     7.332    sobel_AXIvideo2Mat_U0/n_0_axi_last_V_2_reg_229[0]_i_3
+    SLICE_X13Y30         LUT2 (Prop_lut2_I1_O)        0.124     7.456 r  sobel_AXIvideo2Mat_U0/axi_last_V_2_reg_229[0]_i_1/O
+                         net (fo=26, routed)          0.952     8.408    sobel_AXIvideo2Mat_U0/p_5_in
+    SLICE_X17Y33         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[17]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.496     9.496    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X17Y33                                                      r  sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[17]/C
+                         clock pessimism              0.115     9.611    
+                         clock uncertainty           -0.035     9.576    
+    SLICE_X17Y33         FDRE (Setup_fdre_C_CE)      -0.205     9.371    sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[17]
+  -------------------------------------------------------------------
+                         required time                          9.371    
+                         arrival time                          -8.408    
+  -------------------------------------------------------------------
+                         slack                                  0.963    
+
+Slack (MET) :             0.963ns  (required time - arrival time)
+  Source:                 img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[19]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.743ns  (logic 1.976ns (29.306%)  route 4.767ns (70.694%))
+  Logic Levels:           7  (CARRY4=1 LUT2=3 LUT5=1 LUT6=1 SRL16E=1)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.496ns = ( 9.496 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.665ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         1.665     1.665    img_0_cols_V_channel_U/ap_clk
+    SLICE_X15Y28                                                      r  img_0_cols_V_channel_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y28         FDSE (Prop_fdse_C_Q)         0.456     2.121 r  img_0_cols_V_channel_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.448     2.569    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/mOutPtr[0]
+    SLICE_X15Y27         LUT2 (Prop_lut2_I0_O)        0.124     2.693 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][0]_srl3_i_3__1/O
+                         net (fo=12, routed)          1.116     3.809    img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/a[0]
+    SLICE_X12Y28         SRL16E (Prop_srl16e_A0_Q)    0.146     3.955 r  img_0_cols_V_channel_U/U_FIFO_sobel_img_0_cols_V_channel_shiftReg/SRL_SIG_reg[2][4]_srl3/Q
+                         net (fo=1, routed)           0.652     4.607    sobel_AXIvideo2Mat_U0/out[4]
+    SLICE_X13Y28         LUT6 (Prop_lut6_I3_O)        0.328     4.935 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     4.935    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_7
+    SLICE_X13Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.485 r  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_4/CO[3]
+                         net (fo=33, routed)          0.984     6.469    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_4
+    SLICE_X13Y29         LUT5 (Prop_lut5_I0_O)        0.124     6.593 f  sobel_AXIvideo2Mat_U0/INPUT_STREAM_TREADY_INST_0_i_3/O
+                         net (fo=4, routed)           0.437     7.030    sobel_AXIvideo2Mat_U0/n_0_INPUT_STREAM_TREADY_INST_0_i_3
+    SLICE_X13Y30         LUT2 (Prop_lut2_I0_O)        0.124     7.154 f  sobel_AXIvideo2Mat_U0/axi_last_V_2_reg_229[0]_i_3/O
+                         net (fo=4, routed)           0.178     7.332    sobel_AXIvideo2Mat_U0/n_0_axi_last_V_2_reg_229[0]_i_3
+    SLICE_X13Y30         LUT2 (Prop_lut2_I1_O)        0.124     7.456 r  sobel_AXIvideo2Mat_U0/axi_last_V_2_reg_229[0]_i_1/O
+                         net (fo=26, routed)          0.952     8.408    sobel_AXIvideo2Mat_U0/p_5_in
+    SLICE_X17Y33         FDRE                                         r  sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[19]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk
+                         net (fo=1278, unset)         1.496     9.496    sobel_AXIvideo2Mat_U0/ap_clk
+    SLICE_X17Y33                                                      r  sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[19]/C
+                         clock pessimism              0.115     9.611    
+                         clock uncertainty           -0.035     9.576    
+    SLICE_X17Y33         FDRE (Setup_fdre_C_CE)      -0.205     9.371    sobel_AXIvideo2Mat_U0/p_Val2_s_reg_241_reg[19]
+  -------------------------------------------------------------------
+                         required time                          9.371    
+                         arrival time                          -8.408    
+  -------------------------------------------------------------------
+                         slack                                  0.963    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.078ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.472ns  (logic 0.190ns (40.259%)  route 0.282ns (59.741%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.821ns
+    Source Clock Delay      (SCD):    0.553ns
+    Clock Pessimism Removal (CPR):    0.005ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.553     0.553    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X23Y19                                                      r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y19         FDRE (Prop_fdre_C_Q)         0.141     0.694 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[9]/Q
+                         net (fo=16, routed)          0.282     0.976    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603[9]
+    SLICE_X20Y20         LUT4 (Prop_lut4_I0_O)        0.049     1.025 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069[9]_i_1/O
+                         net (fo=1, routed)           0.000     1.025    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_fu_1020_p2[9]
+    SLICE_X20Y20         FDRE                                         r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.821     0.821    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X20Y20                                                      r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[9]/C
+                         clock pessimism             -0.005     0.816    
+    SLICE_X20Y20         FDRE (Hold_fdre_C_D)         0.131     0.947    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -0.947    
+                         arrival time                           1.025    
+  -------------------------------------------------------------------
+                         slack                                  0.078    
+
+Slack (MET) :             0.084ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.468ns  (logic 0.186ns (39.748%)  route 0.282ns (60.252%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.821ns
+    Source Clock Delay      (SCD):    0.553ns
+    Clock Pessimism Removal (CPR):    0.005ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.553     0.553    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X23Y19                                                      r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y19         FDRE (Prop_fdre_C_Q)         0.141     0.694 f  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[9]/Q
+                         net (fo=16, routed)          0.282     0.976    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603[9]
+    SLICE_X20Y20         LUT4 (Prop_lut4_I3_O)        0.045     1.021 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069[10]_i_1/O
+                         net (fo=1, routed)           0.000     1.021    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_fu_1020_p2[10]
+    SLICE_X20Y20         FDRE                                         r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.821     0.821    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X20Y20                                                      r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[10]/C
+                         clock pessimism             -0.005     0.816    
+    SLICE_X20Y20         FDRE (Hold_fdre_C_D)         0.121     0.937    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/y_1_2_1_cast_cast_reg_3069_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -0.937    
+                         arrival time                           1.021    
+  -------------------------------------------------------------------
+                         slack                                  0.084    
+
+Slack (MET) :             0.085ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_addr_reg_3218_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.322ns  (logic 0.164ns (50.977%)  route 0.158ns (49.023%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.053ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.863ns
+    Source Clock Delay      (SCD):    0.557ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.557     0.557    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X6Y22                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_addr_reg_3218_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y22          FDRE (Prop_fdre_C_Q)         0.164     0.721 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_addr_reg_3218_reg[3]/Q
+                         net (fo=9, routed)           0.158     0.879    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/Q[3]
+    RAMB18_X0Y8          RAMB18E1                                     r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.863     0.863    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ap_clk
+    RAMB18_X0Y8                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK
+                         clock pessimism             -0.253     0.610    
+    RAMB18_X0Y8          RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183     0.793    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg
+  -------------------------------------------------------------------
+                         required time                         -0.793    
+                         arrival time                           0.879    
+  -------------------------------------------------------------------
+                         slack                                  0.085    
+
+Slack (MET) :             0.085ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_addr_reg_3218_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.322ns  (logic 0.164ns (50.977%)  route 0.158ns (49.023%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.053ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.863ns
+    Source Clock Delay      (SCD):    0.557ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.557     0.557    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X6Y22                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_addr_reg_3218_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y22          FDRE (Prop_fdre_C_Q)         0.164     0.721 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_addr_reg_3218_reg[3]/Q
+                         net (fo=9, routed)           0.158     0.879    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/Q[3]
+    RAMB18_X0Y9          RAMB18E1                                     r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.863     0.863    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ap_clk
+    RAMB18_X0Y9                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK
+                         clock pessimism             -0.253     0.610    
+    RAMB18_X0Y9          RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183     0.793    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg
+  -------------------------------------------------------------------
+                         required time                         -0.793    
+                         arrival time                           0.879    
+  -------------------------------------------------------------------
+                         slack                                  0.085    
+
+Slack (MET) :             0.097ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_3415_reg[7]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][7]_srl2/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.241ns  (logic 0.128ns (53.025%)  route 0.113ns (46.975%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.849ns
+    Source Clock Delay      (SCD):    0.582ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.582     0.582    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X5Y34                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_3415_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y34          FDSE (Prop_fdse_C_Q)         0.128     0.710 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_3415_reg[7]/Q
+                         net (fo=1, routed)           0.113     0.823    img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/in[7]
+    SLICE_X4Y34          SRL16E                                       r  img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][7]_srl2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.849     0.849    img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/ap_clk
+    SLICE_X4Y34                                                       r  img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][7]_srl2/CLK
+                         clock pessimism             -0.253     0.596    
+    SLICE_X4Y34          SRL16E (Hold_srl16e_CLK_D)
+                                                      0.130     0.726    img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][7]_srl2
+  -------------------------------------------------------------------
+                         required time                         -0.726    
+                         arrival time                           0.823    
+  -------------------------------------------------------------------
+                         slack                                  0.097    
+
+Slack (MET) :             0.100ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/brmerge_reg_3089_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.483ns  (logic 0.186ns (38.546%)  route 0.297ns (61.454%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.822ns
+    Source Clock Delay      (SCD):    0.555ns
+    Clock Pessimism Removal (CPR):    0.005ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.555     0.555    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X23Y17                                                      r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y17         FDRE (Prop_fdre_C_Q)         0.141     0.696 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603_reg[7]/Q
+                         net (fo=19, routed)          0.297     0.993    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_012_0_i_reg_603[7]
+    SLICE_X20Y19         LUT6 (Prop_lut6_I2_O)        0.045     1.038 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/brmerge_reg_3089[0]_i_2/O
+                         net (fo=1, routed)           0.000     1.038    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/brmerge_fu_1045_p2
+    SLICE_X20Y19         FDRE                                         r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/brmerge_reg_3089_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.822     0.822    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X20Y19                                                      r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/brmerge_reg_3089_reg[0]/C
+                         clock pessimism             -0.005     0.817    
+    SLICE_X20Y19         FDRE (Hold_fdre_C_D)         0.121     0.938    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/brmerge_reg_3089_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.938    
+                         arrival time                           1.038    
+  -------------------------------------------------------------------
+                         slack                                  0.100    
+
+Slack (MET) :             0.117ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/p_p2_reg_217_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/x_reg_3194_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.252ns  (logic 0.186ns (73.740%)  route 0.066ns (26.260%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.828ns
+    Source Clock Delay      (SCD):    0.561ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.561     0.561    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/ap_clk
+    SLICE_X7Y17                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/p_p2_reg_217_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y17          FDRE (Prop_fdre_C_Q)         0.141     0.702 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/p_p2_reg_217_reg[7]/Q
+                         net (fo=4, routed)           0.066     0.768    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/p_p2_reg_217[7]
+    SLICE_X6Y17          LUT6 (Prop_lut6_I1_O)        0.045     0.813 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/grp_sobel_borderInterpolate_fu_644/x_reg_3194[7]_i_1/O
+                         net (fo=1, routed)           0.000     0.813    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/n_7_grp_sobel_borderInterpolate_fu_644
+    SLICE_X6Y17          FDRE                                         r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/x_reg_3194_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.828     0.828    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X6Y17                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/x_reg_3194_reg[7]/C
+                         clock pessimism             -0.253     0.575    
+    SLICE_X6Y17          FDRE (Hold_fdre_C_D)         0.121     0.696    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/x_reg_3194_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -0.696    
+                         arrival time                           0.813    
+  -------------------------------------------------------------------
+                         slack                                  0.117    
+
+Slack (MET) :             0.118ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_9_reg_3410_reg[3]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            img_1_data_stream_0_V_U/U_FIFO_sobel_img_1_data_stream_0_V_shiftReg/SRL_SIG_reg[1][3]_srl2/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.187ns  (logic 0.128ns (68.352%)  route 0.059ns (31.648%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.843ns
+    Source Clock Delay      (SCD):    0.576ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.576     0.576    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X5Y28                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_9_reg_3410_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y28          FDSE (Prop_fdse_C_Q)         0.128     0.704 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_9_reg_3410_reg[3]/Q
+                         net (fo=1, routed)           0.059     0.763    img_1_data_stream_0_V_U/U_FIFO_sobel_img_1_data_stream_0_V_shiftReg/in[3]
+    SLICE_X4Y28          SRL16E                                       r  img_1_data_stream_0_V_U/U_FIFO_sobel_img_1_data_stream_0_V_shiftReg/SRL_SIG_reg[1][3]_srl2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.843     0.843    img_1_data_stream_0_V_U/U_FIFO_sobel_img_1_data_stream_0_V_shiftReg/ap_clk
+    SLICE_X4Y28                                                       r  img_1_data_stream_0_V_U/U_FIFO_sobel_img_1_data_stream_0_V_shiftReg/SRL_SIG_reg[1][3]_srl2/CLK
+                         clock pessimism             -0.253     0.590    
+    SLICE_X4Y28          SRL16E (Hold_srl16e_CLK_D)
+                                                      0.055     0.645    img_1_data_stream_0_V_U/U_FIFO_sobel_img_1_data_stream_0_V_shiftReg/SRL_SIG_reg[1][3]_srl2
+  -------------------------------------------------------------------
+                         required time                         -0.645    
+                         arrival time                           0.763    
+  -------------------------------------------------------------------
+                         slack                                  0.118    
+
+Slack (MET) :             0.118ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_3415_reg[3]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][3]_srl2/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.187ns  (logic 0.128ns (68.352%)  route 0.059ns (31.648%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.849ns
+    Source Clock Delay      (SCD):    0.582ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.582     0.582    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X5Y34                                                       r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_3415_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y34          FDSE (Prop_fdse_C_Q)         0.128     0.710 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_10_reg_3415_reg[3]/Q
+                         net (fo=1, routed)           0.059     0.769    img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/in[3]
+    SLICE_X4Y34          SRL16E                                       r  img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][3]_srl2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.849     0.849    img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/ap_clk
+    SLICE_X4Y34                                                       r  img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][3]_srl2/CLK
+                         clock pessimism             -0.253     0.596    
+    SLICE_X4Y34          SRL16E (Hold_srl16e_CLK_D)
+                                                      0.055     0.651    img_1_data_stream_1_V_U/U_FIFO_sobel_img_1_data_stream_1_V_shiftReg/SRL_SIG_reg[1][3]_srl2
+  -------------------------------------------------------------------
+                         required time                         -0.651    
+                         arrival time                           0.769    
+  -------------------------------------------------------------------
+                         slack                                  0.118    
+
+Slack (MET) :             0.119ns  (arrival time - required time)
+  Source:                 sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_11_reg_3420_reg[7]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][7]_srl2/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.262ns  (logic 0.148ns (56.487%)  route 0.114ns (43.513%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.830ns
+    Source Clock Delay      (SCD):    0.563ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.563     0.563    sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/ap_clk
+    SLICE_X12Y35                                                      r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_11_reg_3420_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X12Y35         FDSE (Prop_fdse_C_Q)         0.148     0.711 r  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/p_Val2_11_reg_3420_reg[7]/Q
+                         net (fo=1, routed)           0.114     0.825    img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/in[7]
+    SLICE_X12Y34         SRL16E                                       r  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][7]_srl2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=1278, unset)         0.830     0.830    img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/ap_clk
+    SLICE_X12Y34                                                      r  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][7]_srl2/CLK
+                         clock pessimism             -0.253     0.577    
+    SLICE_X12Y34         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.129     0.706    img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][7]_srl2
+  -------------------------------------------------------------------
+                         required time                         -0.706    
+                         arrival time                           0.825    
+  -------------------------------------------------------------------
+                         slack                                  0.119    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform:           { 0 4 }
+Period:             8.000
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required  Actual  Slack  Location      Pin                                                                                                           
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y10  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y8   sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y9   sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y12  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y13  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y14  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_1_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y11  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y15  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_1_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944     8.000   5.056  RAMB18_X0Y16  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_2_val_2_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKARDCLK  
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576     8.000   5.424  RAMB18_X0Y10  sobel_Sobel_U0/grp_sobel_Filter2D_fu_61/k_buf_0_val_0_U/sobel_Filter2D_k_buf_0_val_0_ram_U/ram_reg/CLKBWRCLK  
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][0]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][1]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][2]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][3]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][4]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][5]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][6]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][7]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][0]_srl2/CLK                
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][1]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][0]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][1]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][2]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][3]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][4]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][5]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][6]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X10Y31  img_0_data_stream_1_V_U/U_FIFO_sobel_img_0_data_stream_1_V_shiftReg/SRL_SIG_reg[1][7]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][0]_srl2/CLK                
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980     3.976   2.996  SLICE_X12Y34  img_1_data_stream_2_V_U/U_FIFO_sobel_img_1_data_stream_2_V_shiftReg/SRL_SIG_reg[1][1]_srl2/CLK                
+
+
+

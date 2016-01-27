@@ -1,0 +1,139 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_Block_proc'
+================================================================
+* Date:           Sat Nov 14 10:52:22 2015
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        sobel.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   8.00|      0.00|        1.00|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|Expression       |        -|      -|      0|      1|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|     72|
+|Register         |        -|      -|     74|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|     74|     73|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|   ~0  |   ~0  |
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------+----------+-------+---+----+------------+------------+
+    | Variable Name | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------+----------+-------+---+----+------------+------------+
+    |ap_sig_bdd_40  |    or    |      0|  0|   1|           1|           1|
+    +---------------+----------+-------+---+----+------------+------------+
+    |Total          |          |      0|  0|   1|           1|           1|
+    +---------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |ap_return_0  |  12|          2|   12|         24|
+    |ap_return_1  |  12|          2|   12|         24|
+    |ap_return_2  |  12|          2|   12|         24|
+    |ap_return_3  |  12|          2|   12|         24|
+    |ap_return_4  |  12|          2|   12|         24|
+    |ap_return_5  |  12|          2|   12|         24|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  72|         12|   72|        144|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------+----+----+-----+-----------+
+    |       Name       | FF | LUT| Bits| Const Bits|
+    +------------------+----+----+-----+-----------+
+    |ap_CS_fsm         |   1|   0|    1|          0|
+    |ap_done_reg       |   1|   0|    1|          0|
+    |ap_return_0_preg  |  12|   0|   12|          0|
+    |ap_return_1_preg  |  12|   0|   12|          0|
+    |ap_return_2_preg  |  12|   0|   12|          0|
+    |ap_return_3_preg  |  12|   0|   12|          0|
+    |ap_return_4_preg  |  12|   0|   12|          0|
+    |ap_return_5_preg  |  12|   0|   12|          0|
+    +------------------+----+----+-----+-----------+
+    |Total             |  74|   0|   74|          0|
+    +------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+-------------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-------------+-----+-----+------------+-------------------+--------------+
+|ap_clk       |  in |    1| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_rst       |  in |    1| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_start     |  in |    1| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_done      | out |    1| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_continue  |  in |    1| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_idle      | out |    1| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_ready     | out |    1| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_return_0  | out |   12| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_return_1  | out |   12| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_return_2  | out |   12| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_return_3  | out |   12| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_return_4  | out |   12| ap_ctrl_hs | sobel_Block__proc | return value |
+|ap_return_5  | out |   12| ap_ctrl_hs | sobel_Block__proc | return value |
+|rows         |  in |   32|   ap_none  |        rows       |    scalar    |
+|cols         |  in |   32|   ap_none  |        cols       |    scalar    |
++-------------+-----+-----+------------+-------------------+--------------+
+

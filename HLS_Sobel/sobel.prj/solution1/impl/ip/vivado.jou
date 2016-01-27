@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Sat Nov 14 10:58:39 2015
+# Process ID: 15940
+# Log file: D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/ip/vivado.log
+# Journal file: D:/Users/Manu/Desktop/VersionesProyecto/HLS_Sobel/sobel.prj/solution1/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
